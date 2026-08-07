@@ -4,7 +4,7 @@
 > Turn websites, browser sessions, Electron apps, and local tools into deterministic interfaces for humans and AI agents.
 > Or run Browser Use against any page — navigate, fill forms, click, extract, automate.
 
-[![中文文档](https://img.shields.io/badge/docs-%E4%B8%AD%E6%96%87-0F766E?style=flat-square)](./README.zh-CN.md)
+
 [![npm](https://img.shields.io/npm/v/@jackwener/opencli?style=flat-square)](https://www.npmjs.com/package/@jackwener/opencli)
 [![Node.js Version](https://img.shields.io/node/v/@jackwener/opencli?style=flat-square)](https://nodejs.org)
 [![License](https://img.shields.io/npm/l/@jackwener/opencli?style=flat-square)](./LICENSE)
