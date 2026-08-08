@@ -28,16 +28,20 @@ function key(site: string, query: string): string {
   return `${site}\u0000${query.trim().toLowerCase().replace(/\s+/g, " ")}`;
 }
 
-const cache = new Map<string, CacheEntry>();
-const distinct = new Map<string, Set<string>>();
+let _globalCache = new Map<string, CacheEntry>();
+let _globalDistinct = new Map<string, Set<string>>();
 
-/** Module-level singleton so every exec path shares the same budget state. */
+export type Budget = ReturnType<typeof createBudget>;
+
 export function createBudget(opts: BudgetOptions = {}) {
   const softCap = opts.softCap ?? DEFAULT_SOFT_CAP;
   const ttlMs = opts.ttlMs ?? DEFAULT_TTL_MS;
+  const cache = new Map<string, CacheEntry>();
+  const distinct = new Map<string, Set<string>>();
+
   return {
-    lookup(site: string, query: string) { return _lookup(site, query, { softCap, ttlMs }); },
-    store(site: string, query: string, content: string) { _store(site, query, content); },
+    lookup(site: string, query: string) { return lookupImpl(site, query, { softCap, ttlMs, cache, distinct }); },
+    store(site: string, query: string, content: string) { storeImpl(site, query, content, cache); },
     softCap,
     ttlMs,
     _cache: cache,
@@ -45,22 +49,37 @@ export function createBudget(opts: BudgetOptions = {}) {
   };
 }
 
-export type Budget = ReturnType<typeof createBudget>;
+export function getGlobalBudget(): Budget {
+  return {
+    lookup(site: string, query: string) { return lookupImpl(site, query, { softCap: DEFAULT_SOFT_CAP, ttlMs: DEFAULT_TTL_MS, cache: _globalCache, distinct: _globalDistinct }); },
+    store(site: string, query: string, content: string) { storeImpl(site, query, content, _globalCache); },
+    softCap: DEFAULT_SOFT_CAP,
+    ttlMs: DEFAULT_TTL_MS,
+    _cache: _globalCache,
+    _distinct: _globalDistinct,
+  };
+}
 
-function _lookup(
+/** Test hook: reset the global budget state. */
+export function __resetGlobalBudgetForTests(): void {
+  _globalCache = new Map();
+  _globalDistinct = new Map();
+}
+
+function lookupImpl(
   site: string,
   query: string,
-  opts: { softCap: number; ttlMs: number }
+  opts: { softCap: number; ttlMs: number; cache: Map<string, CacheEntry>; distinct: Map<string, Set<string>> }
 ): { hit: boolean; content?: string; warning?: string } {
   const k = key(site, query);
-  const entry = cache.get(k);
+  const entry = opts.cache.get(k);
   if (entry && Date.now() - entry.ts < opts.ttlMs) {
     return { hit: true, content: entry.content };
   }
-  const seen = distinct.get(site) ?? new Set<string>();
+  const seen = opts.distinct.get(site) ?? new Set<string>();
   const isNew = !seen.has(k);
   seen.add(k);
-  distinct.set(site, seen);
+  opts.distinct.set(site, seen);
   const warning =
     isNew && seen.size > opts.softCap
       ? `⚠️ budget: ${seen.size - opts.softCap} over the soft cap of ${opts.softCap} distinct queries on "${site}" this session — reframe the query or use another site.`
@@ -68,7 +87,7 @@ function _lookup(
   return { hit: false, warning };
 }
 
-function _store(site: string, query: string, content: string): void {
+function storeImpl(site: string, query: string, content: string, cache: Map<string, CacheEntry>): void {
   cache.set(key(site, query), { content, ts: Date.now() });
 }
 
