@@ -1,4 +1,4 @@
-import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
+import { cli, Strategy, withConversationMeta, conversationIdFromUrl } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     QIANWEN_DOMAIN,
     QIANWEN_URL,
@@ -80,10 +80,10 @@ cli({
         const answer = wantMarkdown && assistant.html
             ? (bubbleHtmlToMarkdown(assistant.html) || assistant.text)
             : assistant.text;
-        return [
+        return withConversationMeta([
             { Role: 'User', Text: prompt },
             { Role: 'Assistant', Text: answer },
-        ];
+        ], { id: conversationIdFromUrl(await page.getCurrentUrl?.() ?? ''), url: await page.getCurrentUrl?.() ?? '' });
     },
 });
 

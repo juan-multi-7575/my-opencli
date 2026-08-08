@@ -1,4 +1,4 @@
-import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
+import { cli, Strategy, withConversationMeta } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     CHATGPT_DOMAIN,
     CHATGPT_URL,
@@ -117,12 +117,12 @@ export const askCommand = cli({
 
         const { conversationId, conversationUrl } = await waitForConversationUrl(page);
         if (!shouldWait) {
-            return [{ conversationId, conversationUrl, tool: selectedTool?.Tool ?? '', response: '' }];
+            return withConversationMeta([{ conversationId, conversationUrl, tool: selectedTool?.Tool ?? '', response: '' }], { id: conversationId, url: conversationUrl, tool: selectedTool?.Tool ?? '' });
         }
         const response = await waitForChatGPTResponse(page, baseline, prompt, timeout, {
             baselinePairCounts,
             conversationUrl,
         });
-        return [{ conversationId, conversationUrl, tool: selectedTool?.Tool ?? '', response }];
+        return withConversationMeta([{ conversationId, conversationUrl, tool: selectedTool?.Tool ?? '', response }], { id: conversationId, url: conversationUrl, tool: selectedTool?.Tool ?? '' });
     },
 });

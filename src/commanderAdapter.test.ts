@@ -3,9 +3,10 @@ import { Command } from 'commander';
 import type { CliCommand } from './registry.js';
 import { attachTraceReceipt, EmptyResultError, selectorError } from './errors.js';
 
-const { mockExecuteCommand, mockRenderOutput } = vi.hoisted(() => ({
-  mockExecuteCommand: vi.fn(),
-  mockRenderOutput: vi.fn(),
+const { mockExecuteCommand, mockRenderOutput, mockSaveConversation } = vi.hoisted(() => ({
+  mockExecuteCommand: vi.fn<(...args: any[]) => any>(),
+  mockRenderOutput: vi.fn<(...args: any[]) => any>(),
+  mockSaveConversation: vi.fn<(...args: any[]) => any>(() => ({ file: '/tmp/fake-conversation.md', appended: false })),
 }));
 
 vi.mock('./execution.js', async () => {
@@ -18,6 +19,10 @@ vi.mock('./execution.js', async () => {
 
 vi.mock('./output.js', () => ({
   render: mockRenderOutput,
+}));
+
+vi.mock('./save-session.js', () => ({
+  saveConversation: mockSaveConversation,
 }));
 
 import { registerCommandToProgram } from './commanderAdapter.js';
@@ -450,5 +455,106 @@ describe('commanderAdapter error envelope output', () => {
     expect(output).toContain('receiptPath: /tmp/opencli/profiles/default/traces/trace-1/receipt.json');
 
     stderrSpy.mockRestore();
+  });
+});
+
+describe('commanderAdapter global output-file / no-save wiring', () => {
+  const makeCmd = (overrides: Partial<CliCommand> = {}): CliCommand => ({
+    site: 'testsite',
+    name: 'run',
+    access: 'read',
+    description: 'Run something',
+    browser: false,
+    args: [{ name: 'query', positional: true, required: true, help: 'Query' }],
+    func: vi.fn() as CliCommand['func'],
+    ...overrides,
+  }) as CliCommand;
+
+  const optionFlagsOf = (siteCmd: Command, name: string): string[] =>
+    siteCmd.commands
+      .find(c => c.name() === name)!
+      .options.map(o => o.flags);
+
+  beforeEach(() => {
+    mockExecuteCommand.mockReset().mockResolvedValue([]);
+    mockRenderOutput.mockReset();
+    mockSaveConversation.mockReset();
+  });
+
+  it('registers -o/--no-save on normal commands and passes -o to renderOutput', async () => {
+    const program = new Command();
+    const siteCmd = program.command('testsite');
+    registerCommandToProgram(siteCmd, makeCmd());
+    expect(optionFlagsOf(siteCmd, 'run')).toContain('-o, --output-file <path>');
+    expect(optionFlagsOf(siteCmd, 'run')).toContain('--no-save');
+
+    await program.parseAsync(['node', 'opencli', 'testsite', 'run', 'hi', '-o', '/tmp/oc-out.json']);
+
+    expect(mockRenderOutput).toHaveBeenCalledTimes(1);
+    expect(mockRenderOutput.mock.calls[0][1]).toMatchObject({ output: '/tmp/oc-out.json' });
+    expect(mockSaveConversation).not.toHaveBeenCalled();
+  });
+
+  it('skips -o but keeps --no-save when the adapter itself defines an output-file arg', async () => {
+    const program = new Command();
+    const siteCmd = program.command('testsite');
+    registerCommandToProgram(siteCmd, makeCmd({
+      name: 'bookmarks',
+      args: [{ name: 'output-file', help: 'Write all-page results to JSONL' }],
+    }));
+    expect(optionFlagsOf(siteCmd, 'bookmarks')).toContain('--output-file [value]');
+    expect(optionFlagsOf(siteCmd, 'bookmarks')).not.toContain('-o, --output-file <path>');
+    expect(optionFlagsOf(siteCmd, 'bookmarks')).toContain('--no-save');
+
+    await program.parseAsync(['node', 'opencli', 'testsite', 'bookmarks', '--output-file', '/tmp/oc.jsonl']);
+
+    expect(mockExecuteCommand).toHaveBeenCalledTimes(1);
+    const kwargs = mockExecuteCommand.mock.calls[0][1];
+    expect(kwargs['output-file']).toBe('/tmp/oc.jsonl');
+    expect(mockRenderOutput.mock.calls[0][1]).not.toHaveProperty('output');
+  });
+
+  it('chat ask commands save a transcript by default and honor --no-save', async () => {
+    const program = new Command();
+    const siteCmd = program.command('chatgpt');
+    const cmd = makeCmd({ site: 'chatgpt', name: 'ask', browser: true, args: [{ name: 'prompt', positional: true, required: true, help: 'Prompt' }] });
+    registerCommandToProgram(siteCmd, cmd);
+    const result = [{ response: '💬 hello world' }];
+    Object.defineProperty(result, '__opencliConversation', {
+      value: { id: 'abc123', url: 'https://chatgpt.com/c/abc123' },
+      enumerable: false,
+    });
+    mockExecuteCommand.mockResolvedValue(result);
+
+    const stderrSpy = vi.spyOn(process.stderr, 'write').mockImplementation(() => true);
+    await program.parseAsync(['node', 'opencli', 'chatgpt', 'ask', 'hi there']);
+
+    expect(mockSaveConversation).toHaveBeenCalledTimes(1);
+    expect(mockSaveConversation.mock.calls[0][0]).toMatchObject({
+      site: 'chatgpt',
+      prompt: 'hi there',
+      response: 'hello world',
+      conversationId: 'abc123',
+      conversationUrl: 'https://chatgpt.com/c/abc123',
+    });
+    expect(stderrSpy.mock.calls.map(c => String(c[0])).join('')).toContain('# saved:');
+    expect(mockRenderOutput.mock.calls[0][1]).not.toHaveProperty('output');
+    stderrSpy.mockRestore();
+
+    mockSaveConversation.mockClear();
+    await program.parseAsync(['node', 'opencli', 'chatgpt', 'ask', 'hi there', '--no-save']);
+    expect(mockSaveConversation).not.toHaveBeenCalled();
+  });
+
+  it('chat ask with -o passes the path as conversation baseDir, not render output', async () => {
+    const program = new Command();
+    const siteCmd = program.command('chatgpt');
+    registerCommandToProgram(siteCmd, makeCmd({ name: 'ask', browser: true, args: [{ name: 'prompt', positional: true, required: true, help: 'Prompt' }] }));
+    mockExecuteCommand.mockResolvedValue([{ response: 'ok' }]);
+
+    await program.parseAsync(['node', 'opencli', 'chatgpt', 'ask', 'hi', '-o', '/tmp/oc-chats']);
+
+    expect(mockSaveConversation.mock.calls[0][0].baseDir).toBe('/tmp/oc-chats');
+    expect(mockRenderOutput.mock.calls[0][1]).not.toHaveProperty('output');
   });
 });

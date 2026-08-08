@@ -1,4 +1,4 @@
-import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
+import { cli, Strategy, withConversationMeta, conversationIdFromUrl } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     authRequired,
     ensureOnGrok,
@@ -59,13 +59,15 @@ export const askCommand = cli({
         }
 
         const result = await waitForAnswer(page, prompt, timeoutSeconds, baselineLastAssistantId);
+        const conversationId = conversationIdFromUrl(await page.getCurrentUrl?.() ?? '');
+        const url = await page.getCurrentUrl?.() ?? '';
         if (result.status === 'ok') {
-            return [{ response: result.assistant.text }];
+            return withConversationMeta([{ response: result.assistant.text }], { id: conversationId, url });
         }
         // Partial: streaming was seen but did not stabilize; keep the best-effort
         // text rather than throwing — the caller asked us to wait, not to discard.
         if (result.status === 'partial' && result.assistant) {
-            return [{ response: result.assistant.text }];
+            return withConversationMeta([{ response: result.assistant.text }], { id: conversationId, url });
         }
         throw new TimeoutError('grok ask response', timeoutSeconds);
     },

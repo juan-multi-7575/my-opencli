@@ -1,4 +1,4 @@
-import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
+import { cli, Strategy, withConversationMeta, conversationIdFromUrl } from '../../../extensions/opencli-bridge/registry-internal';
 import {
   GEMINI_DOMAIN,
   ensureGeminiPage,
@@ -257,17 +257,18 @@ export const askCommand = cli({
         }
 
         const before = await readGeminiSnapshot(page);
+        const conversationId = conversationIdFromUrl(await page.getCurrentUrl?.() ?? '');
         await sendGeminiMessage(page, prompt);
         const submissionStartedAt = Date.now();
         const submitted = await waitForGeminiSubmission(page, before, timeout);
         if (!submitted) {
-            return [{ response: `💬 ${NO_RESPONSE_PREFIX} No Gemini response within ${timeout}s.` }];
+            return withConversationMeta([{ response: `💬 ${NO_RESPONSE_PREFIX} No Gemini response within ${timeout}s.` }], { id: conversationId, url: await page.getCurrentUrl?.() ?? '' });
         }
         const remainingTimeoutSeconds = Math.max(0, timeout - Math.ceil((Date.now() - submissionStartedAt) / 1000));
         const response = await waitForGeminiResponse(page, submitted, prompt, remainingTimeoutSeconds);
         if (!response) {
-            return [{ response: `💬 ${NO_RESPONSE_PREFIX} No Gemini response within ${timeout}s.` }];
+            return withConversationMeta([{ response: `💬 ${NO_RESPONSE_PREFIX} No Gemini response within ${timeout}s.` }], { id: conversationId, url: await page.getCurrentUrl?.() ?? '' });
         }
-        return [{ response: `💬 ${response}` }];
+        return withConversationMeta([{ response: `💬 ${response}` }], { id: conversationId, url: await page.getCurrentUrl?.() ?? '' });
     },
 });

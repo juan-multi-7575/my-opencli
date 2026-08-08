@@ -467,6 +467,7 @@ export function registerAuthCommands(program: Command): Command {
     .option('--timeout <seconds>', 'Per-site timeout in seconds')
     .addOption(new Option('--only <status>', 'Filter rows by status').choices(['all', 'logged-in', 'not-logged-in', 'unknown', 'error']).default('all'))
     .option('-f, --format <fmt>', 'Output format: table, plain, json, yaml, md, csv', 'table')
+    .option('-o, --output-file <path>', 'Save rendered output to a file instead of stdout')
     .action(async (opts) => {
       const globals = typeof status.optsWithGlobals === 'function' ? status.optsWithGlobals() as Record<string, unknown> : {};
       const rows = await collectAuthStatus({
@@ -484,6 +485,7 @@ export function registerAuthCommands(program: Command): Command {
         columns: ['site', 'status', 'identity', 'checked', 'error'],
         title: 'opencli/auth status',
         source: opts.full ? 'full whoami probe' : 'quick auth check',
+        ...(typeof opts.outputFile === 'string' ? { output: opts.outputFile } : {}),
       });
     });
 
@@ -495,6 +497,7 @@ export function registerAuthCommands(program: Command): Command {
     .option('--concurrency <n>', 'Maximum sites to refresh at once')
     .option('--timeout <seconds>', 'Per-site timeout in seconds')
     .option('-f, --format <fmt>', 'Output format: table, plain, json, yaml, md, csv', 'table')
+    .option('-o, --output-file <path>', 'Save rendered output to a file instead of stdout')
     .action(async (opts) => {
       const globals = typeof refresh.optsWithGlobals === 'function' ? refresh.optsWithGlobals() as Record<string, unknown> : {};
       const rows = await collectAuthRefresh({
@@ -511,6 +514,7 @@ export function registerAuthCommands(program: Command): Command {
         columns: ['site', 'status', 'last_touched_at', 'next_refresh_at', 'error'],
         title: 'opencli/auth refresh',
         source: opts.all ? 'forced persistent touch' : 'persistent touch with 24h throttle',
+        ...(typeof opts.outputFile === 'string' ? { output: opts.outputFile } : {}),
       });
     });
 

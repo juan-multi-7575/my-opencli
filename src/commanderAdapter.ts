@@ -15,6 +15,7 @@ import { log } from './logger.js';
 import yaml from 'js-yaml';
 import { type CliCommand, fullName, getRegistry } from './registry.js';
 import { render as renderOutput } from './output.js';
+import { saveConversation } from './save-session.js';
 import { executeCommand, prepareCommandArgs } from './execution.js';
 import {
   commandHelpData,
@@ -61,6 +62,15 @@ export function registerCommandToProgram(siteCmd: Command, cmd: CliCommand): voi
     .option('-f, --format <fmt>', 'Output format: table, plain, json, yaml, md, csv', 'table')
     .option('--trace <mode>', 'Trace capture: off, on, retain-on-failure', 'off')
     .option('-v, --verbose', 'Debug output', false);
+  // Global -o/--no-save, skipped when the adapter itself defines output-file/o.
+  const ownOutputFlag = cmd.args.some((a) => a.name === 'output-file' || a.name === 'o' || a.name === 'output');
+  if (!ownOutputFlag) {
+    subCmd
+      .option('-o, --output-file <path>', 'Save rendered output to a file (or directory) instead of stdout; for ask commands this is the conversation base dir')
+      .option('--no-save', 'Skip automatic conversation transcript saving (ask commands save by default)');
+  } else {
+    subCmd.option('--no-save', 'Skip automatic conversation transcript saving (ask commands save by default)');
+  }
   if (cmd.browser) {
     subCmd
       .option('--window <mode>', 'Browser window mode: foreground or background')
@@ -111,6 +121,10 @@ export function registerCommandToProgram(siteCmd: Command, cmd: CliCommand): voi
       const kwargs = prepareCommandArgs(cmd, rawKwargs);
 
       const verbose = optionsRecord.verbose === true;
+      const outputFile = !ownOutputFlag && typeof optionsRecord.outputFile === 'string' && optionsRecord.outputFile.trim()
+        ? optionsRecord.outputFile.trim()
+        : undefined;
+      const noSave = optionsRecord.save === false;
       let format = typeof optionsRecord.format === 'string' ? optionsRecord.format : 'table';
       const formatExplicit = subCmd.getOptionValueSource('format') === 'cli';
       if (verbose) process.env.OPENCLI_VERBOSE = '1';
@@ -136,6 +150,27 @@ export function registerCommandToProgram(siteCmd: Command, cmd: CliCommand): voi
       if (verbose && (!result || (Array.isArray(result) && result.length === 0))) {
         log.warn('Command returned an empty result.');
       }
+
+      const isChatCommand = cmd.browser === true && (cmd.name === 'ask' || (resolved.site === 'kimi' && cmd.name === 'send'));
+      if (isChatCommand && !noSave) {
+        const meta = (result as Array<unknown> & { __opencliConversation?: { id?: string; url?: string; tool?: string } }).__opencliConversation;
+        const saved = saveConversation({
+          site: resolved.site,
+          prompt: typeof kwargs.prompt === 'string' ? kwargs.prompt : '',
+          response: Array.isArray(result) && result.length > 0
+            ? String((result[0] as Record<string, unknown>)?.response ?? '').replace(/^💬 /, '')
+            : '',
+          conversationId: meta?.id,
+          conversationUrl: meta?.url,
+          tool: meta?.tool,
+          fmt: format === 'json' ? 'json' : 'md',
+          baseDir: outputFile,
+        });
+        if (saved) {
+          process.stderr.write(`# saved: ${saved.file}${saved.appended ? ' (appended)' : ''}\n`);
+        }
+      }
+
       renderOutput(result, {
         fmt: format,
         fmtExplicit: formatExplicit,
@@ -144,6 +179,7 @@ export function registerCommandToProgram(siteCmd: Command, cmd: CliCommand): voi
         elapsed: (Date.now() - startTime) / 1000,
         source: fullName(resolved),
         footerExtra: resolved.footerExtra?.(kwargs),
+        ...(isChatCommand || !outputFile ? {} : { output: outputFile }),
       });
     } catch (err) {
       renderError(err, fullName(cmd), optionsRecord.verbose === true, optionsRecord.trace);

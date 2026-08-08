@@ -1,4 +1,4 @@
-import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
+import { cli, Strategy, withConversationMeta, conversationIdFromUrl } from '../../../extensions/opencli-bridge/registry-internal';
 import { DOUBAO_DOMAIN, getDoubaoTranscriptLines, getDoubaoVisibleTurns, sendDoubaoMessage, waitForDoubaoResponse } from './utils.js';
 export const askCommand = cli({
     site: 'doubao',
@@ -25,15 +25,16 @@ export const askCommand = cli({
         const beforeLines = await getDoubaoTranscriptLines(page);
         await sendDoubaoMessage(page, text);
         const response = await waitForDoubaoResponse(page, beforeLines, beforeTurns, text, timeout);
+        const convMeta = { id: conversationIdFromUrl(await page.getCurrentUrl?.() ?? ''), url: await page.getCurrentUrl?.() ?? '' };
         if (!response) {
-            return [
+            return withConversationMeta([
                 { Role: 'User', Text: text },
                 { Role: 'System', Text: `No response within ${timeout}s. Doubao may still be generating.` },
-            ];
+            ], convMeta);
         }
-        return [
+        return withConversationMeta([
             { Role: 'User', Text: text },
             { Role: 'Assistant', Text: response },
-        ];
+        ], convMeta);
     },
 });

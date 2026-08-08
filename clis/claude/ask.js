@@ -1,4 +1,4 @@
-import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
+import { cli, Strategy, withConversationMeta, conversationIdFromUrl } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     CLAUDE_DOMAIN, CLAUDE_URL, COMPOSER_SELECTOR, MESSAGE_SELECTOR,
     ensureOnClaude, selectModel, setAdaptiveThinking,
@@ -122,7 +122,7 @@ export const askCommand = cli({
                     `No Claude response appeared within ${timeoutSeconds}s. Re-run with a higher --timeout if the model is still generating.`,
                 );
             }
-            return [{ response: result }];
+            return withConversationMeta([{ response: result }], { id: conversationIdFromUrl(await page.getCurrentUrl?.() ?? ''), url: await page.getCurrentUrl?.() ?? '' });
         }
 
         const baseline = await withRetry(() => getBubbleCount(page));
@@ -138,6 +138,6 @@ export const askCommand = cli({
                 `No Claude response appeared within ${timeoutSeconds}s. Re-run with a higher --timeout if the model is still generating.`,
             );
         }
-        return [{ response: result }];
+        return withConversationMeta([{ response: result }], { id: conversationIdFromUrl(await page.getCurrentUrl?.() ?? ''), url: await page.getCurrentUrl?.() ?? '' });
     },
 });

@@ -35,6 +35,16 @@ const COMMON_OPTIONS = [
     choices: ['table', 'plain', 'json', 'yaml', 'md', 'csv'],
   },
   {
+    flags: '-o, --output-file <path>',
+    name: 'output-file',
+    help: 'Save rendered output to a file (or directory) instead of stdout; for ask commands this is the conversation base dir',
+  },
+  {
+    flags: '--no-save',
+    name: 'no-save',
+    help: 'Skip automatic conversation transcript saving (ask commands save by default)',
+  },
+  {
     flags: '--trace <mode>',
     name: 'trace',
     help: 'Trace capture: off, on, retain-on-failure',

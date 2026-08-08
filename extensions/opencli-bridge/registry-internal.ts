@@ -1,5 +1,6 @@
 import { Strategy, cli, getRegistry } from '../../dist/src/registry.js';
 export { Strategy, cli, getRegistry };
+export { conversationIdFromUrl, withConversationMeta, type ConversationMeta } from '../../dist/src/conversation-id.js';
 export {
   CliError,
   BrowserConnectError,

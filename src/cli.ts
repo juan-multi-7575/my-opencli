@@ -716,6 +716,7 @@ export function createProgram(BUILTIN_CLIS: string, USER_CLIS: string): Command 
     .command('list')
     .description('List all available CLI commands')
     .option('-f, --format <fmt>', 'Output format: table, json, yaml, md, csv', 'table')
+    .option('-o, --output-file <path>', 'Save rendered output to a file instead of stdout')
     .action((opts) => {
       const registry = getRegistry();
       const commands = [...new Set(registry.values())].sort((a, b) => fullName(a).localeCompare(fullName(b)));
@@ -742,6 +743,7 @@ export function createProgram(BUILTIN_CLIS: string, USER_CLIS: string): Command 
                      ...(isStructured ? ['columns', 'domain'] : [])],
           title: 'opencli/list',
           source: 'opencli list',
+          ...(typeof opts.outputFile === 'string' ? { output: opts.outputFile } : {}),
         });
         return;
       }
@@ -833,6 +835,7 @@ export function createProgram(BUILTIN_CLIS: string, USER_CLIS: string): Command 
     .command('list')
     .description('List bundled opencli-* skills')
     .option('-f, --format <fmt>', 'Output format: table, json, yaml, md, csv', 'table')
+    .option('-o, --output-file <path>', 'Save rendered output to a file instead of stdout')
     .action((opts) => {
       const rows = listOpenCliSkills();
       renderOutput(rows, {
@@ -841,6 +844,7 @@ export function createProgram(BUILTIN_CLIS: string, USER_CLIS: string): Command 
         columns: ['name', 'description', 'version', 'path'],
         title: 'opencli/skills/list',
         source: 'opencli skills list',
+        ...(typeof opts.outputFile === 'string' ? { output: opts.outputFile } : {}),
       });
     });
 
@@ -876,6 +880,7 @@ export function createProgram(BUILTIN_CLIS: string, USER_CLIS: string): Command 
     .argument('[target]', 'site or site/name')
     .option('--site <site>', 'Limit audit to one site')
     .option('-f, --format <fmt>', 'Output format: table, json, yaml', 'table')
+    .option('-o, --output-file <path>', 'Save rendered output to a file instead of stdout')
     .option('--strict', 'Exit non-zero when violations are found', false)
     .action(async (target, opts) => {
       const { runConventionAudit, renderConventionAuditText } = await import('./convention-audit.js');
@@ -886,7 +891,7 @@ export function createProgram(BUILTIN_CLIS: string, USER_CLIS: string): Command 
       });
       const fmt = String(opts.format ?? 'table').toLowerCase();
       if (fmt === 'json' || fmt === 'yaml' || fmt === 'yml') {
-        renderOutput(report, { fmt });
+        renderOutput(report, { fmt, ...(typeof opts.outputFile === 'string' ? { output: opts.outputFile } : {}) });
       } else {
         console.log(renderConventionAuditText(report));
       }
@@ -3120,6 +3125,7 @@ cli({
           columns: ['name', 'commands', 'source'],
           title: 'opencli/plugins',
           source: 'opencli plugin list',
+          ...(typeof opts.outputFile === 'string' ? { output: opts.outputFile } : {}),
         });
         return;
       }
@@ -3445,6 +3451,7 @@ cli({
     .command('list')
     .description('List registered external CLIs')
     .option('-f, --format <fmt>', 'Output format: table, json, yaml, md, csv', 'table')
+    .option('-o, --output-file <path>', 'Save rendered output to a file instead of stdout')
     .action((opts) => {
       const rows = loadExternalClis().map((ext) => ({
         name: ext.name,
@@ -3460,6 +3467,7 @@ cli({
         columns: ['name', 'package', 'binary', 'installed', 'description', 'homepage', 'tags'],
         title: 'opencli/external/list',
         source: 'opencli external list',
+        ...(typeof opts.outputFile === 'string' ? { output: opts.outputFile } : {}),
       });
     });
 

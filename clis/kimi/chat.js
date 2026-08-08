@@ -1,6 +1,6 @@
 // Chat lifecycle + per-message actions for Kimi.
 
-import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
+import { cli, Strategy, withConversationMeta, conversationIdFromUrl } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     ArgumentError,
     CommandExecutionError,
@@ -459,11 +459,15 @@ cli({
         if (!latestText) {
             throw new TimeoutError('kimi ask', timeoutSec, 'No new Kimi assistant reply was visible before the timeout.');
         }
-        return [{
+        return withConversationMeta([{
             Status: 'reply-received',
             Length: String(text.length),
             WaitedSeconds: String(elapsed),
             ReplyPreview: latestText.slice(0, 300),
-        }];
+        }], {
+            id: conversationIdFromUrl(await page.getCurrentUrl?.() ?? ''),
+            url: await page.getCurrentUrl?.() ?? '',
+            response: latestText,
+        });
     },
 });
