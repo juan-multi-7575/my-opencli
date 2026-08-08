@@ -2,6 +2,5 @@
   "name": "opencli-bridge",
   "version": "1.0.0",
   "dependencies": {
-    "@jackwener/opencli": "1.8.6"
   }
 }
