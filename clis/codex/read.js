@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { conversationSelectionArgs, openCodexConversation } from './sidebar.js';
 export const readCommand = cli({
     site: 'codex',

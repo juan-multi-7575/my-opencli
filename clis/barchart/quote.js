@@ -2,7 +2,7 @@
  * Barchart stock quote — price, volume, market cap, P/E, EPS, and key metrics.
  * Auth: CSRF token from <meta name="csrf-token"> + session cookies.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError } from '@jackwener/opencli/errors';
 cli({
     site: 'barchart',

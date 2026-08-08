@@ -2,7 +2,7 @@
 //
 // Endpoint: GET /<location>?format=j1  → returns weather[] (3 days max on free tier).
 // Each day is collapsed into a single row with min/max/avg + summary description.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { requireString, wttrFetch, pickWeatherDesc } from './utils.js';
 

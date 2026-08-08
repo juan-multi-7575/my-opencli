@@ -1,6 +1,6 @@
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import path from 'node:path';
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 const { mockHttpDownload, mockLoadDoubanSubjectPhotos, mockMkdirSync } = vi.hoisted(() => ({
     mockHttpDownload: vi.fn(),
     mockLoadDoubanSubjectPhotos: vi.fn(),

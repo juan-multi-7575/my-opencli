@@ -15,7 +15,7 @@
 //   add-context           — click Add context (opens file/url picker)
 //   revert                — click revert-button (per-message revert)
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     ArgumentError,
     CommandExecutionError,

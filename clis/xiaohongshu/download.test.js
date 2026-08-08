@@ -9,7 +9,7 @@ vi.mock('@jackwener/opencli/download/media-download', () => ({
 vi.mock('@jackwener/opencli/download', () => ({
     formatCookieHeader: mockFormatCookieHeader,
 }));
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { JSDOM } from 'jsdom';
 import './download.js';

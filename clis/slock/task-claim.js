@@ -7,7 +7,7 @@
 // Claim is independent of status: a task in any non-terminal state can be
 // (re)claimed. The server rejects done/closed.
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { authHeadersFragment } from './in-page.js';
 import { dispatchEvaluateResult } from './errors.js';

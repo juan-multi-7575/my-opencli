@@ -7,7 +7,7 @@
  * Requirements:
  *   - yt-dlp must be installed: pip install yt-dlp
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError, CommandExecutionError, EXIT_CODES } from '@jackwener/opencli/errors';
 import { checkYtdlp, sanitizeFilename } from '@jackwener/opencli/download';
 import { downloadMedia } from '@jackwener/opencli/download/media-download';

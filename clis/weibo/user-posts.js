@@ -1,7 +1,7 @@
 /**
  * Weibo user-posts — list posts from a user within an optional date range.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { unwrapEvaluateResult } from './utils.js';
 

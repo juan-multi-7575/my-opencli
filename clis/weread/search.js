@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { fetchWebApi, WEREAD_UA, WEREAD_WEB_ORIGIN } from './utils.js';
 function decodeNumericHtmlEntity(raw, radix) {

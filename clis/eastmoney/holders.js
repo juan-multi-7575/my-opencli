@@ -3,7 +3,7 @@
 //   opencli eastmoney holders 600519
 //   opencli eastmoney holders sh600519 --limit 10
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 
 /**

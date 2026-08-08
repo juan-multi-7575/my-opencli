@@ -9,7 +9,7 @@
 // Filtering: pass --status to narrow server-side; one of
 //   todo | in_progress | in_review | done | closed.
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { authHeadersFragment, channelResolveFragment } from './in-page.js';
 import { dispatchEvaluateResult } from './errors.js';

@@ -1,4 +1,4 @@
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import fs from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { __test__ } from './topic-content.js';

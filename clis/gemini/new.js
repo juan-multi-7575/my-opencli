@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { GEMINI_DOMAIN, startNewGeminiChat } from './utils.js';
 export const newCommand = cli({
     site: 'gemini',

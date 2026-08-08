@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { QIANWEN_DOMAIN, ensureOnQianwen, isLoggedIn, getCurrentSessionId, getModelLabel } from './utils.js';
 
 cli({

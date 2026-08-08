@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import { AuthRequiredError } from '@jackwener/opencli/errors';
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { __test__ } from './discussion.js';
 import './discussion.js';
 import { createPageMock } from '../test-utils.js';

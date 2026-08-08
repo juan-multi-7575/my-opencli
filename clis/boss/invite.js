@@ -1,7 +1,7 @@
 /**
  * BOSS直聘 invite — send interview invitation to a candidate.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { requirePage, navigateToChat, bossFetch, findFriendByUid, verbose } from './utils.js';
 cli({
     site: 'boss',

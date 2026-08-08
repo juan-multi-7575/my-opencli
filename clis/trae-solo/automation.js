@@ -9,7 +9,7 @@
 //   .button-eTMLAq.secondary  'Create manually'
 //   .button-eTMLAq.primary    'Create in chat'
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { switchToPanel } from './_actions.js';
 

@@ -5,7 +5,7 @@
  * New approach: navigate to `search.smzdm.com/?c=home&s=<keyword>&v=b`
  * and scrape the rendered DOM directly.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 
 function unwrapEvaluateResult(payload) {

@@ -1,5 +1,5 @@
 import { EmptyResultError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildTiebaPostCardsFromPagePc, buildTiebaPostItems, normalizeTiebaLimit, signTiebaPcParams, } from './utils.js';
 function getForumPageNumber(kwargs) {
     return Math.max(1, Number(kwargs.page || 1));

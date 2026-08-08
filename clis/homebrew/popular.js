@@ -5,7 +5,7 @@
 // rows round-trip into `homebrew formula` / `homebrew cask` via the `token`
 // column. The 30/90/365-day windows are the only ones the analytics endpoint
 // publishes — anything else 404s upstream.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import { BREW_BASE, brewFetch, parseInstallCount, requireBoundedInt, requireOneOf } from './utils.js';
 

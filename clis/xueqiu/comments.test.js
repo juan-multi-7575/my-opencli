@@ -14,7 +14,7 @@ vi.mock('@jackwener/opencli/logger', () => ({
     },
 }));
 import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { classifyXueqiuCommentsResponse, collectCommentRows, mergeUniqueCommentRows, normalizeCommentItem, normalizeSymbolInput, } from './comments.js';
 const command = getRegistry().get('xueqiu/comments');
 function createCommandPage(response) {

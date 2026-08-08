@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import './following.js';
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 
 /**
  * Extract the evaluate JS source from the following command pipeline

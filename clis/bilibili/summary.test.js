@@ -12,7 +12,7 @@ vi.mock('./utils.js', async (importOriginal) => ({
     resolveBvid: mockResolveBvid,
 }));
 
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './summary.js';
 
 describe('bilibili summary', () => {

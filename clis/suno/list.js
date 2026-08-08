@@ -3,7 +3,7 @@
  * discover clip ids without needing to remember them, and feed them to
  * `opencli suno download`.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     STUDIO_API,

@@ -7,7 +7,7 @@
  * sheet sits behind a ByteDance-signed XHR and is deliberately not faked.
  */
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError } from '@jackwener/opencli/errors';
 import {
     SPECS_COLUMNS,

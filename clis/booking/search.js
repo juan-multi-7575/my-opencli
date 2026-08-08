@@ -3,7 +3,7 @@ import {
   CommandExecutionError,
   EmptyResultError,
 } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 

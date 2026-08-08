@@ -1,7 +1,7 @@
 import * as path from 'node:path';
 import { formatCookieHeader } from '@jackwener/opencli/download';
 import { downloadMedia } from '@jackwener/opencli/download/media-download';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { cleanText } from './shared.js';
 import { extractAssetsForInput } from './assets.js';
 function extFromUrl(url, fallback) {

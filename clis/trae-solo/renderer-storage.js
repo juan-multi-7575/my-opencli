@@ -11,7 +11,7 @@
 //                       (Trae SOLO ships an @byted/ve-rtc DB for the
 //                        Volcengine RTC voice/video infra)
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     ArgumentError,
     CommandExecutionError,

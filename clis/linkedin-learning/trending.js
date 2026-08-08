@@ -4,7 +4,7 @@
  * returns a small set of carousels (e.g. "Top picks for you"); this
  * command flattens the cards across them into a ranked list.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const DOMAIN = 'www.linkedin.com';

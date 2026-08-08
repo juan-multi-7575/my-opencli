@@ -4,7 +4,7 @@
 //   opencli eastmoney kline 600519 --period day --limit 30
 //   opencli eastmoney kline sh600519 --period week --adjust forward
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 import { resolveSecid } from './_secid.js';
 

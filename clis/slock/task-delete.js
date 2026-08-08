@@ -7,7 +7,7 @@
 // require --confirm before issuing the DELETE. Without it, the command
 // returns a planned-action row and never touches the network.
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError } from '@jackwener/opencli/errors';
 import { authHeadersFragment } from './in-page.js';
 import { dispatchEvaluateResult } from './errors.js';

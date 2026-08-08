@@ -13,7 +13,7 @@ vi.mock('./utils.js', async (importOriginal) => ({
   prepareYoutubeApiPage: mockPrepare,
 }));
 
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './video.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));

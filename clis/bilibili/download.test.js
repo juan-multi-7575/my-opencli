@@ -21,7 +21,7 @@ vi.mock('@jackwener/opencli/download/media-download', () => ({
   downloadMedia: mockDownloadMedia,
 }));
 
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './download.js';
 
 /** view API 成功响应的最小骨架 */

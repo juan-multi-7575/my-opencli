@@ -5,7 +5,7 @@
 // suggestion list from `__UNIVERSAL_DATA_FOR_REHYDRATION__` first, then
 // top up via `/api/recommend/user/` if the warm snapshot is short.
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     EmptyResultError,
 } from '@jackwener/opencli/errors';

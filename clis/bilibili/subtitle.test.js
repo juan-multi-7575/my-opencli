@@ -7,7 +7,7 @@ vi.mock('./utils.js', async (importOriginal) => ({
     ...(await importOriginal()),
     apiGet: mockApiGet,
 }));
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './subtitle.js';
 describe('bilibili subtitle', () => {
     const command = getRegistry().get('bilibili/subtitle');

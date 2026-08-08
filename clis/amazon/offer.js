@@ -1,5 +1,5 @@
 import { CommandExecutionError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildProductUrl, buildProvenance, cleanText, extractAsin, isAmazonEntity, normalizeProductUrl, PRIMARY_PRICE_SELECTORS, parsePriceText, assertUsableState, gotoAndReadState, } from './shared.js';
 const OFFER_FACT_SELECTOR = [
     '#sellerProfileTriggerId',

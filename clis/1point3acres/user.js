@@ -5,7 +5,7 @@
  * post/thread/digest counts, credits, rice (大米 — site currency), profile URL.
  * Users can be queried by numeric uid or by username (both routes are public).
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { fetchHtml, decodeEntities, BASE } from './utils.js';
 

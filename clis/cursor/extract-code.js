@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 export const extractCodeCommand = cli({
     site: 'cursor',
     name: 'extract-code',

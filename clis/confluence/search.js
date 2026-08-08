@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { atlassianRequest, parseLimit, queryString, requireNonEmptyRows, requireString } from '../_atlassian/shared.js';
 import { confluenceConfig, confluenceResults, normalizeSearchResult, withSpaceCql } from './shared.js';
 

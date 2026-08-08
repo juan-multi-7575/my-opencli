@@ -28,7 +28,7 @@
 //     login-likely hint (xiaoe routinely renders an empty shell when
 //     the cookie has expired). No silent `return [{ content: '' }]`.
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 export const CONTENT_SELECTORS = [

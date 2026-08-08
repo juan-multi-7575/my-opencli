@@ -4,7 +4,7 @@
  * target, the API call is skipped and `not-following` is returned without
  * touching state.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { apiPost, fetchJson, getSelfUid, requireOkPayload, resolveUid } from './utils.js';
 

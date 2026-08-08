@@ -4,7 +4,7 @@ import * as path from 'node:path';
 import { JSDOM } from 'jsdom';
 import { describe, expect, it, vi } from 'vitest';
 import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { __test__ } from './reply.js';
 import { __test__ as utilsTest } from './utils.js';
 import { createPageMock } from '../test-utils.js';

@@ -40,7 +40,7 @@
  * https://www.douyin.com. The search results page renders an empty
  * skeleton for anonymous visitors, which we surface as AuthRequiredError.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 export const MAX_SEARCH_LIMIT = 30;

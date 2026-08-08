@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 // Apple Marketing Tools RSS API — public, no key required
 const CHARTS_URL = 'https://rss.marketingtools.apple.com/api/v2';

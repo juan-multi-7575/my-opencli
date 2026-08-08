@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { CommandExecutionError } from '@jackwener/opencli/errors';
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './attachment-url.js';
 
 function makePage(envelope) {

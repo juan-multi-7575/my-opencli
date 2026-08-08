@@ -5,7 +5,7 @@
  *   suggest3.sinajs.cn  — symbol search
  *   hq.sinajs.cn        — real-time quote
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 const MARKET_CN = '11';
 const MARKET_HK = '31';

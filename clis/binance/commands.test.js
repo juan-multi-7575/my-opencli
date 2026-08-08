@@ -1,4 +1,4 @@
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { executePipeline } from '@jackwener/opencli/pipeline';
 

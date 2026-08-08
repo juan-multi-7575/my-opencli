@@ -4,7 +4,7 @@
 // `flathub app` for full appstream detail. Note: the search hit's `id` is
 // underscored (e.g. `org_mozilla_firefox`); the actual reverse-DNS appId lives
 // at `app_id`. We surface the dotted form so it round-trips without translation.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     FLATHUB_API_BASE,

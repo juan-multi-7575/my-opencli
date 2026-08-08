@@ -1,5 +1,5 @@
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 
 const { mockRequestJson, mockLoadCredentials } = vi.hoisted(() => ({
     mockRequestJson: vi.fn(),

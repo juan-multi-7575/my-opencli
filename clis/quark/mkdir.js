@@ -1,5 +1,5 @@
 import { ArgumentError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { DRIVE_API, apiPost, findFolder } from './utils.js';
 cli({
     site: 'quark',

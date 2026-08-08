@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 export const screenshotCommand = cli({
     site: 'doubao-app',
     name: 'screenshot',

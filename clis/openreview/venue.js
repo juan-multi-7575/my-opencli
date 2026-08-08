@@ -7,7 +7,7 @@
  *
  * Invitations contain the literal `/-/` segment, so we use that to disambiguate.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { noteToRow, openreviewFetch, requireBoundedInt, requireNonNegativeInt } from './utils.js';
 

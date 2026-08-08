@@ -1,5 +1,5 @@
 // coingecko trending — top trending coins on CoinGecko (by user search activity).
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     CommandExecutionError,
     EmptyResultError,

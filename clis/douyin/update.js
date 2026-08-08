@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError } from '@jackwener/opencli/errors';
 import { browserFetch } from './_shared/browser-fetch.js';
 import { toUnixSeconds, validateTiming } from './_shared/timing.js';

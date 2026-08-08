@@ -6,7 +6,7 @@
  * Single-shot: the response echoes a `next.max_behot_time` cursor but does not
  * honour it, so a pagination flag would be a no-op.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     CommandExecutionError,
     EmptyResultError,

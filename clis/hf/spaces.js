@@ -4,7 +4,7 @@
 // of `hf models` / `hf datasets`. The Spaces API does not expose `trending` as
 // a sort key (verified live: returns "Invalid sort parameter"), so the allowed
 // sort set is narrower.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const SORT_OPTIONS = ['likes', 'created_at', 'last_modified'];

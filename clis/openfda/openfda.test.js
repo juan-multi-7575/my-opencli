@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, EmptyResultError, CommandExecutionError } from '@jackwener/opencli/errors';
 import './drug-label.js';
 import './food-recall.js';

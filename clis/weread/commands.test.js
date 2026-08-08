@@ -10,7 +10,7 @@ vi.mock('./utils.js', async () => {
         fetchPrivateApi: mockFetchPrivateApi,
     };
 });
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './book.js';
 import './highlights.js';
 import './notes.js';

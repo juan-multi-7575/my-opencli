@@ -1,7 +1,7 @@
 // hf paper — fetch a single Hugging Face paper page (mirrors arXiv id),
 // returning the full title / summary / upvote count / authors and the
 // AI-generated keyword list HF curates.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const ARXIV_ID_PATTERN = /^\d{4}\.\d{4,5}(?:v\d+)?$/;

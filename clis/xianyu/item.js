@@ -1,5 +1,5 @@
 import { AuthRequiredError, EmptyResultError, selectorError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { normalizeNumericId } from './utils.js';
 function buildItemUrl(itemId) {
     return `https://www.goofish.com/item?id=${encodeURIComponent(itemId)}`;

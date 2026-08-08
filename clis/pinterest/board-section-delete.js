@@ -1,5 +1,5 @@
 // Pinterest board-section-delete — remove a section from one of your boards (ApiResource/delete → /v3/board/sections/).
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError } from '@jackwener/opencli/errors';
 import { PINTEREST_BASE, resolveBoardTarget, pinterestResourceFetch, resolveBoardId, resolveSection } from './utils.js';
 

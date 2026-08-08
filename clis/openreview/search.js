@@ -1,7 +1,7 @@
 /**
  * OpenReview full-text search.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { noteToRow, openreviewFetch, requireBoundedInt } from './utils.js';
 

@@ -5,7 +5,7 @@
  * 1. Fetch all illust IDs from the user's profile
  * 2. Batch-fetch details for the most recent ones (max 48 IDs per request)
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { pixivFetch, BATCH_SIZE } from './utils.js';
 cli({

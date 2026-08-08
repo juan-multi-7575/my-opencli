@@ -8,7 +8,7 @@
  * discovery step for the id-based commands (see `fetchPoiSearch` in utils).
  */
 import { EmptyResultError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { fetchPoiSearch, flattenPoiResults, mapSearchRow, parseKeyword, parseListLimit } from './utils.js';
 
 cli({

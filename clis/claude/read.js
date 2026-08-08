@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import { CLAUDE_DOMAIN, ensureOnClaude, getVisibleMessages, ensureClaudeLogin } from './utils.js';
 

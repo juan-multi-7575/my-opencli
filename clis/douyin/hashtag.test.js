@@ -6,7 +6,7 @@ const { browserFetchMock } = vi.hoisted(() => ({
 vi.mock('./_shared/browser-fetch.js', () => ({
     browserFetch: browserFetchMock,
 }));
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './hashtag.js';
 describe('douyin hashtag', () => {
     beforeEach(() => {

@@ -9,7 +9,7 @@ import {
     CommandExecutionError,
     EmptyResultError,
 } from '@jackwener/opencli/errors';
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     SEARCH_COLUMNS,
     SHOP_COLUMNS,

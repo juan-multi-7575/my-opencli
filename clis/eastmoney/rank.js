@@ -4,7 +4,7 @@
 //   opencli eastmoney rank
 //   opencli eastmoney rank --market cyb --sort turnover --limit 30
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 
 const MARKETS = {

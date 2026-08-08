@@ -7,7 +7,7 @@
  * a real series_id) and surface name / brand / official + dealer price.
  */
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     DCD_BASE,

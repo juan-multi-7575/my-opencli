@@ -10,7 +10,7 @@
  *      letter (M=一等座, O=二等座, A9=商务座, A1=硬座, A3=硬卧,
  *      A4=软卧, F=动卧, P=特等座, WZ=无座, etc.)
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { fetchStationBundle, mintSession, resolveStation, validateDate } from './utils.js';
 

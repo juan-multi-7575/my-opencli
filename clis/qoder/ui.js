@@ -12,7 +12,7 @@
 //   account         — read user info (the "leo"-style button at bottom)
 //   more-actions    — open More Actions menu + list items
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     ArgumentError,
     CommandExecutionError,

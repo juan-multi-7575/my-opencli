@@ -7,7 +7,7 @@
 //   opencli eastmoney quote 600000 --fields all
 //   opencli eastmoney quote "sh600000,sz000001,00700.HK"
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 import { resolveSecid, splitSymbols } from './_secid.js';
 

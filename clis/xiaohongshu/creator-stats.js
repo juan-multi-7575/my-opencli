@@ -7,7 +7,7 @@
  *
  * Requires: logged into creator.xiaohongshu.com in Chrome.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 cli({
     site: 'xiaohongshu',

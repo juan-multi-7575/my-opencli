@@ -1,5 +1,5 @@
 // coingecko coin — fetch a single cryptocurrency's market detail by id.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     ArgumentError,
     CommandExecutionError,

@@ -9,7 +9,7 @@
  * bookable inventory live on the linked page and are out of scope here.
  */
 import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { WAIT_FOR_DEALS_JS, buildDealsExtractJs, buildDealsUrl, parseListLimit } from './utils.js';
 
 cli({

@@ -7,7 +7,7 @@
  * venue / year / type, DOI, and the open-access landing page when one
  * exists.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     SEARCH_COLUMNS,

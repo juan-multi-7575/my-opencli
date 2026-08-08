@@ -10,7 +10,7 @@
  *   opencli twitter download elonmusk --limit 50 --output ./twitter
  *   opencli twitter download --tweet-url https://x.com/xxx/status/123 --output ./twitter
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, AuthRequiredError, CliError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { formatCookieHeader } from '@jackwener/opencli/download';
 import { downloadMedia } from '@jackwener/opencli/download/media-download';

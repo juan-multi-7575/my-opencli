@@ -5,7 +5,7 @@
  * the search results page and extracts data from rendered DOM elements.
  * Ref: https://github.com/jackwener/opencli/issues/10
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 /**
  * Wait for search results or login wall using MutationObserver (max 5s).

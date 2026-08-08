@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { DOUBAO_DOMAIN, getDoubaoVisibleTurns } from './utils.js';
 export const readCommand = cli({
     site: 'doubao',

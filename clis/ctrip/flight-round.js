@@ -10,7 +10,7 @@
  * the outbound flight shown; picking the return leg is a second step out of scope.
  */
 import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildFlightExtractJs, buildScrollUntilJs, parseIataCode, parseIsoDate, parseListLimit } from './utils.js';
 
 const ROUND_CARD_SELECTOR = '.flight-item';

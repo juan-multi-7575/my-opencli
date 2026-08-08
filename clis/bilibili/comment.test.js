@@ -14,7 +14,7 @@ vi.mock('./utils.js', async (importOriginal) => ({
     resolveUid: mockResolveUid,
 }));
 
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './comment.js';
 
 describe('bilibili comment', () => {

@@ -9,7 +9,7 @@
  * in issue #1628.
  */
 import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { TWITTER_BEARER_TOKEN, applyTopByEngagement } from './utils.js';
 import { describeTwitterApiError } from './shared.js';
 

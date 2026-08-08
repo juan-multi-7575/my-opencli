@@ -1,6 +1,6 @@
 import { CDPBridge } from '@jackwener/opencli/browser/cdp';
 import { ArgumentError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { activityScript } from './utils.js';
 
 function normalizeEndpoint(value) {

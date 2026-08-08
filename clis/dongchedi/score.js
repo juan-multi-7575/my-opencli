@@ -7,7 +7,7 @@
  * Scores are rescaled from x100 ints to /5 floats (422 -> 4.22).
  */
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     SCORE_COLUMNS,

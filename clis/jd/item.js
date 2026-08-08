@@ -4,7 +4,7 @@
  * 依赖: 需要在 Chrome 已登录京东
  * 用法: opencli jd item 100291143898
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 function normalizePositiveInt(value, fallback) {
     const n = Number(value);

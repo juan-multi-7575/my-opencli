@@ -2,7 +2,7 @@
 //
 // Hits `/api/user/<username>`. Returns the agent-useful slice: handle, title,
 // flags (online / patron), counts, top-rated perf, profile bio.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import { LICHESS_BASE, formatTimestamp, lichessFetch, requireUsername } from './utils.js';
 

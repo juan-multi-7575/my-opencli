@@ -7,7 +7,7 @@
  * `pageFetchJson` helper runs inside the page so the WAF sees a real browser.
  */
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 import {
     WE_ORIGIN, SEARCH_COLUMNS,

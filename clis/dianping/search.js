@@ -11,7 +11,7 @@
  * a JSDOM-against-frozen-fixture unit test (see dianping.test.js).
  */
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import {
     SEARCH_COLUMNS,

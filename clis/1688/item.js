@@ -1,5 +1,5 @@
 import { CommandExecutionError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { isRecord } from '@jackwener/opencli/utils';
 import { assertAuthenticatedState, buildDetailUrl, buildProvenance, canonicalizeSellerUrl, cleanMultilineText, cleanText, extractLocation, extractMemberId, extractOfferId, extractShopId, gotoAndReadState, normalizePriceTiers, parseMoqText, parsePriceText, toNumber, uniqueNonEmpty, } from './shared.js';
 function normalizeItemPayload(payload) {

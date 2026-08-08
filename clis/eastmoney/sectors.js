@@ -3,7 +3,7 @@
 //   opencli eastmoney sectors
 //   opencli eastmoney sectors --type concept --sort money-flow --limit 30
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 
 const SECTOR_TYPES = {

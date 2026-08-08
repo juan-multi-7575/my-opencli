@@ -15,7 +15,7 @@
 //                            on /chat/history (each conv has an inline Edit)
 //   user-rules             — read/write the rules from /settings (best-effort)
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     ArgumentError,
     CommandExecutionError,

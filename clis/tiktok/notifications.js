@@ -4,7 +4,7 @@
 // text content" pipeline. Calls `/api/notice/multi/?notice_type=N` directly
 // from inside the live page so cookies + msToken get forwarded by the browser.
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     EmptyResultError,
 } from '@jackwener/opencli/errors';

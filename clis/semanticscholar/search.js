@@ -4,7 +4,7 @@
 // paperId (round-trips into `semanticscholar paper`), DOI, title, year,
 // first author, citationCount. The bulk search endpoint is the rate-limited
 // surface, so `utils.s2Fetch` retries once on 429.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     S2_GRAPH_BASE,

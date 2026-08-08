@@ -1,5 +1,5 @@
 import { CommandExecutionError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildProvenance, buildSearchUrl, cleanText, extractAsin, normalizeProductUrl, parsePriceText, parseRatingValue, parseReviewCount, assertUsableState, gotoAndReadState, } from './shared.js';
 function normalizeSearchCandidate(candidate, rank, sourceUrl) {
     const productUrl = normalizeProductUrl(candidate.href);

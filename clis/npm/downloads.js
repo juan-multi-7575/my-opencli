@@ -3,7 +3,7 @@
 // Hits `api.npmjs.org/downloads/range/<period>/<pkg>`. Default window is the
 // last 7 days (one row per day). Use `--period last-month` for 30 days, or
 // pass a custom `YYYY-MM-DD:YYYY-MM-DD` range.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { NPM_API, npmFetch, requirePackageName } from './utils.js';
 

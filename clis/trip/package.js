@@ -11,7 +11,7 @@
  * rides on the hotel checkout date.
  */
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { fetchPackageSearch, mapPackageRow, parseIsoDate, parseKeyword, parseListLimit, resolvePackageCity } from './utils.js';
 
 function parseAdults(raw) {

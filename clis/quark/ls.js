@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { findFolder, formatSize, listMyDrive, } from './utils.js';
 async function buildTree(page, pdirFid, parentPath, depth, maxDepth, dirsOnly) {
     if (depth > maxDepth)

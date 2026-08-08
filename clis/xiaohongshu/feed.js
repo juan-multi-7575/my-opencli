@@ -12,7 +12,7 @@
  * (`noteCard.displayTitle`, `interactInfo.likedCount`). This is the SSR store
  * shape, not the snake_case `/homefeed` API response the old tap intercepted.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 function parseLimit(raw) {

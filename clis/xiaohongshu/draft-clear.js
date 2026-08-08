@@ -1,5 +1,5 @@
 import { CommandExecutionError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     DRAFT_DB_NAME,
     STORE_NAME_MAP,

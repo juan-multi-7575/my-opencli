@@ -3,7 +3,7 @@
  * Matches frontend workspace-generator.tsx for qwen-image-edit model.
  */
 import * as path from 'node:path';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 import { log } from '@jackwener/opencli/logger';
 import { YOLLOMI_DOMAIN, yollomiPost, downloadOutput, fmtBytes } from './utils.js';

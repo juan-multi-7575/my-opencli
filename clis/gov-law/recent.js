@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { clampInt } from '../_shared/common.js';
 import { extractLawResults, navigateViaVueRouter } from './shared.js';
 

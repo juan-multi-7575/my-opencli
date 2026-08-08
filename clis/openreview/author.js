@@ -8,7 +8,7 @@
  * Uses the public v2 endpoint `/notes?content.authorids=~<profile-id>`,
  * which returns the same note shape as `paper`, sorted by `cdate:desc`.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     noteToRow,

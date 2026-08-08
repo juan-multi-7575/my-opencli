@@ -1,5 +1,5 @@
 // Pinterest pin — details of a single pin (PinResource, one row).
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import { PINTEREST_BASE, parsePinId, pickPinImage, pinterestResourceFetch } from './utils.js';
 

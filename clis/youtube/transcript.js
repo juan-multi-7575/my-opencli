@@ -9,7 +9,7 @@
  *   --mode grouped (default): sentences merged, speaker detection, chapters
  *   --mode raw: every caption segment as-is with precise timestamps
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { extractJsonAssignmentFromHtml, parseVideoId, prepareYoutubeApiPage } from './utils.js';
 import { groupTranscriptSegments, formatGroupedTranscript, } from './transcript-group.js';
 import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';

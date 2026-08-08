@@ -3,7 +3,7 @@
 //   opencli eastmoney convertible
 //   opencli eastmoney convertible --sort premium --limit 30
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const SORTS = {

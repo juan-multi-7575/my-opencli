@@ -1,7 +1,7 @@
 /**
  * 36kr latest news — public RSS feed, no browser needed.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 cli({
     site: '36kr',
     name: 'news',

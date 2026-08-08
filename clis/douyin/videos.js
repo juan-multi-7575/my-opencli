@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError } from '@jackwener/opencli/errors';
 import { browserFetch } from './_shared/browser-fetch.js';
 const WORK_LIST_URL = 'https://creator.douyin.com/janus/douyin/creator/pc/work_list';

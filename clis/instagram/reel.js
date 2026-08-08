@@ -2,7 +2,7 @@ import * as fs from 'node:fs';
 import * as os from 'node:os';
 import * as path from 'node:path';
 import { Page as BrowserPage } from '@jackwener/opencli/browser/page';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { buildClickActionJs, buildEnsureComposerOpenJs, buildInspectUploadStageJs, } from './post.js';
 import { resolveInstagramRuntimeInfo } from './_shared/runtime-info.js';

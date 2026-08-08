@@ -1,6 +1,6 @@
 // Quest (= conversation) lifecycle commands: new / send / ask.
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     ArgumentError,
     CommandExecutionError,

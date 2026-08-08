@@ -3,7 +3,7 @@
  * Reuses the DOM-extraction IIFE from `../xiaohongshu/note.js`; only the
  * web host and cookie root differ.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { NOTE_EXTRACT_JS } from '../xiaohongshu/note.js';
 import { buildNoteUrl, parseNoteId } from '../xiaohongshu/note-helpers.js';

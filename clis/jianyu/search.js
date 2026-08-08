@@ -1,7 +1,7 @@
 /**
  * Jianyu search — browser DOM extraction from Jianyu bid search page.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { AuthRequiredError } from '@jackwener/opencli/errors';
 import { buildSearchCandidates, cleanText, dedupeCandidates, detectAuthPrompt, normalizeDate, searchRowsFromEntries, } from './shared/china-bid-search.js';
 import { toProcurementSearchRecords } from './shared/procurement-contract.js';

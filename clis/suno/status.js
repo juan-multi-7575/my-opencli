@@ -3,7 +3,7 @@
  * breakdown, captcha readiness. Lets agents pre-flight before spending
  * generate credits.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import {
     SUNO_DOMAIN,

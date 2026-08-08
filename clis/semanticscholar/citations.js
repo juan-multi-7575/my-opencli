@@ -3,7 +3,7 @@
 // Hits `/paper/{ref}/citations?fields=...`. The endpoint returns
 // `{ data: [{ citingPaper: { ... } }] }`; we unwrap to the citing-paper rows
 // and surface fields that round-trip into `semanticscholar paper <paperId>`.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     S2_GRAPH_BASE,

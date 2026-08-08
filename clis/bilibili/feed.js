@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { apiGet, payloadData, resolveUid, stripHtml } from './utils.js';
 
 /** Map bilibili dynamic type to readable short name */

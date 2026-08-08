@@ -1,4 +1,4 @@
-import { cli } from '@jackwener/opencli/registry';
+import { cli } from '../../../extensions/opencli-bridge/registry-internal';
 import { createRankingCliOptions } from './rankings.js';
 cli(createRankingCliOptions({
     commandName: 'new-releases',

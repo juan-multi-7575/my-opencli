@@ -36,7 +36,7 @@
 //   - Empty list (after settle + auth check passes) → `EmptyResultError`,
 //     never silent `[]`.
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     ArgumentError,
     AuthRequiredError,

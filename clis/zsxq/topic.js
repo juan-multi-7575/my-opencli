@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 import { getActiveGroupId, browserJsonRequest, ensureZsxqAuth, ensureZsxqPage, fetchFirstJson, getCommentsFromResponse, getTopicFromResponse, getTopicUrl, summarizeComments, toTopicRow, } from './utils.js';
 cli({

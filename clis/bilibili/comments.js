@@ -3,7 +3,7 @@
  * Top-level comments come from /x/v2/reply/main (WBI-signed); with --parent,
  * the replies nested under a given comment come from /x/v2/reply/reply.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { apiGet, resolveBvid } from './utils.js';
 

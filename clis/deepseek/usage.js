@@ -2,7 +2,7 @@
 // Reads data from the https://platform.deepseek.com/usage page.
 // Uses the internal API for account summary + innerText extraction for time-dimension cards.
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 
 const DS_DOMAIN = 'platform.deepseek.com';

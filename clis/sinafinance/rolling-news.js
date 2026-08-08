@@ -1,7 +1,7 @@
 /**
  * Sinafinance rolling news feed
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 cli({
     site: 'sinafinance',
     name: 'rolling-news',

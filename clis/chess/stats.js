@@ -2,7 +2,7 @@
  * Chess.com player stats across game kinds (rapid / blitz / bullet /
  * daily / chess960 / etc) via the public stats endpoint.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import { chessApi, validateUsername, summarizeStats } from './utils.js';
 

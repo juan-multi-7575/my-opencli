@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { fetchIssue, jiraConfig, jiraRowsOrEmpty, normalizeAttachment, requireIssueKey } from './shared.js';
 import { requirePayloadArray } from '../_atlassian/shared.js';
 

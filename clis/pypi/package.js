@@ -4,7 +4,7 @@
 // projection: name, latest version, summary, author, license, homepage,
 // project URLs, requires-python, last-modified time. Download stats are
 // intentionally separate (see `pypi downloads`).
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import { PYPI_BASE, pypiFetch, requirePackageName } from './utils.js';
 

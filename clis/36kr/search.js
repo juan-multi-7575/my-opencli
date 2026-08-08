@@ -3,7 +3,7 @@
  *
  * Navigates to the 36kr search results page and scrapes rendered articles.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 cli({
     site: '36kr',

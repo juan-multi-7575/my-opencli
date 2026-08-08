@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CLAUDE_DOMAIN, ensureOnClaude, getPageState } from './utils.js';
 
 export const statusCommand = cli({

@@ -3,7 +3,7 @@
  * navigates the bound session to the `/analysis` form of the game URL
  * and reports the resolved page URL.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { parseGameUrl } from './utils.js';
 

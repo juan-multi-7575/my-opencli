@@ -1,5 +1,5 @@
 // github-trending — repositories from https://github.com/trending (public HTML, no auth).
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const SINCE = {

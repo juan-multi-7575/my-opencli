@@ -5,7 +5,7 @@
 // last-week / last-month totals as a single row. Pass `--period overall` to
 // hit `/api/packages/<pkg>/overall` for the full daily history (one row per
 // day).
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { PYPISTATS_BASE, pypiFetch, requirePackageName } from './utils.js';
 

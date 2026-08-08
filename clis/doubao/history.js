@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { DOUBAO_DOMAIN, getDoubaoConversationList } from './utils.js';
 export const historyCommand = cli({
     site: 'doubao',

@@ -4,7 +4,7 @@
  * Navigates to a Product Hunt category page and scrapes the top-rated products.
  * Shows all-time best products for a category (ranked by review score, not daily votes).
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 import { PRODUCTHUNT_CATEGORY_SLUGS } from './utils.js';
 cli({

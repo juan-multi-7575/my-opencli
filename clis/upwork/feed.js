@@ -10,7 +10,7 @@
  * onboarding flow and never see the feed state.
  */
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     CommandExecutionError,
     EmptyResultError,

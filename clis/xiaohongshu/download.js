@@ -6,7 +6,7 @@
  *
  * Accepts a full xiaohongshu.com URL with xsec_token or an xhslink short link.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { formatCookieHeader } from '@jackwener/opencli/download';
 import { downloadMedia } from '@jackwener/opencli/download/media-download';
 import { CliError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';

@@ -3,7 +3,7 @@
 // Region values: africa / americas / asia / europe / oceania / antarctic.
 // Subregions ("eastern asia") are not supported by this command — they go
 // through the v3.1 `subregion/` endpoint which behaves identically.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     COUNTRY_FIELDS,

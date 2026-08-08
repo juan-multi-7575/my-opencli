@@ -13,7 +13,7 @@
  *   opencli web read --url "https://www.anthropic.com/research/..." --output ./articles
  *   opencli web read --url "https://..." --download-images false
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { downloadArticle } from '@jackwener/opencli/download/article-download';
 
 const NETWORK_IDLE_QUIET_MS = 1000;

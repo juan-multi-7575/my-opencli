@@ -9,7 +9,7 @@
  * the booking step; the row `price` is the starting per-person estimate shown.
  */
 import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildTourSearchJs, buildTourSearchUrl, parseKeyword, parseListLimit } from './utils.js';
 
 const TOUR_TABS = { private: 'privateTours', group: 'groupTours' };

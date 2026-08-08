@@ -1,5 +1,5 @@
 import { execSync } from 'node:child_process';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError, ConfigError } from '@jackwener/opencli/errors';
 export const statusCommand = cli({
     site: 'chatgpt-app',

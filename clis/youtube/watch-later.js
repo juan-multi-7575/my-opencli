@@ -2,7 +2,7 @@
  * YouTube watch-later — the user's Watch Later queue.
  * Navigates to /playlist?list=WL and reads ytInitialData directly.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { FETCH_BROWSE_FN, extractPlaylistVideos } from './utils.js';
 import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 

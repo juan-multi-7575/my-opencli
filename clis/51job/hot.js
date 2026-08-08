@@ -5,7 +5,7 @@
  * own ranked recommendation list (up to ~999 for most regions).
  */
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 import {
     WE_ORIGIN, SEARCH_COLUMNS, SORT_CODES,

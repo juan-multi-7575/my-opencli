@@ -3,7 +3,7 @@
 //   opencli eastmoney longhu
 //   opencli eastmoney longhu --date 2025-12-10 --limit 20
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CliError } from '@jackwener/opencli/errors';
 
 function defaultTradeDate() {

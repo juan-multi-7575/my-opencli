@@ -19,7 +19,7 @@
  *   - per answer: an `ANSWER` row plus its `A-COMMENT` rows indented under it
  *   - the accepted answer (if any) is surfaced first and tagged `accepted=true`
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const SE_API_BASE = 'https://api.stackexchange.com/2.3';

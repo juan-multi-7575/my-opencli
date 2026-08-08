@@ -1,5 +1,5 @@
 import { AuthRequiredError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 cli({
     site: 'jd',
     name: 'cart',

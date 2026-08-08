@@ -14,7 +14,7 @@
 //     gate ②). The fragment is inlined here for now (R3 backlog: consolidate
 //     into a shared shortIdResolveFragment).
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError } from '@jackwener/opencli/errors';
 import { authHeadersFragment, resolveShortIdFragment } from './in-page.js';
 import { dispatchEvaluateResult } from './errors.js';

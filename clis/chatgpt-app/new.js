@@ -1,5 +1,5 @@
 import { execSync } from 'node:child_process';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError, ConfigError, getErrorMessage } from '@jackwener/opencli/errors';
 import { isTemporaryChatVisible } from './ax.js';
 export const newCommand = cli({

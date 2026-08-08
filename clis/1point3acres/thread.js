@@ -5,7 +5,7 @@
  * main post; the rest are replies. Columns are shaped so `--limit 1` gives
  * just the main post, and larger limits walk down the thread.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { fetchHtml, decodeEntities, stripHtml, truncate, normalizePositiveInteger, BASE } from './utils.js';
 

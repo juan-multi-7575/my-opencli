@@ -1,5 +1,5 @@
 // archive snapshots: Wayback Machine CDX history for a URL.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     ArgumentError,
     CommandExecutionError,

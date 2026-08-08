@@ -3,7 +3,7 @@
  * Reuses the DOM-extraction IIFE from `../xiaohongshu/download.js`; that
  * IIFE's CDN allowlist already accepts rednote-hosted media URLs.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { formatCookieHeader } from '@jackwener/opencli/download';
 import { downloadMedia } from '@jackwener/opencli/download/media-download';
 import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';

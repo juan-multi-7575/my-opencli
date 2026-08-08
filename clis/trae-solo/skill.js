@@ -15,7 +15,7 @@
 // they can prove install/uninstall/run/toggle postconditions instead of only
 // proving a button click.
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     ArgumentError,
     CommandExecutionError,

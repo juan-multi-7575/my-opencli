@@ -1,5 +1,5 @@
 // Pinterest board-update — rename or re-configure one of your boards (BoardResource/update).
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError } from '@jackwener/opencli/errors';
 import { PINTEREST_BASE, resolveBoardTarget, pinterestResourceUpdate, resolveBoardId } from './utils.js';
 

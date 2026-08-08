@@ -3,7 +3,7 @@
 // Hits the public storesearch API (`/api/storesearch/?term=…`). Returns
 // matched apps with id / name / price / metascore / platform support so
 // the row's `id` round-trips into `steam app`.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     STEAM_STORE,

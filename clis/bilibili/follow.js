@@ -6,7 +6,7 @@
  * Pre-checks the current relation so the result row reports `already-following`
  * accurately instead of relying on the modify API's idempotent silent success.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { apiPost, fetchJson, getSelfUid, requireOkPayload, resolveUid } from './utils.js';
 

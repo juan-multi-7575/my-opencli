@@ -7,7 +7,7 @@
  * is heavily obfuscated and changes shape per A/B bucket).
  */
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError, CommandExecutionError } from '@jackwener/opencli/errors';
 import {
     SEARCH_COLUMNS,

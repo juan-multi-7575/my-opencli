@@ -4,7 +4,7 @@
  * Backed by the public hot-event/hot-board endpoint which serves the same JSON
  * the toutiao.com homepage hot panel renders. No authentication required.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     CommandExecutionError,
     EmptyResultError,

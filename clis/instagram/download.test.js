@@ -1,6 +1,6 @@
 import * as os from 'node:os';
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 const { mockHttpDownload, logSpy } = vi.hoisted(() => ({
     mockHttpDownload: vi.fn(),

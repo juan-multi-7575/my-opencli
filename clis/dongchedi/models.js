@@ -6,7 +6,7 @@
  * `info.car_id`. Year-group header rows (no car_id) are skipped.
  */
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     MODELS_COLUMNS,

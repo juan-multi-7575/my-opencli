@@ -6,7 +6,7 @@
  * own response (12306 already masks the ID number server-side; this
  * adapter never decodes that mask).
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { isAuthLikePayload, maskEmail, maskMobile, maskChineseName, require12306Login, requireEvaluateObject } from './utils.js';
 

@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError } from '@jackwener/opencli/errors';
 import { GEMINI_DOMAIN, clickGeminiConversationByTitle, exportGeminiDeepResearchReport, getLatestGeminiAssistantResponse, getGeminiPageState, parseGeminiConversationUrl, parseGeminiTitleMatchMode, readGeminiSnapshot, resolveGeminiConversationForQuery, waitForGeminiTranscript, getGeminiConversationList, } from './utils.js';
 const DEEP_RESEARCH_WAITING_MESSAGE = 'Deep Research is still running. Please wait and retry later.';

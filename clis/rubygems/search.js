@@ -3,7 +3,7 @@
 // Hits `https://rubygems.org/api/v1/search.json?query=…&page=1`. Returns an
 // agent-useful projection: gem name (round-trips into `rubygems gem`), latest
 // version, lifetime downloads, license(s), author(s), short info, project URL.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import { GEMS_BASE, gemsFetch, requireBoundedInt, requireString } from './utils.js';
 

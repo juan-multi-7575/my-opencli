@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { parseZhihuUser } from './user-arg.js';
 import { fetchZhihuList, validateLimit } from './paginate.js';

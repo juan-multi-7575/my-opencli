@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ConfigError } from '@jackwener/opencli/errors';
 import { activateChatGPT, selectModel, MODEL_CHOICES } from './ax.js';
 export const modelCommand = cli({

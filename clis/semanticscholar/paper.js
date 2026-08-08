@@ -4,7 +4,7 @@
 // Semantic Scholar versus the existing arxiv/openalex/dblp/pubmed adapters:
 // `influentialCitationCount` (their gated "important" count) and `tldr.text`
 // (LLM-generated one-line summary).
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError } from '@jackwener/opencli/errors';
 import {
     S2_GRAPH_BASE,

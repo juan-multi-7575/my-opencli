@@ -5,7 +5,7 @@
 //   cookies         — list JS-visible cookies
 //   idb-list        — list IndexedDB databases on kimi.com
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     ArgumentError,
     CommandExecutionError,

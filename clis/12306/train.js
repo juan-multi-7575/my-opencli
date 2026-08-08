@@ -5,7 +5,7 @@
  * Requires the internal `train_no` returned by `12306 trains`
  * (`24000000G10L`), not the public train code (`G1`).
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { fetchStationBundle, mintSession, resolveStation, validateDate } from './utils.js';
 

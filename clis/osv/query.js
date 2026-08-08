@@ -3,7 +3,7 @@
 // Hits `POST https://api.osv.dev/v1/query` with `{package:{name,ecosystem}, version?}`.
 // Returns one row per vulnerability ranked by published date (newest first), so
 // agents can answer "is package X@Y vulnerable?" in one shot.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     OSV_BASE, osvPost, requireBoundedInt, requireEcosystem, requireString, severityLabel, trimDate,

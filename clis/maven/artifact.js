@@ -5,7 +5,7 @@
 // Returns the agent-useful projection: each version + publish timestamp +
 // packaging. If a specific `:version` is supplied, only that version is
 // returned.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import { MAVEN_BASE, mavenFetch, epochMsToIso, requireBoundedInt, requireCoord } from './utils.js';
 

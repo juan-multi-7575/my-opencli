@@ -7,7 +7,7 @@
  * Rows missing the airline, both airports, or both times are dropped.
  */
 import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     WAIT_FOR_FLIGHTS_JS,
     buildFlightExtractJs,

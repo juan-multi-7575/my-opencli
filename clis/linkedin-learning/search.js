@@ -2,7 +2,7 @@
  * LinkedIn Learning search via the public learning-api REST endpoint.
  * Shares cookie session with linkedin.com; no Commercial Use Limit.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const DOMAIN = 'www.linkedin.com';

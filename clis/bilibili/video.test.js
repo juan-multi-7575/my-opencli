@@ -10,7 +10,7 @@ vi.mock('./utils.js', async (importOriginal) => ({
   apiGet: mockApiGet,
 }));
 
-import { getRegistry } from '@jackwener/opencli/registry';
+import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './video.js';
 
 describe('bilibili video', () => {

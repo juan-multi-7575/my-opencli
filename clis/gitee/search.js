@@ -1,5 +1,5 @@
 import { CliError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 const GITEE_SEARCH_URL = 'https://gitee.com/search';
 const GITEE_SEARCH_WIDGET = 'wong1slagnlmzwvsu5ya';
 const GITEE_SEARCH_API = `https://so.gitee.com/v1/search/widget/${GITEE_SEARCH_WIDGET}`;

@@ -7,7 +7,7 @@
 // Auth: flex-auth (Bearer + X-Server-Id via header — server accepts query too,
 // but CLI uses header). Bugen source-verified.
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { buildFetchSnippet } from './in-page.js';
 import { dispatchEvaluateResult } from './errors.js';

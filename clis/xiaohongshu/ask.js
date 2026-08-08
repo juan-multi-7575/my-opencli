@@ -6,7 +6,7 @@
  * This adapter intentionally calls the site's own webpack conversation store
  * from an authenticated tab instead of replaying private signatures.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, AuthRequiredError, CommandExecutionError, TimeoutError } from '@jackwener/opencli/errors';
 
 const XHS_WEB_HOST = 'www.xiaohongshu.com';

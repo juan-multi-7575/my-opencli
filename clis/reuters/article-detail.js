@@ -5,7 +5,7 @@
  * detail). Reads the in-page Fusion globalContent payload + paragraph DOM.
  */
 import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildArticleDetailScript, mapArticleDetail } from './utils.js';
 
 const REUTERS_HOST = /^https?:\/\/(?:www\.)?reuters\.com\//i;

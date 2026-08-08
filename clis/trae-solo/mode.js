@@ -1,4 +1,4 @@
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { ArgumentError, CommandExecutionError, selectorError } from '@jackwener/opencli/errors';
 
 // TRAE SOLO has two top-level modes: "Code" and "Work". The mode indicator

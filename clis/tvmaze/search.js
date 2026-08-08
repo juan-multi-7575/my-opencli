@@ -3,7 +3,7 @@
 // Hits `https://api.tvmaze.com/search/shows?q=<query>` and returns one row per
 // match. Includes the show id (round-tripable into `tvmaze show <id>`),
 // premiered/ended dates, network, and TVmaze rating so agents can rank.
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     TVMAZE_BASE, joinList, requireBoundedInt, requireString, stripHtml, tvmazeFetch,

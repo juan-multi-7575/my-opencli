@@ -1,5 +1,5 @@
 import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { mergeSearchItems, normalizeSearchItem, parseLimitArg, parsePageArg, sanitizeSearchItems } from './utils.js';
 function escapeJsString(value) {
     return JSON.stringify(value);

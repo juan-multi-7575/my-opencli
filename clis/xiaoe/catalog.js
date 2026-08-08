@@ -19,7 +19,7 @@
 //     via `${fn.toString()}` so the live and the test path share one
 //     source of truth.
 
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { requireXiaoePageUrl } from './content.js';
 

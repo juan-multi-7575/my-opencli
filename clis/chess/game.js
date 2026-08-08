@@ -3,7 +3,7 @@
  * endpoint `/callback/{live|daily}/game/{id}`. Returns the canonical
  * PGN headers + move data plus per-player metadata.
  */
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { UA, formatDate, isPlainObject, parseGameUrl } from './utils.js';
 

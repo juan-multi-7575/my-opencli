@@ -1,5 +1,5 @@
 import { CliError } from '@jackwener/opencli/errors';
-import { cli, Strategy } from '@jackwener/opencli/registry';
+import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { isRecord } from '@jackwener/opencli/utils';
 const GITEE_EXPLORE_URL = 'https://gitee.com/explore';
 const MAX_LIMIT = 50;
