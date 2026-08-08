@@ -1,0 +1,3 @@
+# Budget guard: dedupe cache plus a soft per-site cap
+
+The prompt rule "never loop the same search site more than twice for the same topic" was advisory only. The tool-level guard counts distinct queries, not raw calls: an identical (site, query) repeat is served from a short-lived result cache with no re-execution, while distinct queries on the same site (reddit "rust async" then reddit "rust clippy", or page 2 of a listing) always run. Each site gets a soft cap of distinct queries per session to stop same-site reframing loops. The rejected alternatives were raw call counting per site (false-positives on legitimate multi-query exploration) and advisory-only (nothing stops a retry storm).

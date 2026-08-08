@@ -26,6 +26,6 @@ docs/.vitepress/cache
 autoresearch/results/
 autoresearch-results.tsv
 
-docs/
+/docs/
 .scratch
 AGENTS.md

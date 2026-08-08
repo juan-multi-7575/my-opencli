@@ -1,0 +1,19 @@
+{
+  "name": "opencli-bridge",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Strict OpenCLI integration for the pi coding agent: web search, research, downloads via 173+ site registry",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^0.84.1",
+    "@earendil-works/pi-coding-agent": "^0.84.1",
+    "@sinclair/typebox": "^0.34.52",
+    "@types/node": "^24.0.0",
+    "tsx": "^4.23.4",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
