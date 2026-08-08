@@ -68,6 +68,12 @@ const BROWSER_COMMON_OPTIONS = [
     choices: ['ephemeral', 'persistent'],
   },
   {
+    flags: '--session-key <key>',
+    name: 'session-key',
+    help: 'Reuse one Chrome window across invocations sharing this key (same agent, same site); implies persistent',
+    choices: undefined,
+  },
+  {
     flags: '--keep-tab <bool>',
     name: 'keep-tab',
     help: 'Keep the browser tab lease after the command finishes',
@@ -569,7 +575,7 @@ export function formatCommonOptionsHelpText(): string {
 export function formatBrowserCommonOptionsHelpText(): string {
   const rows = BROWSER_COMMON_OPTIONS.map(option => {
     const details: string[] = [option.help];
-    if ('choices' in option) details.push(`choices: ${option.choices.join(', ')}`);
+    if (option.choices?.length) details.push(`choices: ${option.choices.join(', ')}`);
     return [option.flags, details.join('  ')] as [string, string];
   });
   return ['Browser common options:', ...formatRows(rows)].join('\n');

@@ -205,6 +205,7 @@ export async function executeCommand(
     keepTab?: string;
     windowMode?: string;
     siteSession?: string;
+    sessionKey?: string;
     onTraceExport?: (trace: ObservationExportResult) => void;
   } = {},
 ): Promise<unknown> {
@@ -261,8 +262,8 @@ export async function executeCommand(
       const profileRouting = profileRouteParams(profileSelection);
       const contextId = profileSelection?.contextId;
       const internal = cmd as InternalCliCommand;
-      const siteSession = resolveSiteSession(cmd, opts.siteSession);
-      const session = resolveAdapterBrowserSession(cmd, siteSession);
+      const siteSession = resolveSiteSession(cmd, opts.siteSession, opts.sessionKey);
+      const session = resolveAdapterBrowserSession(cmd, siteSession, opts.sessionKey);
       const keepTab = resolveKeepTab(siteSession, opts.keepTab);
       const windowMode = resolveBrowserWindowMode(cmd.defaultWindowMode ?? 'background', opts.windowMode);
       // Persistent-session write commands take a logical lease on the site
@@ -579,11 +580,13 @@ function normalizeSiteSession(raw: unknown): SiteSessionMode | null {
   throw new ArgumentError(`--site-session must be one of: ephemeral, persistent. Received: "${String(raw)}"`);
 }
 
-function resolveSiteSession(cmd: CliCommand, rawOption?: unknown): SiteSessionMode {
+export function resolveSiteSession(cmd: CliCommand, rawOption?: unknown, sessionKey?: string): SiteSessionMode {
+  if (typeof sessionKey === 'string' && sessionKey) return 'persistent';
   return normalizeSiteSession(rawOption) ?? cmd.siteSession ?? 'ephemeral';
 }
 
-function resolveAdapterBrowserSession(cmd: CliCommand, siteSession: SiteSessionMode): string {
+export function resolveAdapterBrowserSession(cmd: CliCommand, siteSession: SiteSessionMode, sessionKey?: string): string {
+  if (typeof sessionKey === 'string' && sessionKey) return `site:${cmd.site}:${sessionKey}`;
   if (siteSession === 'persistent') return `site:${cmd.site}`;
   return `site:${cmd.site}:${crypto.randomUUID()}`;
 }
