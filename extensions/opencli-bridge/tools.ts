@@ -81,7 +81,7 @@ function compactMarkdown(stdout: string): string {
 export const shellQuote = (p: string) => (/[\s"']/.test(p) ? `"${p.replace(/"/g, '\\"')}"` : p);
 
 function budgetKeyFromParts(parts: string[]): string {
-  return parts.slice(2).join(" ").trim();
+  return parts.slice(2).join(" ").trim().toLowerCase().replace(/\s+/g, " ");
 }
 
 async function runOpencli(
@@ -97,7 +97,8 @@ async function runOpencli(
   const query = budgetKeyFromParts(parts);
   const site = parts[0] ?? "";
   if (query) {
-    const { hit, content: cached, warning } = budget.lookup(site, query.toLowerCase());
+    const normalized = query;
+    const { hit, content: cached, warning } = budget.lookup(site, normalized);
     if (hit && cached !== undefined) {
       return { ok: true, content: cached, code: 0, stderr: warning ?? "" };
     }
@@ -109,7 +110,7 @@ async function runOpencli(
       maxBuffer: OPENCLI_MAX_BUFFER,
     })) as any;
     const content = truncate(stdout ?? "");
-    if (query) budget.store(site, query.toLowerCase(), content);
+    if (query) budget.store(site, query, content);
     return { ok: true, content, code: 0, stderr: String(stderr ?? "") };
   } catch (e: any) {
     const stdout = e?.stdout ?? "";
