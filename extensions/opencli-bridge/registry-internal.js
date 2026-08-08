@@ -1,4 +1,4 @@
-import { Strategy, cli, getRegistry } from '../../src/registry.ts';
+import { Strategy, cli, getRegistry } from '../../dist/src/registry.js';
 export { Strategy, cli, getRegistry };
 export {
   CliError,
@@ -10,4 +10,4 @@ export {
   AuthRequiredError,
   TimeoutError,
   getErrorMessage
-} from '../../src/errors.ts';
+} from '../../dist/src/errors.js';
