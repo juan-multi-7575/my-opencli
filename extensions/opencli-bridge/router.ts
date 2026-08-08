@@ -145,6 +145,6 @@ export function routeQuery(query: string, siteOverride?: string): Route {
  * Check if a site exists in the live registry.
  */
 export function siteExists(site: string, registry: Registry | null): boolean {
-  if (!registry) return true; // registry unavailable — assume exists
+  if (!registry) return false;
   return registry.sites.some((s) => s.site === site);
 }
