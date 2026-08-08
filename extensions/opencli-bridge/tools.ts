@@ -21,7 +21,7 @@ import { createBudget, budgetedExec } from "./budget";
 
 // AI-slot fallback chain (ADR-0004): kimi → gemini → grok → chatgpt → deepseek,
 // terminal = the profile's own AI site. claude stays reachable via explicit sites.
-const AI_FALLBACKS = ["kimi", "gemini", "grok", "chatgpt", "deepseek"];
+const AI_FALLBACKS = ["chatgpt", "gemini", "qwen", "deepseek", "grok", "kimi"];
 const ASK_SITES = new Set([...AI_FALLBACKS, "claude", "qwen"]);
 
 // Session-wide budget guard (ADR-0003): dedupe cache + soft per-site cap.

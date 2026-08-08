@@ -83,7 +83,7 @@ export function buildResearchPlan(
   const base = PROFILES[profile] ?? PROFILES.default;
 
   // AI step: deep-research pins its own site (gemini) — no chain override.
-  // Otherwise try the fallback chain (kimi→gemini→grok→chatgpt→deepseek) against
+  // Otherwise try the fallback chain (chatgpt→gemini→qwen→deepseek→grok→kimi) against
   // the registry; terminal fallback = the profile's own AI site (ADR-0004).
   const aiStep = base.find((s) => s.kind === "ai");
   const aiSite = aiStep
