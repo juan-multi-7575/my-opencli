@@ -36,8 +36,7 @@
     "skills/opencli-*/**",
     "cli-manifest.json",
     "scripts/",
-    "README.md",
-    "LICENSE"
+    "README.md"
   ],
   "scripts": {
     "dev": "tsx src/main.ts",

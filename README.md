@@ -7,7 +7,6 @@
 
 [![npm](https://img.shields.io/npm/v/@jackwener/opencli?style=flat-square)](https://www.npmjs.com/package/@jackwener/opencli)
 [![Node.js Version](https://img.shields.io/node/v/@jackwener/opencli?style=flat-square)](https://nodejs.org)
-[![License](https://img.shields.io/npm/l/@jackwener/opencli?style=flat-square)](./LICENSE)
 
 OpenCLI gives you one surface for three different kinds of automation:
 
@@ -295,7 +294,3 @@ See **[TESTING.md](./TESTING.md)** for how to run and write tests.
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=jackwener/opencli&type=Date)](https://star-history.com/#jackwener/opencli&Date)
-
-## License
-
-[Apache-2.0](./LICENSE)
