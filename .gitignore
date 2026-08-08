@@ -28,4 +28,6 @@ autoresearch-results.tsv
 
 /docs/
 .scratch
-AGENTS.md
+*.md
+!README.md
+
