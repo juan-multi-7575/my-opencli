@@ -24,69 +24,72 @@ interface CacheEntry {
   ts: number;
 }
 
+function key(site: string, query: string): string {
+  return `${site}\u0000${query.trim().toLowerCase().replace(/\s+/g, " ")}`;
+}
+
+const cache = new Map<string, CacheEntry>();
+const distinct = new Map<string, Set<string>>();
+
+/** Module-level singleton so every exec path shares the same budget state. */
 export function createBudget(opts: BudgetOptions = {}) {
   const softCap = opts.softCap ?? DEFAULT_SOFT_CAP;
   const ttlMs = opts.ttlMs ?? DEFAULT_TTL_MS;
-  const cache = new Map<string, CacheEntry>();
-  const distinct = new Map<string, Set<string>>();
+  return { lookup, store, _cache: cache, _distinct: distinct, softCap, ttlMs };
+}
 
-  function key(site: string, query: string): string {
-    return `${site}\u0000${query.trim().toLowerCase().replace(/\s+/g, " ")}`;
+export type Budget = ReturnType<typeof createBudget>;
+
+function lookup(
+  site: string,
+  query: string,
+  opts: { softCap: number; ttlMs: number }
+): { hit: boolean; content?: string; warning?: string } {
+  const k = key(site, query);
+  const entry = cache.get(k);
+  if (entry && Date.now() - entry.ts < opts.ttlMs) {
+    return { hit: true, content: entry.content };
   }
+  const seen = distinct.get(site) ?? new Set<string>();
+  const isNew = !seen.has(k);
+  seen.add(k);
+  distinct.set(site, seen);
+  const warning =
+    isNew && seen.size > opts.softCap
+      ? `⚠️ budget: ${seen.size - opts.softCap} over the soft cap of ${opts.softCap} distinct queries on "${site}" this session — reframe the query or use another site.`
+      : undefined;
+  return { hit: false, warning };
+}
 
-  return {
-    /**
-     * Consult the cache + cap. Returns either a cache hit or a warning.
-     */
-    lookup(site: string, query: string): { hit: boolean; content?: string; warning?: string } {
-      const k = key(site, query);
-      const entry = cache.get(k);
-      if (entry && Date.now() - entry.ts < ttlMs) {
-        return { hit: true, content: entry.content };
-      }
-      const seen = distinct.get(site) ?? new Set<string>();
-      const isNew = !seen.has(k);
-      seen.add(k);
-      distinct.set(site, seen);
-      const warning =
-        isNew && seen.size > softCap
-          ? `⚠️ budget: ${seen.size - softCap} over the soft cap of ${softCap} distinct queries on "${site}" this session — reframe the query or use another site.`
-          : undefined;
-      return { hit: false, warning };
-    },
-
-    /** Store an exec result for dedupe. */
-    store(site: string, query: string, content: string): void {
-      cache.set(key(site, query), { content, ts: Date.now() });
-    },
-
-    /** Test/session helpers. */
-    _cache: cache,
-    _distinct: distinct,
-  };
+function store(site: string, query: string, content: string): void {
+  cache.set(key(site, query), { content, ts: Date.now() });
 }
 
 /**
- * Wrap an exec helper with the budget: identical (site, query) calls are
- * answered from cache; warnings surface as stderr annotations.
+ * Run an exec function through the budget guard.
  */
+export async function withBudget(
+  budget: Budget,
+  exec: (cmd: string, args: string[]) => Promise<{ stdout: string; stderr: string; code: number }>,
+  cmd: string,
+  args: string[]
+): Promise<{ stdout: string; stderr: string; code: number }> {
+  const site = args[0] ?? "";
+  const query = args[2] ?? "";
+  const { hit, content, warning } = lookup(site, query, { softCap: budget.softCap, ttlMs: budget.ttlMs });
+  if (hit && content !== undefined) {
+    return { stdout: content, stderr: warning ?? "", code: 0 };
+  }
+  const result = await exec(cmd, args);
+  if (result.code === 0) store(site, query, result.stdout);
+  if (warning) result.stderr = `${result.stderr}\n${warning}`.trim();
+  return result;
+}
+
+/** Legacy wrapper kept for compatibility. */
 export function budgetedExec(
   exec: (cmd: string, args: string[]) => Promise<{ stdout: string; stderr: string; code: number }>,
-  budget: ReturnType<typeof createBudget>
+  budget: Budget
 ) {
-  return async (
-    cmd: string,
-    args: string[]
-  ): Promise<{ stdout: string; stderr: string; code: number }> => {
-    const site = args[0] ?? "";
-    const query = args[2] ?? "";
-    const { hit, content, warning } = budget.lookup(site, query);
-    if (hit && content !== undefined) {
-      return { stdout: content, stderr: warning ?? "", code: 0 };
-    }
-    const result = await exec(cmd, args);
-    if (result.code === 0) budget.store(site, query, result.stdout);
-    if (warning) result.stderr = `${result.stderr}\n${warning}`.trim();
-    return result;
-  };
+  return async (cmd: string, args: string[]) => withBudget(budget, exec, cmd, args);
 }
