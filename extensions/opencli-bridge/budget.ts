@@ -35,12 +35,19 @@ const distinct = new Map<string, Set<string>>();
 export function createBudget(opts: BudgetOptions = {}) {
   const softCap = opts.softCap ?? DEFAULT_SOFT_CAP;
   const ttlMs = opts.ttlMs ?? DEFAULT_TTL_MS;
-  return { lookup, store, _cache: cache, _distinct: distinct, softCap, ttlMs };
+  return {
+    lookup(site: string, query: string) { return _lookup(site, query, { softCap, ttlMs }); },
+    store(site: string, query: string, content: string) { _store(site, query, content); },
+    softCap,
+    ttlMs,
+    _cache: cache,
+    _distinct: distinct,
+  };
 }
 
 export type Budget = ReturnType<typeof createBudget>;
 
-function lookup(
+function _lookup(
   site: string,
   query: string,
   opts: { softCap: number; ttlMs: number }
@@ -61,7 +68,7 @@ function lookup(
   return { hit: false, warning };
 }
 
-function store(site: string, query: string, content: string): void {
+function _store(site: string, query: string, content: string): void {
   cache.set(key(site, query), { content, ts: Date.now() });
 }
 
@@ -76,12 +83,12 @@ export async function withBudget(
 ): Promise<{ stdout: string; stderr: string; code: number }> {
   const site = args[0] ?? "";
   const query = args[2] ?? "";
-  const { hit, content, warning } = lookup(site, query, { softCap: budget.softCap, ttlMs: budget.ttlMs });
+  const { hit, content, warning } = budget.lookup(site, query);
   if (hit && content !== undefined) {
     return { stdout: content, stderr: warning ?? "", code: 0 };
   }
   const result = await exec(cmd, args);
-  if (result.code === 0) store(site, query, result.stdout);
+  if (result.code === 0) budget.store(site, query, result.stdout);
   if (warning) result.stderr = `${result.stderr}\n${warning}`.trim();
   return result;
 }
