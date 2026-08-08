@@ -18,6 +18,12 @@ import { REMOVED_SITES } from "./allowed-sites";
 import { buildResearchPlan, executeResearchPlan, type ResearchProfile } from "./research";
 import { sessionKeyArgs } from "./capabilities";
 import { createBudget, budgetedExec } from "./budget";
+import {
+  OPENCLI_TIMEOUT_MS,
+  OPENCLI_MAX_BUFFER,
+  RESEARCH_EXEC_TIMEOUT_MS,
+  RESEARCH_EXEC_MAX_BUFFER,
+} from "./constants";
 
 // AI-slot fallback chain (ADR-0004): kimi → gemini → grok → chatgpt → deepseek,
 // terminal = the profile's own AI site. claude stays reachable via explicit sites.
@@ -86,8 +92,8 @@ async function runOpencli(
   const cmdStr = ["opencli", ...parts.map(shellQuote)].join(" ");
   try {
     const { stdout, stderr } = (await execAsync(cmdStr, {
-      timeout: opts.timeout ?? 60_000,
-      maxBuffer: 50 * 1024 * 1024,
+      timeout: opts.timeout ?? OPENCLI_TIMEOUT_MS,
+      maxBuffer: OPENCLI_MAX_BUFFER,
     })) as any;
     return {
       ok: true,
@@ -549,8 +555,8 @@ async function runExecHelper(
   const cmdStr = [cmd, ...args.map(shellQuote)].join(" ");
   try {
     const { stdout, stderr } = (await execAsync(cmdStr, {
-      timeout: 90_000,
-      maxBuffer: 50 * 1024 * 1024,
+      timeout: RESEARCH_EXEC_TIMEOUT_MS,
+      maxBuffer: RESEARCH_EXEC_MAX_BUFFER,
     })) as any;
     return { stdout: String(stdout ?? ""), stderr: String(stderr ?? ""), code: 0 };
   } catch (e: any) {
