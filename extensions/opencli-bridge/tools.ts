@@ -80,6 +80,10 @@ function compactMarkdown(stdout: string): string {
 // Shell-quote a part containing whitespace or quotes so multi-word queries stay one arg.
 export const shellQuote = (p: string) => (/[\s"']/.test(p) ? `"${p.replace(/"/g, '\\"')}"` : p);
 
+function budgetKeyFromParts(parts: string[]): string {
+  return parts.slice(2).join(" ").trim();
+}
+
 async function runOpencli(
   pi: ExtensionAPI,
   parts: string[],
@@ -90,19 +94,24 @@ async function runOpencli(
   const execAsync = promisify(exec);
 
   const cmdStr = ["opencli", ...parts.map(shellQuote)].join(" ");
+  const query = budgetKeyFromParts(parts);
+  const site = parts[0] ?? "";
+  if (query) {
+    const { hit, content: cached, warning } = budget.lookup(site, query.toLowerCase());
+    if (hit && cached !== undefined) {
+      return { ok: true, content: cached, code: 0, stderr: warning ?? "" };
+    }
+  }
+
   try {
     const { stdout, stderr } = (await execAsync(cmdStr, {
       timeout: opts.timeout ?? OPENCLI_TIMEOUT_MS,
       maxBuffer: OPENCLI_MAX_BUFFER,
     })) as any;
-    return {
-      ok: true,
-      content: truncate(stdout ?? ""),
-      code: 0,
-      stderr: String(stderr ?? ""),
-    };
+    const content = truncate(stdout ?? "");
+    if (query) budget.store(site, query.toLowerCase(), content);
+    return { ok: true, content, code: 0, stderr: String(stderr ?? "") };
   } catch (e: any) {
-    // execAsync throws on non-zero exit; err.stdout/stderr carry output
     const stdout = e?.stdout ?? "";
     const stderr = e?.stderr ?? String(e?.message ?? e);
     return { ok: false, content: truncate(stdout), code: e?.code ?? 1, stderr: truncate(stderr, 2000) };
