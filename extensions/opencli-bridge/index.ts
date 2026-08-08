@@ -11,6 +11,11 @@ import { registerOpenCliTools } from "./tools";
 import { registerEnforcement } from "./enforce";
 import { buildSystemPrompt, OPENCLI_INTENT_INJECTION, type ConnectivityInfo } from "./prompts";
 import { type ResearchProfile } from "./research";
+import {
+  REGISTRY_REFRESH_TIMEOUT_MS,
+  REGISTRY_REFRESH_MAX_BUFFER,
+  DOCTOR_TIMEOUT_MS,
+} from "./constants";
 
 // ---------- State ----------
 
@@ -30,8 +35,8 @@ async function refreshRegistry(pi: ExtensionAPI) {
     const { promisify } = await import("node:util");
     const execAsync = promisify(exec);
     const { stdout } = (await execAsync("opencli list -f json", {
-      timeout: 30_000,
-      maxBuffer: 50 * 1024 * 1024,
+      timeout: REGISTRY_REFRESH_TIMEOUT_MS,
+      maxBuffer: REGISTRY_REFRESH_MAX_BUFFER,
     })) as any;
     cachedRegistry = buildRegistry(JSON.parse(stdout));
   } catch (e: any) {
@@ -50,7 +55,7 @@ async function refreshConnectivity() {
     const { promisify } = await import("node:util");
     const execAsync = promisify(exec);
     const { stdout } = (await execAsync("opencli doctor", {
-      timeout: 8_000,
+      timeout: DOCTOR_TIMEOUT_MS,
     })) as any;
     const out = String(stdout ?? "");
     cachedConnectivity = {
@@ -138,7 +143,7 @@ export default async function (pi: ExtensionAPI) {
             const { exec } = await import("node:child_process");
             const { promisify } = await import("node:util");
             const execAsync = promisify(exec);
-            const { stdout } = await execAsync("opencli doctor", { timeout: 10_000 });
+            const { stdout } = await execAsync("opencli doctor", { timeout: DOCTOR_TIMEOUT_MS });
             ctx.ui.notify(String(stdout ?? "opencli doctor completed"), "info");
           } catch (e: any) {
             ctx.ui.notify(`opencli doctor failed: ${e?.message ?? e}`, "error");

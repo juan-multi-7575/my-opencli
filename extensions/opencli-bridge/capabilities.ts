@@ -1,6 +1,7 @@
 import { execFileSync } from "node:child_process";
 import * as fs from "node:fs";
 import * as path from "node:path";
+import { CAPABILITIES_PROBE_TIMEOUT_MS } from "./constants";
 
 // Capability probe: the --session-key option only exists in opencli builds
 // after it landed upstream. The bridge must never pass an unknown flag to an
@@ -18,13 +19,13 @@ export function sessionKeySupported(): boolean {
 
 function probeInstalledOpencli(): boolean {
   try {
-    const bin = execFileSync("which", ["opencli"], { encoding: "utf8", timeout: 5_000 }).trim();
+    const bin = execFileSync("which", ["opencli"], { encoding: "utf8", timeout: CAPABILITIES_PROBE_TIMEOUT_MS }).trim();
     const pkgDir = path.dirname(path.dirname(path.dirname(fs.realpathSync(bin))));
     if (!pkgDir || !fs.existsSync(path.join(pkgDir, "package.json"))) return false;
     // grep the compiled dist for the flag literal — one scan, fast.
     execFileSync("grep", ["-rl", "--include=*.js", "--session-key", path.join(pkgDir, "dist")], {
       encoding: "utf8",
-      timeout: 5_000,
+      timeout: CAPABILITIES_PROBE_TIMEOUT_MS,
       stdio: "ignore",
     });
     return true;
