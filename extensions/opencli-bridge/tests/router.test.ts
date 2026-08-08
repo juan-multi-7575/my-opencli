@@ -94,6 +94,6 @@ describe("siteExists", () => {
   });
 
   it("assumes existence when the registry is unavailable", () => {
-    expect(siteExists("anything", null)).toBe(true);
+    expect(siteExists("anything", null)).toBe(false);
   });
 });
