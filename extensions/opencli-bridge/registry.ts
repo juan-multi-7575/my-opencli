@@ -27,6 +27,8 @@ export interface CommandSchema {
   browser: boolean; // runs in Chrome via the Browser Bridge (needs a session window)
 }
 
+import { ALLOWED_SITES } from "./allowed-sites";
+
 export interface SiteEntry {
   site: string;
   domain: string;
@@ -74,6 +76,9 @@ export function getCachedRegistry(): Registry | null {
 }
 
 export function buildRegistry(commands: any[]): Registry {
+  // Prune to the agent's allowlist (site-checklist.md) — the agent only sees
+  // and can call kept sites. Opencli itself is untouched.
+  commands = commands.filter((c) => c && ALLOWED_SITES.has(c.site));
   const sites: SiteEntry[] = [];
   const domainMap = new Map<string, string>();
   const existingDomainLen = new Map<string, number>();

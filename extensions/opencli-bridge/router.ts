@@ -46,7 +46,6 @@ const ROUTES: RouteRule[] = [
   { keywords: ["google scholar", "scholar"], site: "google-scholar", command: "search", label: "Google Scholar" },
   { keywords: ["semantic scholar"], site: "semanticscholar", command: "search", label: "Semantic Scholar" },
   { keywords: ["pubmed"], site: "pubmed", command: "search", label: "PubMed" },
-  { keywords: ["dblp"], site: "dblp", command: "search", label: "DBLP" },
 
   // Developer / code
   { keywords: ["github trending"], site: "github-trending", command: "repos", label: "GitHub trending" },
@@ -68,20 +67,15 @@ const ROUTES: RouteRule[] = [
   { keywords: ["hackernews", "hn"], site: "hackernews", command: "search", label: "HackerNews" },
   { keywords: ["bbc"], site: "bbc", command: "news", label: "BBC news" },
   { keywords: ["bloomberg"], site: "bloomberg", command: "news", label: "Bloomberg" },
-  { keywords: ["reuters"], site: "reuters", command: "search", label: "Reuters" },
   { keywords: ["pi extension", "pi coding agent", "oh-my-pi", "omp pi"], site: "aibase", command: "news", label: "Aibase AI news" },
-  { keywords: ["36kr"], site: "36kr", command: "news", label: "36kr" },
 
   // Dev.to / medium / articles
   { keywords: ["how to learn", "tutorial", "learn python", "learn javascript", "learn rust"], site: "youtube", command: "search", label: "YouTube tutorials" },
   { keywords: ["devto", "dev.to"], site: "devto", command: "latest", label: "Dev.to" },
   { keywords: ["medium"], site: "medium", command: "search", label: "Medium" },
   { keywords: ["substack"], site: "substack", command: "feed", label: "Substack" },
-  { keywords: ["juejin"], site: "juejin", command: "hot", label: "Juejin" },
 
   // Media / images / video
-  { keywords: ["xiaohongshu", "rednote", "xhs"], site: "xiaohongshu", command: "search", label: "Xiaohongshu" },
-  { keywords: ["bilibili", "b站"], site: "bilibili", command: "search", label: "Bilibili" },
   { keywords: ["youtube transcript", "transcript of"], site: "youtube", command: "transcript", label: "YouTube transcript" },
   { keywords: ["youtube"], site: "youtube", command: "search", label: "YouTube" },
   { keywords: ["instagram"], site: "instagram", command: "search", label: "Instagram" },
@@ -91,17 +85,10 @@ const ROUTES: RouteRule[] = [
 
   // Shopping
   { keywords: ["amazon"], site: "amazon", command: "search", label: "Amazon" },
-  { keywords: ["taobao"], site: "taobao", command: "search", label: "Taobao" },
-  { keywords: ["jd", "京东"], site: "jd", command: "search", label: "JD" },
-  { keywords: ["coupang"], site: "coupang", command: "search", label: "Coupang" },
 
   // Finance / crypto
-  { keywords: ["stock", "share price", "quote", "finance", "yahoo finance"], site: "yahoo-finance", command: "quote", label: "Yahoo Finance" },
   { keywords: ["crypto", "bitcoin", "btc", "eth", "ethereum", "coingecko"], site: "coingecko", command: "coin", label: "CoinGecko" },
   { keywords: ["binance"], site: "binance", command: "price", label: "Binance" },
-
-  // Weather
-  { keywords: ["weather", "temperature", "forecast"], site: "wttr", command: "current", label: "Weather" },
 
   // Wikipedia / reference
   { keywords: ["wikipedia", "wiki"], site: "wikipedia", command: "search", label: "Wikipedia" },

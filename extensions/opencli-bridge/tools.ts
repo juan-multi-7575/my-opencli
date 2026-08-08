@@ -14,6 +14,7 @@ import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import type { Registry } from "./registry";
 import { getRegistry, matchSiteFromHostname, getCommandSchema } from "./registry";
 import { routeQuery, siteExists } from "./router";
+import { REMOVED_SITES } from "./allowed-sites";
 import { buildResearchPlan, executeResearchPlan, type ResearchProfile } from "./research";
 import { sessionKeyArgs } from "./capabilities";
 import { createBudget, budgetedExec } from "./budget";
@@ -109,15 +110,14 @@ export function registerOpenCliTools(pi: ExtensionAPI, getRegistryRef: () => Reg
     name: "opencli_run",
     label: "OpenCLI Run",
     description:
-      "Run any opencli command. Prefer this over curl/wget for any site-specific web task. " +
+      "Run an allowed opencli command (site allowlist applies — removed sites are blocked). " +
       "Examples: 'hackernews top --limit 5', 'reddit search \"rust async\"', 'arxiv search \"coding agents\"', " +
-      "'bilibili search 教程', 'xiaohongshu search python', 'gemini ask \"<question>\"'. " +
-      "Discover sites: opencli_list. Use -f json for structured output.",
+      "'gemini ask \"<question>\"'. " +
+      "Discover kept sites: opencli_list. Use -f json for structured output.",
     promptSnippet:
       "Run any opencli <site> <command> web operation — prefer this over curl/wget for site-specific tasks",
     promptGuidelines: [
       "Use opencli_run for ALL site-specific web access (search, posts, news, media) — never curl/wget for public web URLs.",
-      "Use opencli_run when the user asks about content on a specific site (Reddit, HackerNews, arXiv, Twitter, GitHub, Bilibili, Xiaohongshu, etc.).",
     ],
     parameters: Type.Object({
       command: Type.String({
@@ -139,6 +139,22 @@ export function registerOpenCliTools(pi: ExtensionAPI, getRegistryRef: () => Reg
       const parts = parseCommand(params.command);
       if (parts.length === 0) {
         throw new Error("opencli_run: empty command");
+      }
+
+      // Allowlist gate (site-checklist.md): removed sites are off-limits to the agent.
+      if (REMOVED_SITES.has(parts[0])) {
+        return {
+          content: [
+            {
+              type: "text",
+              text:
+                `⛔ "${parts[0]}" was removed from the agent's site allowlist ` +
+                `(extensions/opencli-bridge/site-checklist.md). It was NOT run. ` +
+                `Stick to kept sites — see opencli_list or the checklist.`,
+            },
+          ],
+          details: { site: parts[0], command: params.command, blocked: true, ok: false },
+        };
       }
 
       // Destructive-verb guard (ADR-0005): block unless explicitly confirmed.
@@ -263,7 +279,7 @@ export function registerOpenCliTools(pi: ExtensionAPI, getRegistryRef: () => Reg
       "Download images, videos, audio, or documents from a supported site URL. " +
       "Auto-detects the site from the URL domain. Saves to ~/Downloads by default.",
     promptSnippet:
-      "Download media (images, video, audio) from supported sites (Twitter, Instagram, Bilibili, Xiaohongshu, etc.)",
+      "Download media (images, video, audio) from supported sites (Twitter, Instagram, Reddit, etc.)",
     promptGuidelines: [
       "Use opencli_download when the user wants to download images, videos, or other media from a site URL.",
     ],
@@ -403,7 +419,7 @@ export function registerOpenCliTools(pi: ExtensionAPI, getRegistryRef: () => Reg
       "Use opencli_list to discover which sites opencli supports and what commands each has.",
     ],
     parameters: Type.Object({
-      site: Type.Optional(Type.String({ description: "Filter by site name, e.g. 'reddit', 'bilibili'" })),
+      site: Type.Optional(Type.String({ description: "Filter by site name, e.g. 'reddit', 'twitter'" })),
     }),
     async execute(_toolCallId, params, _signal, _onUpdate, _ctx) {
       const registry = getRegistryRef();

@@ -65,10 +65,10 @@ describe("routeQuery", () => {
     expect(route.command).toBe("read");
   });
 
-  it("routes weather queries to wttr", () => {
+  it("routes weather queries to general search (wttr removed)", () => {
     const route = routeQuery("weather in tokyo tomorrow");
-    expect(route.site).toBe("wttr");
-    expect(route.command).toBe("current");
+    expect(route.site).toBe("duckduckgo");
+    expect(route.command).toBe("search");
   });
 
   it("routes tutorial intents to youtube before generic fallback", () => {

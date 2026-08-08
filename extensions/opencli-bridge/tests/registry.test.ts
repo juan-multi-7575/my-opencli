@@ -9,6 +9,11 @@ describe("buildRegistry", () => {
     expect(registry.sites.map((s) => s.site)).toEqual(["reddit", "github", "crates", "web", "gemini", "hackernews", "duckduckgo"]);
   });
 
+  it("prunes removed sites from the allowlist", () => {
+    const withRemoved = buildRegistry([...listFixture, { site: "zhihu", name: "hot", access: "read" }]);
+    expect(withRemoved.sites.map((s) => s.site)).not.toContain("zhihu");
+  });
+
   it("collects commands per site", () => {
     expect(registry.siteCommands.get("reddit")).toEqual(["search", "reply"]);
     expect(registry.siteCommands.get("web")).toEqual(["read"]);
