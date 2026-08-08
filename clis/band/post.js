@@ -1,6 +1,3 @@
-import { AuthRequiredError, EmptyResultError } from '@jackwener/opencli/errors';
-import { formatCookieHeader } from '@jackwener/opencli/download';
-import { downloadMedia } from '@jackwener/opencli/download/media-download';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 /**
  * band post — Export full content of a Band post: body, comments, and optional photo download.

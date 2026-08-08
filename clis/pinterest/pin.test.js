@@ -1,6 +1,5 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, EmptyResultError } from '@jackwener/opencli/errors';
 import { createPageMock } from '../test-utils.js';
 import './pin.js';
 

@@ -2,7 +2,6 @@
  * Yahoo Finance stock quote — multi-strategy API fallback.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 cli({
     site: 'yahoo-finance',
     name: 'quote',

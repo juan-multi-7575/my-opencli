@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from 'vitest';
-import { CliError } from '@jackwener/opencli/errors';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { __test__ } from './hot-rank.js';
 

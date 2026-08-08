@@ -7,7 +7,6 @@
  */
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 import { JOBS_ORIGIN, requirePage, navigateTo } from './utils.js';
 
 cli({

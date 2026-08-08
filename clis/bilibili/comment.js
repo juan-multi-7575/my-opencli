@@ -4,7 +4,6 @@
  * @username mentions in the message are resolved to real mentions (at_name_to_mid).
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { apiGet, apiPost, requireOkPayload, resolveBvid, resolveUid } from './utils.js';
 
 function readPositiveInteger(value, label) {

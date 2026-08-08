@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import os from 'node:os';
 import path from 'node:path';
 import { ensureApplet, ggbEval, ggbListObjects, ggbWaitForObjectCount, normalizeNumber, requireGgbSuccess } from './utils.js';

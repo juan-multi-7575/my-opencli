@@ -5,7 +5,6 @@
 // canonical sections and reject anything else with a typed argument error
 // so the user knows the supported set.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { bbcFetchRss, parseRssItems, pubDateToIso, requireBoundedInt } from './utils.js';
 
 const TOPICS = [

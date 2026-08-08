@@ -9,7 +9,6 @@
  * which returns the same note shape as `paper`, sorted by `cdate:desc`.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     noteToRow,
     openreviewFetch,

@@ -13,7 +13,6 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { JSDOM } from 'jsdom';
 import { describe, expect, it, vi } from 'vitest';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     HOT_LIMIT_DEFAULT,

@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, selectorError } from '@jackwener/opencli/errors';
 
 // Codex Desktop App exposes the active model + reasoning level on a button
 // in the composer bottom toolbar. As of 2026-05-31 the button has no

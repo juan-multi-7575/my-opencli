@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { CLAUDE_DOMAIN, MESSAGE_SELECTOR, getVisibleMessages, ensureClaudeLogin, requireConversationId } from './utils.js';
 
 export const detailCommand = cli({

@@ -1,6 +1,5 @@
 // stackoverflow tag — list questions tagged with a given tag (most active first).
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError } from '@jackwener/opencli/errors';
 import {
     seFetch,
     normalizeLimit,

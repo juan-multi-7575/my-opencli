@@ -9,7 +9,6 @@
  * Response shape is identical; we surface every field the endpoint emits as a
  * stable column so callers do not silently lose geo / English / id metadata.
  */
-import { ArgumentError, CliError } from '@jackwener/opencli/errors';
 
 const ENDPOINT = 'https://m.ctrip.com/restapi/soa2/21881/json/gaHotelSearchEngine';
 const MIN_LIMIT = 1;

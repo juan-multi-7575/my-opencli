@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError, EmptyResultError } from '@jackwener/opencli/errors';
 import { NOTEBOOKLM_DOMAIN, NOTEBOOKLM_SITE } from './shared.js';
 import { buildNotebooklmNotebookUrl, getNotebooklmPageState, parseNotebooklmNotebookTarget, readCurrentNotebooklm, requireNotebooklmSession, } from './utils.js';
 cli({

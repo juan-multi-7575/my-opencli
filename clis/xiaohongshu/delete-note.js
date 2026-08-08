@@ -13,7 +13,6 @@
  * Requires: logged into creator.xiaohongshu.com in Chrome.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CliError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 const NOTE_MANAGER_URL = 'https://creator.xiaohongshu.com/new/note-manager';
 const ROW_SETTLE_MS = 3000;
 const MODAL_SETTLE_MS = 2000;

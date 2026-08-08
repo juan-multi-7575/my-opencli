@@ -3,7 +3,6 @@
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { parseVideoId, prepareYoutubeApiPage, readYoutubeSapisid, SAPISID_HASH_FN } from './utils.js';
-import { CommandExecutionError, AuthRequiredError } from '@jackwener/opencli/errors';
 
 cli({
     site: 'youtube',

@@ -1,4 +1,3 @@
-import { ArgumentError, AuthRequiredError, CommandExecutionError, getErrorMessage } from '@jackwener/opencli/errors';
 export const SHARE_API = 'https://drive-h.quark.cn/1/clouddrive/share/sharepage';
 export const DRIVE_API = 'https://drive-pc.quark.cn/1/clouddrive/file';
 export const TASK_API = 'https://drive-pc.quark.cn/1/clouddrive/task';

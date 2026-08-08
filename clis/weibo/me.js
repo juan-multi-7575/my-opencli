@@ -2,7 +2,6 @@
  * Weibo me — current logged-in user profile.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { getSelfUid, requireObjectEvaluateResult, unwrapEvaluateResult } from './utils.js';
 cli({
     site: 'weibo',

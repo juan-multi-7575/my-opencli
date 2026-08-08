@@ -8,7 +8,6 @@ import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-inter
 import {
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import { HOT_BOARD_URL, mapHotRow, parseHotLimit } from './utils.js';
 
 cli({

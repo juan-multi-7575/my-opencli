@@ -4,7 +4,6 @@ import {
   AuthRequiredError,
   CommandExecutionError,
   EmptyResultError,
-} from '@jackwener/opencli/errors';
 import { createHash } from 'node:crypto';
 
 const FLOMO_APP_DOMAIN = 'v.flomoapp.com';

@@ -5,7 +5,6 @@
  * 用法: opencli jd item 100291143898
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 function normalizePositiveInt(value, fallback) {
     const n = Number(value);
     return Number.isFinite(n) && n >= 0 ? Math.floor(n) : fallback;

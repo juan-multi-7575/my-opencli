@@ -41,7 +41,6 @@
  * skeleton for anonymous visitors, which we surface as AuthRequiredError.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 export const MAX_SEARCH_LIMIT = 30;
 // Time budget for the SPA's initial DOM commit. Empirically the

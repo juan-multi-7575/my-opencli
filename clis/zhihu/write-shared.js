@@ -1,5 +1,4 @@
 import { readFile, stat } from 'node:fs/promises';
-import { CliError } from '@jackwener/opencli/errors';
 const RESULT_ROW_RESERVED_KEYS = new Set(['status', 'outcome', 'message', 'target_type', 'target']);
 const NAV_SCOPE_SELECTOR = 'header, nav, [role="banner"], [role="navigation"]';
 const PROFILE_LINK_SELECTOR = 'a[href^="/people/"]';

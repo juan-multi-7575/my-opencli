@@ -17,7 +17,6 @@
 import {
     ArgumentError,
     CommandExecutionError,
-} from '@jackwener/opencli/errors';
 
 export const UPWORK_ORIGIN = 'https://www.upwork.com';
 

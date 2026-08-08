@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 import { loadXiaoyuzhouCredentials, requestXiaoyuzhouJson } from './auth.js';
 import { formatDuration, formatDate } from './utils.js';
 cli({

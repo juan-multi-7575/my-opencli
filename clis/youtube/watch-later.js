@@ -4,7 +4,6 @@
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { FETCH_BROWSE_FN, extractPlaylistVideos } from './utils.js';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 cli({
     site: 'youtube',

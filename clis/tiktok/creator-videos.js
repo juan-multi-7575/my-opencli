@@ -5,7 +5,6 @@ import {
     CommandExecutionError,
     EmptyResultError,
     getErrorMessage,
-} from '@jackwener/opencli/errors';
 
 const STUDIO_CONTENT_URL = 'https://www.tiktok.com/tiktokstudio/content';
 const ITEM_LIST_API_PATH = '/tiktok/creator/manage/item_list/v1/';

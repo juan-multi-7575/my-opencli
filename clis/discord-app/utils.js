@@ -1,4 +1,3 @@
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 
 const DISCORD_HOSTS = new Set(['discord.com', 'canary.discord.com', 'ptb.discord.com']);
 const DISCORD_ORIGIN = 'https://discord.com';

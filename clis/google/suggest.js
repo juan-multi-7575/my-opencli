@@ -3,7 +3,6 @@
  * Uses suggestqueries.google.com with client=firefox for pure JSON (not JSONP).
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 cli({
     site: 'google',
     name: 'suggest',

@@ -1,5 +1,4 @@
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import './repos.js';
 

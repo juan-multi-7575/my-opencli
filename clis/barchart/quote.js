@@ -3,7 +3,6 @@
  * Auth: CSRF token from <meta name="csrf-token"> + session cookies.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 cli({
     site: 'barchart',
     name: 'quote',

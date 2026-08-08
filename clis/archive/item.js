@@ -4,7 +4,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 
 const IDENTIFIER_RE = /^[A-Za-z0-9._-]+$/;
 

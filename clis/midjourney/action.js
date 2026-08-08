@@ -1,5 +1,3 @@
-import { ArgumentError, CommandExecutionError, TimeoutError } from '@jackwener/opencli/errors';
-import { log } from '@jackwener/opencli/logger';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
   ACTION_CHOICES,

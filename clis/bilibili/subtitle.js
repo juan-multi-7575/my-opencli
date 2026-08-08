@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { apiGet, resolveBvid, parsePageArg, selectVideoPart } from './utils.js';
 cli({
     site: 'bilibili',

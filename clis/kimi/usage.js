@@ -2,7 +2,6 @@
 // Reads usage cards from https://www.kimi.com/membership/subscription?tab=quota
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 
 const KIMI_DOMAIN = 'kimi.com';
 const QUOTA_URL = 'https://www.kimi.com/membership/subscription?tab=quota';

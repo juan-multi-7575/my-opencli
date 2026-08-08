@@ -1,4 +1,3 @@
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 export function requireSearchQuery(value, label = 'keyword') {
   const query = String(value ?? '').trim();

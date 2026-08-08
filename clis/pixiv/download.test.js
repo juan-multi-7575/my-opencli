@@ -1,13 +1,11 @@
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { createPageMock } from '../test-utils.js';
 // Mock download dependencies before importing the adapter
 const { mockHttpDownload, mockMkdirSync } = vi.hoisted(() => ({
     mockHttpDownload: vi.fn(),
     mockMkdirSync: vi.fn(),
 }));
-vi.mock('@jackwener/opencli/download', () => ({
     formatCookieHeader: vi.fn().mockReturnValue('cookie=value'),
     httpDownload: mockHttpDownload,
 }));

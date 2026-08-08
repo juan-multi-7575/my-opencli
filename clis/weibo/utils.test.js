@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { requireArrayEvaluateResult, requireObjectEvaluateResult, unwrapEvaluateResult } from './utils.js';
 
 describe('unwrapEvaluateResult (browser-bridge envelope normalization)', () => {

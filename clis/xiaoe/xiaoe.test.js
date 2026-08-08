@@ -20,7 +20,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     CONTENT_SELECTORS,

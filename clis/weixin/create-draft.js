@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 
 const WEIXIN_DOMAIN = 'mp.weixin.qq.com';
 const WEIXIN_HOME = 'https://mp.weixin.qq.com/';

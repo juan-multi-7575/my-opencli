@@ -7,7 +7,6 @@
  * `tour`, and the `airportCode` feeds `flight` / `transfer`, so `search` is the
  * discovery step for the id-based commands (see `fetchPoiSearch` in utils).
  */
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { fetchPoiSearch, flattenPoiResults, mapSearchRow, parseKeyword, parseListLimit } from './utils.js';
 

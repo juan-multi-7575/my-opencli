@@ -9,7 +9,6 @@
  * available we can extend to a POST + L0/L1 shape like `hackernews read`.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const DEVTO_ARTICLE_BASE = 'https://dev.to/api/articles';
 

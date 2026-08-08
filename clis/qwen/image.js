@@ -1,8 +1,6 @@
 import * as os from 'node:os';
 import * as path from 'node:path';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { saveBase64ToFile } from '@jackwener/opencli/utils';
-import { ArgumentError, CommandExecutionError, EmptyResultError, TimeoutError } from '@jackwener/opencli/errors';
 import {
     QIANWEN_DOMAIN,
     authRequired,

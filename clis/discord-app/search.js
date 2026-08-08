@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 export const searchCommand = cli({
     site: 'discord-app',
     name: 'search',

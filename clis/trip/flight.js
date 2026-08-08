@@ -6,7 +6,6 @@
  * reads by selector (see `buildFlightExtractJs` in utils) rather than by
  * position. Rows missing the airline, both airports, or both times are dropped.
  */
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     WAIT_FOR_FLIGHTS_JS,

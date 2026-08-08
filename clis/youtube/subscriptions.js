@@ -2,7 +2,6 @@
  * YouTube subscriptions — list of subscribed channels from /feed/channels.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { extractSubscriptionChannel } from './utils.js';
 
 cli({

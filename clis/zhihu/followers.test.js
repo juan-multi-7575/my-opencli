@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, CliError, CommandExecutionError } from '@jackwener/opencli/errors';
 import './followers.js';
 
 describe('zhihu followers', () => {

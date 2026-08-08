@@ -5,7 +5,6 @@
 // counts (claim properties, sitelinks). The full claim graph is huge; we keep
 // the projection narrow by design.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { WIKIDATA_BASE, joinAliases, pickLocalised, requireEntityId, requireLanguage, wikidataFetch } from './utils.js';
 
 cli({

@@ -1,5 +1,4 @@
 import { describe, it, expect, vi } from 'vitest';
-import { ArgumentError } from '@jackwener/opencli/errors';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './bookmark-remove.js';
 

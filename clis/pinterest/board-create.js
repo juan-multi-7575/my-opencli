@@ -1,6 +1,5 @@
 // Pinterest board-create — create a new board (BoardResource/create).
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { PINTEREST_BASE, pinterestResourceCreate } from './utils.js';
 
 const PRIVACY = ['public', 'secret'];

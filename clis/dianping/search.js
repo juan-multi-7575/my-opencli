@@ -12,7 +12,6 @@
  */
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import {
     SEARCH_COLUMNS,
     detectAuthOrPageFailure,

@@ -1,6 +1,5 @@
 import { beforeAll, describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { isManusUrl } from './_utils.js';
 import './status.js';
 import './list.js';

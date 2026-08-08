@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
 import { getRegistry, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, TimeoutError } from '@jackwener/opencli/errors';
 import {
     buildAskResult,
     buildAskEvaluateJs,

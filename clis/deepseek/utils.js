@@ -1,4 +1,3 @@
-import { ArgumentError } from '@jackwener/opencli/errors';
 
 export const DEEPSEEK_DOMAIN = 'chat.deepseek.com';
 export const DEEPSEEK_URL = 'https://chat.deepseek.com/';

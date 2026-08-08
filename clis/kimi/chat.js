@@ -6,7 +6,6 @@ import {
     CommandExecutionError,
     EmptyResultError,
     TimeoutError,
-} from '@jackwener/opencli/errors';
 import {
     KIMI_DOMAIN,
     KIMI_URL,

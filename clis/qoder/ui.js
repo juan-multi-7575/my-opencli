@@ -17,7 +17,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import { IS_VISIBLE_JS, clickByTextScript, clickFirstScript, evaluateQoder, parsePositiveInt, requireArrayResult } from './_utils.js';
 
 // -------- sidebar-toggle --------

@@ -1,4 +1,3 @@
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const EMPTY_RESULT_PATTERNS = [
     /没有找到/,

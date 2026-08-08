@@ -1,4 +1,3 @@
-import { AuthRequiredError, CommandExecutionError, selectorError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildChatUrl, buildExtractChatStateEvaluate, buildSendMessageEvaluate, requireEvaluateObject } from './im.js';
 import { normalizeNumericId } from './utils.js';

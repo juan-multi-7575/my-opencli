@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, EmptyResultError } from '@jackwener/opencli/errors';
 import { compactRepeatedText } from './shared.js';
 function normalizeWhitespace(value) {
     return String(value ?? '').replace(/\s+/g, ' ').trim();

@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import './job-detail.js';
 
 const { normalizeJobUrl, decodeLinkedinRedirect, normalizeDetail } = await import('./job-detail.js').then((m) => m.__test__);

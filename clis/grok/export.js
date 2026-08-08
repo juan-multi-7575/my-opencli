@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, EmptyResultError, TimeoutError } from '@jackwener/opencli/errors';
 import { normalizeConversationRows, requireObjectEvaluateResult } from './export-utils.js';
 
 const GROK_DOMAIN = 'grok.com';

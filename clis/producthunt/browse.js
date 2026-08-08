@@ -5,7 +5,6 @@
  * Shows all-time best products for a category (ranked by review score, not daily votes).
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 import { PRODUCTHUNT_CATEGORY_SLUGS } from './utils.js';
 cli({
     site: 'producthunt',

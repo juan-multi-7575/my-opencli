@@ -1,4 +1,3 @@
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 function cleanText(value) {
     return String(value ?? '').replace(/\s+/g, ' ').trim();

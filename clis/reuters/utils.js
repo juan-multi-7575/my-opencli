@@ -1,7 +1,6 @@
 /**
  * Shared helpers for the reuters adapter.
  */
-import { ArgumentError } from '@jackwener/opencli/errors';
 
 const MIN_LIMIT = 1;
 const MAX_LIMIT = 40;

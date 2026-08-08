@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import './list-remove.js';
 
 function buildListsPayload(listId = '123', memberCount = 10) {

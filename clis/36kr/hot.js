@@ -5,7 +5,6 @@
  * Supports category types: renqi (人气), zonghe (综合), shoucang (收藏), catalog (综合热门).
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 const TYPE_MAP = {
     renqi: '人气榜',
     zonghe: '综合榜',

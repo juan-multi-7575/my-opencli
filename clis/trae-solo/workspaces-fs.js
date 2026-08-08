@@ -11,7 +11,6 @@ import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-inter
 import {
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import {
     TRAE_WORKSPACE_STORAGE,
     TRAE_EXTENSIONS_JSON,

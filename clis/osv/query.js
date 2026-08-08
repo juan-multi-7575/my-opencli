@@ -4,7 +4,6 @@
 // Returns one row per vulnerability ranked by published date (newest first), so
 // agents can answer "is package X@Y vulnerable?" in one shot.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     OSV_BASE, osvPost, requireBoundedInt, requireEcosystem, requireString, severityLabel, trimDate,
 } from './utils.js';

@@ -5,11 +5,9 @@ const { mockDownloadMedia, mockFormatCookieHeader } = vi.hoisted(() => ({
     mockFormatCookieHeader: vi.fn(() => 'sid=secret'),
 }));
 
-vi.mock('@jackwener/opencli/download/media-download', () => ({
     downloadMedia: mockDownloadMedia,
 }));
 
-vi.mock('@jackwener/opencli/download', () => ({
     formatCookieHeader: mockFormatCookieHeader,
 }));
 

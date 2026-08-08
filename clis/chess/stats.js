@@ -3,7 +3,6 @@
  * daily / chess960 / etc) via the public stats endpoint.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { chessApi, validateUsername, summarizeStats } from './utils.js';
 
 const KINDS = ['chess_rapid', 'chess_blitz', 'chess_bullet', 'chess_daily', 'chess960_daily', 'chess_daily_960'];

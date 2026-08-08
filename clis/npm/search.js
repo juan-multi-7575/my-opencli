@@ -4,7 +4,6 @@
 // to feed back into `npm package` / `npm downloads`: name (round-trips as id),
 // description, version, weekly downloads, dependents count, license, links.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { NPM_REGISTRY, npmFetch, requireBoundedInt, requireString } from './utils.js';
 
 cli({

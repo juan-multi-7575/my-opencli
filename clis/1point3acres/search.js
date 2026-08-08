@@ -7,7 +7,6 @@
  * long as we pass the session cookie along.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { fetchHtml, parseSearchList, assertNotGuestAlert, getCookie, decodeEntities, normalizeLimit, BASE } from './utils.js';
 
 cli({

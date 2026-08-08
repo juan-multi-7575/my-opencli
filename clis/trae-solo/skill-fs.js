@@ -18,7 +18,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import {
     TRAE_SKILLS_DIR,
     assertReadable,

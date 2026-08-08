@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError } from '@jackwener/opencli/errors';
 import { BASE, absolutizeUrl, assertRequiredFields, extractIdFromUrl, gotoAndWait, normalizeLimit } from './utils.js';
 
 const RESULT_TYPES = ['player', 'team', 'event', 'article'];

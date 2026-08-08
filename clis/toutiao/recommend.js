@@ -10,7 +10,6 @@ import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-inter
 import {
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import {
     RECOMMEND_CATEGORIES,
     RECOMMEND_URL,

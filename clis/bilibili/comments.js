@@ -4,7 +4,6 @@
  * the replies nested under a given comment come from /x/v2/reply/reply.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { apiGet, resolveBvid } from './utils.js';
 
 const MAX_LIMIT = 50;

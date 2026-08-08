@@ -1,4 +1,3 @@
-import { AuthRequiredError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { clampInt } from '../_shared/common.js';
 cli({

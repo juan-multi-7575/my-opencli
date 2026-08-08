@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError } from '@jackwener/opencli/errors';
 import { GEMINI_DEEP_RESEARCH_DEFAULT_CONFIRM_LABELS, GEMINI_DEEP_RESEARCH_DEFAULT_TOOL_LABELS, GEMINI_APP_URL, GEMINI_DOMAIN, getCurrentGeminiUrl, getLatestGeminiAssistantResponse, readGeminiSnapshot, resolveGeminiLabels, selectGeminiTool, sendGeminiMessage, startNewGeminiChat, waitForGeminiSubmission, waitForGeminiConfirmButton, } from './utils.js';
 function isGeminiRootAppUrl(url) {
     try {

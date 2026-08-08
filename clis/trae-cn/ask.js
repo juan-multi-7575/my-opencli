@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { TimeoutError } from '@jackwener/opencli/errors';
 import {
   activityScript,
   approveTraePrompts,

@@ -42,7 +42,6 @@ import {
     AuthRequiredError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 
 export const FB_HOST = 'https://www.facebook.com';
 export const NOTIFICATIONS_LIMIT_DEFAULT = 15;

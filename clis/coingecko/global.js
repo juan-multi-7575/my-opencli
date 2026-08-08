@@ -1,7 +1,6 @@
 // coingecko global — total crypto market cap, volume, BTC/ETH dominance,
 // active currencies, ICO counts, in a single row.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 
 cli({
     site: 'coingecko',

@@ -7,7 +7,6 @@
  * — same approach as the arxiv adapter.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     PAPER_COLUMNS,
     dblpFetchXml,

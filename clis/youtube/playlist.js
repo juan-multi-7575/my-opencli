@@ -3,7 +3,6 @@
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { prepareYoutubeApiPage, FETCH_BROWSE_FN, extractPlaylistVideos } from './utils.js';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 /**
  * Parse a playlist ID from a URL or bare ID string.

@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { clampInt, requireNonEmptyQuery } from '../_shared/common.js';
 
 cli({

@@ -8,7 +8,6 @@
  * command can ship reliably.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { isAuthLikePayload, maskChineseName, require12306Login, requireEvaluateObject } from './utils.js';
 
 const NO_COMPLETE_URL = 'https://kyfw.12306.cn/otn/queryOrder/queryMyOrderNoComplete';

@@ -1,4 +1,3 @@
-import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 
 export const LINKEDIN_DOMAIN = 'www.linkedin.com';
 

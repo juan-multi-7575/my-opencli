@@ -4,7 +4,6 @@
 // not stable IDs, so this is a best-effort fuzzy match — the same person can
 // appear under multiple spellings ("Y. Bengio" vs "Yoshua Bengio").
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { arxivFetch, normalizeArxivLimit, parseEntries } from './utils.js';
 
 cli({

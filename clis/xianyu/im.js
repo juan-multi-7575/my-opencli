@@ -1,4 +1,3 @@
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 
 export const DEFAULT_INBOX_LIMIT = 20;
 export const MAX_INBOX_LIMIT = 100;

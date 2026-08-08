@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const LINKEDIN_DOMAIN = 'www.linkedin.com';
 const SALES_INBOX_URL = 'https://www.linkedin.com/sales/inbox/';

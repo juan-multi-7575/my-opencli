@@ -6,7 +6,6 @@
  *   hq.sinajs.cn        — real-time quote
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 const MARKET_CN = '11';
 const MARKET_HK = '31';
 const MARKET_US = '41';

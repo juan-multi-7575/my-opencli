@@ -1,9 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 // Mock logger
-vi.mock('@jackwener/opencli/logger', () => ({
   log: {
     info: vi.fn(),
     status: vi.fn(),

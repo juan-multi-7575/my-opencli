@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { fetchJson, getSelfUid, resolveUid } from './utils.js';
 cli({
     site: 'bilibili',

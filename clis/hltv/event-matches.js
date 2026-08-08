@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { BASE, assertRequiredFields, extractIdFromUrl, gotoAndWait, normalizeLimit, parseEventRef, parseHltvDate, parseNumber } from './utils.js';
 
 function buildEventStatsUrl(event) {

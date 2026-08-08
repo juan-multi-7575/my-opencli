@@ -8,8 +8,6 @@
  */
 import * as path from 'node:path';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
-import { log } from '@jackwener/opencli/logger';
 import { YOLLOMI_DOMAIN, yollomiPost, downloadOutput, fmtBytes, MODEL_ROUTES } from './utils.js';
 function getDimensions(ratio) {
     const map = {

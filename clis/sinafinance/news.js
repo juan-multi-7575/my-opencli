@@ -5,7 +5,6 @@
  * https://app.cj.sina.com.cn/api/news/pc
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 // User-facing type (0-9) → Sina API tag ID
 const TYPE_MAP = [
     0, // 0: 全部

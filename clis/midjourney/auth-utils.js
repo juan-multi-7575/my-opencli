@@ -1,4 +1,3 @@
-import { AuthRequiredError } from '@jackwener/opencli/errors';
 import {
   MIDJOURNEY_DOMAIN,
   MIDJOURNEY_IMAGINE_URL,

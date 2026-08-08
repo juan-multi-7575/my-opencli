@@ -2,7 +2,6 @@
  * YouTube history — watch history via InnerTube browse API (FEhistory).
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 cli({
     site: 'youtube',

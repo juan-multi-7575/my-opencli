@@ -6,7 +6,6 @@
 // packaging. If a specific `:version` is supplied, only that version is
 // returned.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { MAVEN_BASE, mavenFetch, epochMsToIso, requireBoundedInt, requireCoord } from './utils.js';
 
 cli({

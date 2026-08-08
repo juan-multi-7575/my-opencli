@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { parsePageArg, resolveBvid, resolveUid, selectVideoPart } from './utils.js';
 describe('resolveBvid', () => {
     it('passes through a valid BV ID', async () => {

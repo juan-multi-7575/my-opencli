@@ -1,4 +1,3 @@
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 
 const FACEBOOK_HOME = 'https://www.facebook.com';

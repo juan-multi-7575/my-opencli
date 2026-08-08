@@ -8,7 +8,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 
 cli({
     site: 'wikipedia',

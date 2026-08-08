@@ -8,7 +8,6 @@
  */
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     DCD_BASE,
     SEARCH_COLUMNS,

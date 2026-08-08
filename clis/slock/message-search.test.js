@@ -1,5 +1,4 @@
 import { describe, it, expect, vi } from 'vitest';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './message-search.js';
 

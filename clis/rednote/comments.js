@@ -3,7 +3,6 @@
  * Reuses the DOM-extraction IIFE from `../xiaohongshu/comments.js`.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { buildCommentsExtractJs, normalizeCommentRows } from '../xiaohongshu/comments.js';
 import { buildNoteUrl, parseNoteId } from '../xiaohongshu/note-helpers.js';
 

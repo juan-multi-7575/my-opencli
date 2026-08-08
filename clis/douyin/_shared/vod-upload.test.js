@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from 'vitest';
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { getUploadAuthV5Credentials, applyVideoUploadInner } from './vod-upload.js';
 
 describe('douyin vod upload helpers', () => {

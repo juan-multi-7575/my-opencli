@@ -1,4 +1,3 @@
-import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildTiebaSearchItems, normalizeTiebaLimit } from './utils.js';
 const MAX_SUPPORTED_PAGE = '1';

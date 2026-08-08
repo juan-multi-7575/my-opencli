@@ -2,7 +2,6 @@
  * LinkedIn Learning course detail by slug, via /learning-api/courses?q=slug.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const DOMAIN = 'www.linkedin.com';
 

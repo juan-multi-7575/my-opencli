@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { buildListCreateRow, parseListCreateArgs } from './list-create.js';
 import './list-create.js';
 

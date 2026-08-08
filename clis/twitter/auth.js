@@ -1,4 +1,3 @@
-import { AuthRequiredError } from '@jackwener/opencli/errors';
 import { registerSiteAuthCommands } from '../_shared/site-auth.js';
 import { normalizeTwitterScreenName, unwrapBrowserResult } from './shared.js';
 

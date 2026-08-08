@@ -7,7 +7,6 @@
  * `--include-sensitive` to surface the unmasked-by-12306 fields.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { isAuthLikePayload, maskChineseName, require12306Login, requireEvaluateObject } from './utils.js';
 
 const PASSENGER_QUERY_URL = 'https://kyfw.12306.cn/otn/passengers/query';

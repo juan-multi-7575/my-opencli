@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { normalizeLimit, parseTeamRef, readPlayerMatches } from './utils.js';
 
 function round(value, digits = 2) {

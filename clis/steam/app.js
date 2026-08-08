@@ -5,7 +5,6 @@
 // date, developers / publishers, price, metacritic, recommendations,
 // genres / categories joined.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { STEAM_STORE, decodeHtmlEntities, priceCents, requireAppId, requireCountryCode, steamFetch } from './utils.js';
 
 function joinNames(list) {

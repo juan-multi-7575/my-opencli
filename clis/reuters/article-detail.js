@@ -4,7 +4,6 @@
  * Pairs with `reuters search` (use the `url` column to round-trip into
  * detail). Reads the in-page Fusion globalContent payload + paragraph DOM.
  */
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildArticleDetailScript, mapArticleDetail } from './utils.js';
 

@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { selectorError } from '@jackwener/opencli/errors';
 export const sendCommand = cli({
     site: 'cursor',
     name: 'send',

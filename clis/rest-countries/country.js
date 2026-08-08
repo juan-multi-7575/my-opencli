@@ -4,7 +4,6 @@
 // common and official names; multiple matches are returned (e.g. "guinea"
 // matches Guinea, Guinea-Bissau, Equatorial Guinea, Papua New Guinea).
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     COUNTRY_FIELDS,
     REST_COUNTRIES_BASE,

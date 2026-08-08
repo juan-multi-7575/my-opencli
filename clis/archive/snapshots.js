@@ -4,7 +4,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 
 function buildWaybackUrl(timestamp, original) {
     if (!timestamp || !original) return '';

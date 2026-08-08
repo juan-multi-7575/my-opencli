@@ -4,7 +4,6 @@
 // match. Includes the show id (round-tripable into `tvmaze show <id>`),
 // premiered/ended dates, network, and TVmaze rating so agents can rank.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     TVMAZE_BASE, joinList, requireBoundedInt, requireString, stripHtml, tvmazeFetch,
 } from './utils.js';

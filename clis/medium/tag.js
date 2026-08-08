@@ -4,7 +4,6 @@
 // Complements existing `medium feed` (per-publication / per-user) and
 // `medium search` by surfacing topical streams.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const TAG_PATTERN = /^[a-z0-9][a-z0-9-]*$/i;
 

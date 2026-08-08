@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './retweet.js';
 import { createPageMock } from '../test-utils.js';

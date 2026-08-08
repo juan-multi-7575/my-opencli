@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { NOTEBOOKLM_DOMAIN, NOTEBOOKLM_SITE } from './shared.js';
 import { findNotebooklmNoteRow, getNotebooklmPageState, listNotebooklmNotesFromPage, readNotebooklmVisibleNoteFromPage, requireNotebooklmSession, } from './utils.js';
 function matchesNoteTitle(title, query) {

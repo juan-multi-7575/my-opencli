@@ -1,4 +1,3 @@
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { registerSiteAuthCommands } from '../_shared/site-auth.js';
 
 // Nowcoder's logged-in token cookie is `t`. The numeric uid is not in any

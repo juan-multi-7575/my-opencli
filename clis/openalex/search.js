@@ -5,7 +5,6 @@
 // work`), DOI, title, year, citation count, first author, primary venue,
 // open-access status.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     OPENALEX_BASE,
     appendMailto,

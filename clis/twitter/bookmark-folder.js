@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { TWITTER_BEARER_TOKEN, applyTopByEngagement } from './utils.js';
 import { extractMedia, resolveTwitterQueryId, describeTwitterApiError } from './shared.js';
 

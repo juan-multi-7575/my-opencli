@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 function truncate(str, max = 60) {
     return str.length > max ? str.slice(0, max - 3) + '...' : str;
 }

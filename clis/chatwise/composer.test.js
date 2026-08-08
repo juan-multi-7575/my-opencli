@@ -1,6 +1,5 @@
 import { JSDOM } from 'jsdom';
 import { describe, expect, it, vi } from 'vitest';
-import { ArgumentError, TimeoutError } from '@jackwener/opencli/errors';
 import {
     buildChatwiseInjectTextJs,
     buildChatwiseMessageCountJs,

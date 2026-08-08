@@ -3,7 +3,6 @@
  * shown on the video page) via /x/web-interface/view/conclusion/get.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { apiGet, resolveBvid } from './utils.js';
 
 const BILIBILI_HOST_RE = /(^|\.)bilibili\.com$/i;

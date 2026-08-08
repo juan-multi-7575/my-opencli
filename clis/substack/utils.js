@@ -1,4 +1,3 @@
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 const FEED_POST_LINK_SELECTOR = 'a[href*="/home/post/"], a[href*="/p/"]';
 const ARCHIVE_POST_LINK_SELECTOR = 'a[href*="/p/"]';
 export function buildSubstackBrowseUrl(category) {

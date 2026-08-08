@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError } from '@jackwener/opencli/errors';
 import { __test__ } from './search.js';
 
 const {

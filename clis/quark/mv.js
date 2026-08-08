@@ -1,4 +1,3 @@
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { DRIVE_API, apiPost, findFolder, pollTask } from './utils.js';
 cli({

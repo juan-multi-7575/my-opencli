@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     CLAUDE_DOMAIN, CLAUDE_URL, COMPOSER_SELECTOR, MESSAGE_SELECTOR,
     ensureOnClaude, selectModel, setAdaptiveThinking,

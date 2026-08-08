@@ -1,6 +1,5 @@
 // Shared helpers for the steam adapters that hit Steam's storefront JSON
 // endpoints (no browser).
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 export const STEAM_STORE = 'https://store.steampowered.com';
 const UA = 'opencli-steam-adapter (+https://github.com/jackwener/opencli)';

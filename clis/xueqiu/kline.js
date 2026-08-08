@@ -1,5 +1,4 @@
 import { cli } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { fetchXueqiuJson, formatChinaDate } from './utils.js';
 cli({
     site: 'xueqiu',

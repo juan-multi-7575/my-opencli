@@ -1,4 +1,3 @@
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
   assertLinkedInAuthenticated,
   assertSafeLinkedinUrl,

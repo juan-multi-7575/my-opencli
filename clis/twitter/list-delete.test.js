@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError } from '@jackwener/opencli/errors';
 import { buildListDeleteRow } from './list-delete.js';
 
 describe('twitter list-delete registration', () => {

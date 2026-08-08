@@ -4,7 +4,6 @@
 //   open-editor         — click "Open Editor" (open the chat draft in a full editor pane)
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { clickByTextScript, evaluateQoder } from './_utils.js';
 
 // -------- prompt-enhance --------

@@ -1,6 +1,5 @@
 // Pinterest user-boards — list the boards owned by a user (BoardsResource).
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { DEFAULT_PAGE_SIZE, PINTEREST_BASE, collectResults, parseUsername, requireLimit } from './utils.js';
 
 const DEFAULT_LIMIT = 25;

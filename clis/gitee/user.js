@@ -1,4 +1,3 @@
-import { CliError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 const GITEE_BASE_URL = 'https://gitee.com';
 const GITEE_USER_API = 'https://gitee.com/api/v5/users';

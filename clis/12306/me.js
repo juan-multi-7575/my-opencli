@@ -7,7 +7,6 @@
  * adapter never decodes that mask).
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { isAuthLikePayload, maskEmail, maskMobile, maskChineseName, require12306Login, requireEvaluateObject } from './utils.js';
 
 const ACCOUNT_INFO_URL = 'https://kyfw.12306.cn/otn/modifyUser/initQueryUserInfoApi';

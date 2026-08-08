@@ -1,6 +1,5 @@
 // Pinterest board-sections — sections inside a board (BoardResource → BoardSectionsResource).
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { PINTEREST_BASE, resolveBoardTarget, pinterestResourceFetch, requireLimit } from './utils.js';
 
 const DEFAULT_LIMIT = 50;

@@ -5,7 +5,6 @@
 // and an `eolStatus` projection (`active` / `eol` / `ongoing`) so agents can
 // answer "is this version still supported" without parsing dates themselves.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { EOL_BASE, eolFetch, normaliseDateOrFlag, requireProduct } from './utils.js';
 
 cli({

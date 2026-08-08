@@ -12,7 +12,6 @@ import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-inter
 import {
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import { TRAE_APP_SUPPORT } from './_fs.js';
 
 const TRAE_SETTINGS_JSON = path.join(TRAE_APP_SUPPORT, 'User/settings.json');

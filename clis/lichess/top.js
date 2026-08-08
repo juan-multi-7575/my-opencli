@@ -3,7 +3,6 @@
 // Hits `/api/player/top/<n>/<perf>`. Returns the leaderboard rows; usernames
 // round-trip into `lichess user` for full profile detail.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { LICHESS_BASE, lichessFetch, requireBoundedInt, requirePerf } from './utils.js';
 
 cli({

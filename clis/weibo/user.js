@@ -2,7 +2,6 @@
  * Weibo user — get user profile by uid or screen_name.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { requireObjectEvaluateResult, unwrapEvaluateResult } from './utils.js';
 cli({
     site: 'weibo',

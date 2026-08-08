@@ -1,4 +1,3 @@
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildTiebaReadItems } from './utils.js';
 function getThreadUrl(kwargs) {

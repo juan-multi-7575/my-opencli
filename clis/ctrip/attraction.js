@@ -13,7 +13,6 @@
  * id, which surfaces as `CommandExecutionError` ("check the city id") rather than a
  * genuine-empty result.
  */
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     buildAttractionExtractJs,

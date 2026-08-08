@@ -6,7 +6,6 @@
  * and scrape the rendered DOM directly.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 
 function unwrapEvaluateResult(payload) {
     if (payload && !Array.isArray(payload) && typeof payload === 'object' && 'session' in payload && 'data' in payload) {

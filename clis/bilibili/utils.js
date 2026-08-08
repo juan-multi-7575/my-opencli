@@ -2,7 +2,6 @@
  * Bilibili shared helpers: WBI signing, authenticated fetch, nav data, UID resolution.
  */
 import https from 'node:https';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 /**
  * Resolve Bilibili short URL / short code to BV ID.
  * Supports: BV1MV9NBtENN, XYzsqGa, b23.tv/XYzsqGa, https://b23.tv/XYzsqGa

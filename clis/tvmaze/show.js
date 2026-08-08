@@ -4,7 +4,6 @@
 // premiered/ended dates, network, runtime, rating, official site, IMDB / TheTVDB
 // cross-refs (so agents can hop into other adapters), and a plain-text summary.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { TVMAZE_BASE, joinList, requireShowId, stripHtml, tvmazeFetch } from './utils.js';
 
 cli({

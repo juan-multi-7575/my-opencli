@@ -4,7 +4,6 @@
 //   opencli eastmoney kuaixun --column 102 --limit 30
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 
 // Known columns on eastmoney 7x24:
 //   102 = 重要 (default)

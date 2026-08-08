@@ -1,6 +1,5 @@
 // Shared helpers for the pypi adapters that hit the PyPI public JSON API
 // (pypi.org/pypi/<pkg>/json) and pypistats.org for download stats.
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 export const PYPI_BASE = 'https://pypi.org';
 export const PYPISTATS_BASE = 'https://pypistats.org';

@@ -6,7 +6,6 @@
  * Flight rows are `.result-item` cards keyed by stable `data-testid` anchors
  * (`flights-name`, `stopInfoText`, `flight_price_*`).
  */
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 
 const MIN_LIMIT = 1;
 const MAX_LIMIT = 50;

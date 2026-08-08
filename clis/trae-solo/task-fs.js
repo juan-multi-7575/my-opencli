@@ -18,7 +18,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import {
     TRAE_SNAPSHOT_DIR,
     TRAE_AGENTCONFIG_DIR,

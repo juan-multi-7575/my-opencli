@@ -6,7 +6,6 @@
  * Ref: https://github.com/jackwener/opencli/issues/10
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 /**
  * Wait for search results or login wall using MutationObserver (max 5s).
  * Returns 'content' if note items appeared, 'login_wall' if login gate

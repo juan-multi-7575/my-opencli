@@ -5,7 +5,6 @@
 // homepage / docs / repo, license (from latest version row), version count,
 // created / updated timestamps.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { CRATES_BASE, cratesFetch, requireCrateName } from './utils.js';
 
 cli({

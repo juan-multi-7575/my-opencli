@@ -17,7 +17,6 @@
  * `metadata.control_sliders` the web UI exposes.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import {
     DEFAULT_SUNO_MODEL,
     SUNO_DOMAIN,

@@ -1,4 +1,3 @@
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { extractJsonLd, forceEnglishUrl, isChallengePage } from './utils.js';
 /**

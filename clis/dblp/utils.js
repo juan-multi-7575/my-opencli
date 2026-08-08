@@ -11,7 +11,6 @@
  * XML. We parse it with conservative regexes (same pattern as the arxiv
  * adapter) to avoid pulling in an XML lib for this single endpoint.
  */
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 export const DBLP_ORIGIN = 'https://dblp.org';
 

@@ -4,7 +4,6 @@
 // requested top-N. The API ships ~7400 entries today; we cap output at 500
 // rows so agents do not paginate their entire DeFi universe by accident.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { LLAMA_BASE, llamaFetch, requireBoundedInt, unixToDate } from './utils.js';
 
 cli({

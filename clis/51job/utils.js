@@ -13,7 +13,6 @@
  *   DOM (SSR), so adapters for those navigate and scrape.
  */
 
-import { CliError } from '@jackwener/opencli/errors';
 
 export const WE_ORIGIN = 'https://we.51job.com';
 export const JOBS_ORIGIN = 'https://jobs.51job.com';

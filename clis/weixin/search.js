@@ -1,4 +1,3 @@
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 
 const SOGOU_WEIXIN_DOMAIN = 'weixin.sogou.com';

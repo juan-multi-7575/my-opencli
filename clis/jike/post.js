@@ -1,5 +1,4 @@
 import { cli } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 cli({
     site: 'jike',
     name: 'post',

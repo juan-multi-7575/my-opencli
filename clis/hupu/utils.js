@@ -1,4 +1,3 @@
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 export function stripHtml(html) {
     if (!html)
         return '';

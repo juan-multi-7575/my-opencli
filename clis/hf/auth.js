@@ -1,4 +1,3 @@
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { registerSiteAuthCommands } from '../_shared/site-auth.js';
 
 // Hugging Face's `token` cookie is httpOnly; gate the login poll on the

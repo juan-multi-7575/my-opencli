@@ -2,7 +2,6 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as crypto from 'node:crypto';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, TimeoutError } from '@jackwener/opencli/errors';
 
 const GROK_URL = 'https://grok.com/';
 const SESSION_HINT = 'Likely login/auth/challenge/session issue in the existing grok.com browser session.';

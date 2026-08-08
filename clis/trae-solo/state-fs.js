@@ -21,7 +21,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import {
     TRAE_GLOBAL_STATE_DB,
     TRAE_WORKSPACE_STORAGE,

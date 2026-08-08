@@ -5,7 +5,6 @@
  * called with `searchType=H`, surfacing Hotel and BusinessArea rows that the
  * destination flavour does not return.
  */
-import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { fetchSuggest, mapSuggestRow, parseLimit } from './utils.js';
 

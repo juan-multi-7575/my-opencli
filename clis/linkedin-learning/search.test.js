@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import './search.js';
 
 const { parseLimit, parseAuthors, durationSeconds, averageRating, parseRow, buildFetchScript } = await import('./search.js').then((m) => m.__test__);

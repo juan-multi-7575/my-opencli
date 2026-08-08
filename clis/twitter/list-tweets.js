@@ -1,6 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
-import { BROWSER_JSON_SNIFF_FN, throwIfLoginWall } from '@jackwener/opencli/utils';
 import { TWITTER_BEARER_TOKEN, applyTopByEngagement } from './utils.js';
 import { extractCard, extractQuotedTweet, extractMedia, describeTwitterApiError } from './shared.js';
 

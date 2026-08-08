@@ -5,7 +5,6 @@
 //   opencli eastmoney northbound --direction south
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 
 cli({
   site: 'eastmoney',

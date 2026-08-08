@@ -12,7 +12,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import { unwrapEvaluateResult } from './_actions.js';
 
 const STORAGE_COLUMNS = [

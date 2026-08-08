@@ -4,7 +4,6 @@
 // (served as static files from GitHub Pages, regenerated daily). No auth.
 // Formula / cask tokens are lowercase ASCII + `-_.+@` per Homebrew's own
 // validation; they round-trip into `homebrew formula` / `homebrew cask`.
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 export const BREW_BASE = 'https://formulae.brew.sh/api';
 const UA = 'opencli-homebrew-adapter (+https://github.com/jackwener/opencli)';

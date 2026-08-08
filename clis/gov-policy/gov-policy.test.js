@@ -7,7 +7,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { extractSearchRows } from './search.js';
 import { extractRecentRows } from './recent.js';

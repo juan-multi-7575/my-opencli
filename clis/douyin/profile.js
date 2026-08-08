@@ -1,6 +1,5 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { browserFetch } from './_shared/browser-fetch.js';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 cli({
     site: 'douyin',
     name: 'profile',

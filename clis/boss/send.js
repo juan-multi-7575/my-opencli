@@ -6,7 +6,6 @@
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { requirePage, navigateToChat, findFriendByUid, clickCandidateInList, typeAndSendMessage, } from './utils.js';
-import { EmptyResultError, selectorError } from '@jackwener/opencli/errors';
 cli({
     site: 'boss',
     name: 'send',

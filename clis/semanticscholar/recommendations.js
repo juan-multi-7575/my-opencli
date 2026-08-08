@@ -4,7 +4,6 @@
 //
 // Hits `https://api.semanticscholar.org/recommendations/v1/papers/forpaper/{ref}`.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     S2_REC_BASE,
     normalizePaperRow,

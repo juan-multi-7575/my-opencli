@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, CliError } from '@jackwener/opencli/errors';
 import './question.js';
 describe('zhihu question', () => {
     it('returns answers from the Zhihu API', async () => {

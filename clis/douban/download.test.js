@@ -6,7 +6,6 @@ const { mockHttpDownload, mockLoadDoubanSubjectPhotos, mockMkdirSync } = vi.hois
     mockLoadDoubanSubjectPhotos: vi.fn(),
     mockMkdirSync: vi.fn(),
 }));
-vi.mock('@jackwener/opencli/download', () => ({
     httpDownload: mockHttpDownload,
     sanitizeFilename: vi.fn((value) => value.replace(/\s+/g, '_')),
 }));
@@ -17,7 +16,6 @@ vi.mock('./utils.js', async () => {
         loadDoubanSubjectPhotos: mockLoadDoubanSubjectPhotos,
     };
 });
-vi.mock('@jackwener/opencli/download/progress', () => ({
     formatBytes: vi.fn((size) => `${size} B`),
 }));
 vi.mock('node:fs', () => ({

@@ -10,7 +10,6 @@
 //   .button-eTMLAq.primary    'Create in chat'
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { switchToPanel } from './_actions.js';
 
 async function switchToAutomationTab(page, tabName) {

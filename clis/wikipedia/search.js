@@ -1,4 +1,3 @@
-import { CliError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { wikiFetch } from './utils.js';
 cli({

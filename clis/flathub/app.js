@@ -3,7 +3,6 @@
 // Hits `/api/v2/appstream/<appId>`. AppStream IDs are reverse-DNS (e.g.
 // "org.mozilla.firefox", "org.gnome.Calculator").
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     FLATHUB_API_BASE,
     FLATHUB_APP_BASE,

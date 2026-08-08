@@ -4,7 +4,6 @@
  * `opencli suno download`.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     STUDIO_API,
     SUNO_DOMAIN,

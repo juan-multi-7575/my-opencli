@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 import { getOnesBaseUrl, onesFetchInPage } from './common.js';
 cli({
     site: 'ones',

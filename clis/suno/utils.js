@@ -17,7 +17,6 @@
  */
 import * as fs from 'node:fs';
 import * as path from 'node:path';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError, TimeoutError } from '@jackwener/opencli/errors';
 
 export const SUNO_DOMAIN = 'suno.com';
 export const SUNO_URL = 'https://suno.com';

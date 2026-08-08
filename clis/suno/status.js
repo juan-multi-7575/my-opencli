@@ -4,7 +4,6 @@
  * generate credits.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import {
     SUNO_DOMAIN,
     checkSunoCaptcha,

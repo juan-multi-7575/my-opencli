@@ -1,4 +1,3 @@
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { registerSiteAuthCommands } from '../_shared/site-auth.js';
 
 // Jimeng (ByteDance) authenticates through the shared jianying passport. The

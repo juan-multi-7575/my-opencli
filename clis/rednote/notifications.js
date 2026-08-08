@@ -10,7 +10,6 @@
  * `feed` hits on rednote.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 
 const NOTIFICATION_TYPES = new Set(['mentions', 'likes', 'connections']);
 

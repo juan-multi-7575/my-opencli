@@ -7,7 +7,6 @@
  *   opencli weixin download --url "https://mp.weixin.qq.com/s/xxx" --output ./weixin
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { downloadArticle } from '@jackwener/opencli/download/article-download';
 // ============================================================
 // URL Normalization
 // ============================================================

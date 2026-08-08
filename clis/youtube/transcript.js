@@ -12,7 +12,6 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { extractJsonAssignmentFromHtml, parseVideoId, prepareYoutubeApiPage } from './utils.js';
 import { groupTranscriptSegments, formatGroupedTranscript, } from './transcript-group.js';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 function unwrapBrowserResult(value) {
     if (value && typeof value === 'object' && 'session' in value && 'data' in value) {

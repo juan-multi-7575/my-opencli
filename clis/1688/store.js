@@ -1,4 +1,3 @@
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { FACTORY_BADGE_PATTERNS, SERVICE_BADGE_PATTERNS, assertAuthenticatedState, buildDetailUrl, buildProvenance, canonicalizeSellerUrl, canonicalizeStoreUrl, cleanMultilineText, cleanText, extractAddress, extractBadges, extractMemberId, extractMetric, extractOfferId, extractShopId, extractYearsOnPlatform, gotoAndReadState, guessTopCategories, resolveStoreUrl, uniqueNonEmpty, } from './shared.js';
 function normalizeStorePayload(input) {

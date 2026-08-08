@@ -5,7 +5,6 @@
  * command flattens the cards across them into a ranked list.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const DOMAIN = 'www.linkedin.com';
 const MAX_LIMIT = 50;

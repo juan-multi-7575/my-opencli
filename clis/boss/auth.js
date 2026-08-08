@@ -1,4 +1,3 @@
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { registerSiteAuthCommands } from '../_shared/site-auth.js';
 
 const BOSS_GEEK_JOBS_URL = 'https://www.zhipin.com/web/geek/jobs';

@@ -2,7 +2,6 @@ import {
   ArgumentError,
   CommandExecutionError,
   EmptyResultError,
-} from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;

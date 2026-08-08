@@ -5,7 +5,6 @@
 // project URLs, requires-python, last-modified time. Download stats are
 // intentionally separate (see `pypi downloads`).
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { PYPI_BASE, pypiFetch, requirePackageName } from './utils.js';
 
 function pickHomepage(info) {

@@ -7,7 +7,6 @@
  * the web UI's "Download → WAV" flow makes).
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     STUDIO_API,
     SUNO_DOMAIN,

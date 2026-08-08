@@ -1,5 +1,4 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { ArgumentError, CliError, CommandExecutionError } from '@jackwener/opencli/errors';
 
 const { mockApiGet, mockDownloadMedia, mockCheckYtdlp } = vi.hoisted(() => ({
   mockApiGet: vi.fn(),
@@ -12,12 +11,10 @@ vi.mock('./utils.js', async (importOriginal) => ({
   apiGet: mockApiGet,
 }));
 
-vi.mock('@jackwener/opencli/download', () => ({
   checkYtdlp: mockCheckYtdlp,
   sanitizeFilename: (s) => s,
 }));
 
-vi.mock('@jackwener/opencli/download/media-download', () => ({
   downloadMedia: mockDownloadMedia,
 }));
 

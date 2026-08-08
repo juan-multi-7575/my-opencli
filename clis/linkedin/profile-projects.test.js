@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import './profile-projects.js';
 
 const { normalizeProfileUrl, profileProjectsUrl, parseProjectText, parseProjectsSectionText, decodeLinkedInSafetyUrl, normalizeProject } = await import('./profile-projects.js').then((m) => m.__test__);

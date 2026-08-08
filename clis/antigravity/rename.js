@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { conversationTargetArgs } from './_actions.js';
 
 // Known followup: a first attempt at rename triggered a destructive side

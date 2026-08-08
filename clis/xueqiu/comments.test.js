@@ -2,7 +2,6 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 const { mockWarn } = vi.hoisted(() => ({
     mockWarn: vi.fn(),
 }));
-vi.mock('@jackwener/opencli/logger', () => ({
     log: {
         info: vi.fn(),
         warn: mockWarn,
@@ -13,7 +12,6 @@ vi.mock('@jackwener/opencli/logger', () => ({
         stepResult: vi.fn(),
     },
 }));
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { classifyXueqiuCommentsResponse, collectCommentRows, mergeUniqueCommentRows, normalizeCommentItem, normalizeSymbolInput, } from './comments.js';
 const command = getRegistry().get('xueqiu/comments');

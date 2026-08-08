@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 import { gotoOnesHome, onesFetchInPage, resolveOnesUserUuid } from './common.js';
 import { enrichPeekEntriesWithDetails } from './enrich-tasks.js';
 import { resolveTaskListLabels } from './resolve-labels.js';

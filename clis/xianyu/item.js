@@ -1,4 +1,3 @@
-import { AuthRequiredError, EmptyResultError, selectorError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { normalizeNumericId } from './utils.js';
 function buildItemUrl(itemId) {

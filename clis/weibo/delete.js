@@ -2,7 +2,6 @@
  * Weibo delete — remove a single post owned by the logged-in user.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { requireObjectEvaluateResult, unwrapEvaluateResult } from './utils.js';
 
 const WEIBO_HOST_RE = /(^|\.)weibo\.(com|cn)$/i;

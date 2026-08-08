@@ -1,6 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { htmlToMarkdown } from '@jackwener/opencli/utils';
-import { ArgumentError, CommandExecutionError, TimeoutError } from '@jackwener/opencli/errors';
 import {
     YUANBAO_DOMAIN,
     IS_VISIBLE_JS,

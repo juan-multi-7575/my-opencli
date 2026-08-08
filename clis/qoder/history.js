@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { evaluateQoder, IS_VISIBLE_JS, parsePositiveInt, requireArrayResult } from './_utils.js';
 
 cli({

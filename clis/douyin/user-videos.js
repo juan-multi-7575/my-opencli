@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CliError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { fetchDouyinComments, fetchDouyinUserVideos } from './_shared/public-api.js';
 export const MAX_USER_VIDEOS_LIMIT = 20;
 export const USER_VIDEO_COMMENT_CONCURRENCY = 4;

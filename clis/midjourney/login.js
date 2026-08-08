@@ -1,4 +1,3 @@
-import { AuthRequiredError, TimeoutError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { midjourneyIdentity } from './auth-utils.js';
 import { MIDJOURNEY_DOMAIN, MIDJOURNEY_IMAGINE_URL, normalizePositiveInt } from './utils.js';

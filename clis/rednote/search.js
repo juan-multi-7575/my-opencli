@@ -6,7 +6,6 @@
  * 1:1 comparison between the two frontends.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { buildScrollUntilJs, buildSearchExtractJs, noteIdToDate, unwrapEvaluateResult } from '../xiaohongshu/search.js';
 
 function parseLimit(raw) {

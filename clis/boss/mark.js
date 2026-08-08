@@ -7,7 +7,6 @@
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { requirePage, navigateToChat, bossFetch, findFriendByUid, verbose } from './utils.js';
-import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 const LABEL_MAP = {
     '新招呼': 1, '沟通中': 2, '已约面': 3, '已获取简历': 4,
     '已交换电话': 5, '已交换微信': 6, '不合适': 7, '牛人发起': 8, '收藏': 11,

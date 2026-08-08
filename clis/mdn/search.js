@@ -4,7 +4,6 @@
 // row per matched doc with title, slug-derived id, summary preview, and the
 // canonical MDN URL.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const MDN_BASE = 'https://developer.mozilla.org';
 const UA = 'opencli-mdn-adapter (+https://github.com/jackwener/opencli)';

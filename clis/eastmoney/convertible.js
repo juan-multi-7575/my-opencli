@@ -4,7 +4,6 @@
 //   opencli eastmoney convertible --sort premium --limit 30
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const SORTS = {
   change:        { fid: 'f3',   order: 'desc' },

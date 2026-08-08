@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import './greeks.js';
 
 const { normalizeExpiration, normalizeSymbol, parseLimit, unwrapBrowserResult } = await import('./greeks.js').then((m) => m.__test__);

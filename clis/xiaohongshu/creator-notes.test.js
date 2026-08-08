@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from 'vitest';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { __test__, parseCreatorNoteIdsFromHtml, parseCreatorNotesText } from './creator-notes.js';
 import './creator-notes.js';

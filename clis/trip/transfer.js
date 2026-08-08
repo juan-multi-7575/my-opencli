@@ -9,7 +9,6 @@
  * in utils); the from-price is the site's representative fare, with the dated
  * pickup quote behind the booking step.
  */
-import { AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     WAIT_FOR_TRANSFERS_JS,

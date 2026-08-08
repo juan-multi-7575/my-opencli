@@ -2,7 +2,6 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 
 const { mockPrepare } = vi.hoisted(() => ({
   mockPrepare: vi.fn(),

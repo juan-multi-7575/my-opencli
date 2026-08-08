@@ -1,4 +1,3 @@
-import { AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { DOMAIN, amazonHostFromInput, buildProductUrl, buildDiscussionUrl, buildProvenance, cleanText, extractAsin, normalizeProductUrl, parseRatingValue, parseReviewCount, trimRatingPrefix, uniqueNonEmpty, assertUsableState, gotoAndReadState, } from './shared.js';
 function normalizeDiscussionPayload(payload) {

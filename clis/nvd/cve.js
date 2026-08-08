@@ -5,7 +5,6 @@
 // vuln status, English description, CVSS v3.1 base score / severity / vector,
 // CWE id(s), CISA KEV flag.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const NVD_BASE = 'https://services.nvd.nist.gov/rest/json/cves/2.0';
 const UA = 'opencli-nvd-adapter (+https://github.com/jackwener/opencli)';

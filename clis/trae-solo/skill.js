@@ -20,7 +20,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import { switchToPanel } from './_actions.js';
 
 const SESSION_HINT = 'Make sure TRAE SOLO is running and the Skills panel is reachable.';

@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 import { PAPERREVIEW_DOMAIN, ensureApiSuccess, ensureSuccess, normalizeVenue, readPdfFile, requestJson, summarizeSubmission, uploadPresignedPdf, } from './utils.js';
 cli({
     site: 'paperreview',

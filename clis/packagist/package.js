@@ -4,7 +4,6 @@
 // one row: latest stable version + release time, license, repository,
 // description, lifetime / monthly / daily downloads, github stars, favers.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { PACKAGIST_BASE, packagistFetch, pickStableVersion, requirePackageName, trimDate } from './utils.js';
 
 cli({

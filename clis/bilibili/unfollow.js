@@ -5,7 +5,6 @@
  * touching state.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { apiPost, fetchJson, getSelfUid, requireOkPayload, resolveUid } from './utils.js';
 
 const RELATION_VERIFY_TIMEOUT_MS = 5000;

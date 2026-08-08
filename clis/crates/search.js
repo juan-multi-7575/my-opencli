@@ -4,7 +4,6 @@
 // trips into `crates crate`), latest version, description, downloads, recent
 // downloads, repository, last-update.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { CRATES_BASE, cratesFetch, requireBoundedInt, requireString } from './utils.js';
 
 cli({

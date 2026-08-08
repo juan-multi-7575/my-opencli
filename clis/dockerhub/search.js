@@ -4,7 +4,6 @@
 // agent-useful projection: official-flag, owner/name (round-trips into
 // `dockerhub image`), star count, pull count, short description.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { HUB_BASE, hubFetch, requireBoundedInt, requireString } from './utils.js';
 
 cli({

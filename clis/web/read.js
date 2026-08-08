@@ -14,7 +14,6 @@
  *   opencli web read --url "https://..." --download-images false
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { downloadArticle } from '@jackwener/opencli/download/article-download';
 
 const NETWORK_IDLE_QUIET_MS = 1000;
 const NETWORK_IDLE_POLL_MS = 500;

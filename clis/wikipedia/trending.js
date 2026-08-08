@@ -1,4 +1,3 @@
-import { CliError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { DESC_MAX_LEN, wikiFetch } from './utils.js';
 cli({

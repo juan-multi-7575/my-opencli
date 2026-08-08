@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import { describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, EmptyResultError } from '@jackwener/opencli/errors';
 import { __test__ } from './likes.js';
 
 function likesPayload() {

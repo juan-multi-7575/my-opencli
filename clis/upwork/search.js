@@ -13,7 +13,6 @@ import {
     CommandExecutionError,
     EmptyResultError,
     AuthRequiredError,
-} from '@jackwener/opencli/errors';
 import {
     buildSearchUrl,
     isPlainObject,

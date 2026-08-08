@@ -5,7 +5,6 @@
 // time comes from `@v/<ver>.info` and is fetched only when `--with-time` is set,
 // since it costs one HTTP request per row.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     GOPROXY_BASE, goproxyJson, goproxyText, requireBoundedInt, requireModulePath, sortVersionsDescending, trimDate,
 } from './utils.js';

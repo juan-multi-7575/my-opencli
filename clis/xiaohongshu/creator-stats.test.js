@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from 'vitest';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import './creator-stats.js';
 

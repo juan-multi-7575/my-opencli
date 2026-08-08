@@ -8,7 +8,6 @@ import {
     normalizeLimit,
     normalizeRank,
 } from './im.js';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import './messages.js';
 import './reply.js';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';

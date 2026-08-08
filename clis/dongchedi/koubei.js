@@ -9,7 +9,6 @@
  */
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     DCD_BASE,
     KOUBEI_COLUMNS,

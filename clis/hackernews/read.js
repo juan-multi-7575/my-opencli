@@ -11,7 +11,6 @@
  *   - `[+N more replies]` summary rows whenever depth/limit cuts in
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const HN_ITEM_BASE = 'https://hacker-news.firebaseio.com/v0/item';
 

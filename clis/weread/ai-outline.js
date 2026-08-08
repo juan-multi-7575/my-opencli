@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 import { WEREAD_UA, WEREAD_WEB_ORIGIN, WEREAD_DOMAIN } from './utils.js';
 
 const WEB_API = `${WEREAD_WEB_ORIGIN}/web`;

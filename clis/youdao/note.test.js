@@ -1,5 +1,4 @@
 import { describe, it, expect, vi } from 'vitest';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const { __test__ } = await import('./note.js');
 const command = __test__.command;

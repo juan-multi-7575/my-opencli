@@ -4,7 +4,6 @@
 // with all sub-fields populated. We surface formula / xref / reference counts
 // instead of dumping the full graph.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { OEIS_BASE, formatId, oeisFetch, previewTerms, requireSequenceId } from './utils.js';
 
 function asArray(value) {

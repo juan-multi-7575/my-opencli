@@ -4,7 +4,6 @@
 // useful for an agent: trust score, 24h BTC volume, country, year founded,
 // canonical URL.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 cli({
     site: 'coingecko',

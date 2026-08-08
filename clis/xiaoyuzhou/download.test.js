@@ -18,12 +18,10 @@ vi.mock('./auth.js', async () => {
     };
 });
 
-vi.mock('@jackwener/opencli/download', () => ({
     httpDownload: mockHttpDownload,
     sanitizeFilename: vi.fn((value) => value.replace(/\s+/g, '_')),
 }));
 
-vi.mock('@jackwener/opencli/download/progress', () => ({
     formatBytes: vi.fn((size) => `${size} B`),
 }));
 

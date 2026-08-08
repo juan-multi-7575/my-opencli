@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError } from '@jackwener/opencli/errors';
 import { getCourses, initSession, enterCourse, getTabIframeUrl, parseAssignmentsFromDom, sleep, } from './utils.js';
 cli({
     site: 'chaoxing',

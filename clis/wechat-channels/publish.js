@@ -19,7 +19,6 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 
 // ── Constants ──────────────────────────────────────────────────────────────
 const PUBLISH_URL = 'https://channels.weixin.qq.com/platform/post/create';

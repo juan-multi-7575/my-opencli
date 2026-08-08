@@ -1,4 +1,3 @@
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { canonicalizeProductUrl, normalizeProductId, requireProductIdArg } from './utils.js';
 

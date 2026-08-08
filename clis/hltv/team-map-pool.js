@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { BASE, gotoAndWait, parseNumber, parseTeamRef } from './utils.js';
 
 function round(value, digits = 2) {

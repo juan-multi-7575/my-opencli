@@ -4,7 +4,6 @@ import {
     ArgumentError,
     AuthRequiredError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 
 import './search.js';
 import './shelf.js';

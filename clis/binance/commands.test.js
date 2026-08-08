@@ -1,6 +1,5 @@
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { executePipeline } from '@jackwener/opencli/pipeline';
 
 // Import all binance adapters to register them
 import './top.js';

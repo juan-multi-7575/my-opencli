@@ -10,7 +10,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import { KIMI_DOMAIN, ensureOnKimi } from './_utils.js';
 
 const STORAGE_COLUMNS = ['Field', 'Value', 'Index', 'Key', 'Bytes', 'Name', 'Preview', 'Database', 'Version'];

@@ -1,4 +1,3 @@
-import { ArgumentError } from '@jackwener/opencli/errors';
 
 /** Side-effect-free helpers shared by xiaohongshu note and comments commands. */
 /** Extract a bare note ID from a full URL or raw ID string. */

@@ -1,4 +1,3 @@
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 
 const REDDIT_HOME_MAX_LIMIT = 100;

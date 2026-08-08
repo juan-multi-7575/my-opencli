@@ -5,7 +5,6 @@
 // into `maven artifact`), latest version, packaging, version count, last
 // publish timestamp, repository.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { MAVEN_BASE, mavenFetch, epochMsToIso, requireBoundedInt, requireString } from './utils.js';
 
 cli({

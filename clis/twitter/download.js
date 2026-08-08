@@ -11,9 +11,6 @@
  *   opencli twitter download --tweet-url https://x.com/xxx/status/123 --output ./twitter
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CliError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
-import { formatCookieHeader } from '@jackwener/opencli/download';
-import { downloadMedia } from '@jackwener/opencli/download/media-download';
 import {
     resolveTwitterOperationMetadata,
     normalizeTwitterGraphqlPayload,

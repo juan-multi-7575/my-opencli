@@ -1,7 +1,6 @@
 import * as os from 'node:os';
 import * as path from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import {
     DEFAULT_FORMATS,
     SUPPORTED_FORMATS,

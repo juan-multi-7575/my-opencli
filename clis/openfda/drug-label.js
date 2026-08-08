@@ -5,7 +5,6 @@
 // query DSL). Returns label sections (purpose, warnings, dosage, etc.) and
 // metadata (manufacturer, product_ndc, route, etc.).
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import {
     OPENFDA_BASE,
     firstOrNull,

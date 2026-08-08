@@ -1,4 +1,3 @@
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 export const PUBLISH_URL = 'https://creator.xiaohongshu.com/publish/publish?from=menu_left&target=image';
 export const DRAFT_DB_NAME = 'draft-database-v1';

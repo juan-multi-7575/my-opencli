@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { extractMedia, describeTwitterApiError, resolveTwitterQueryId, unwrapBrowserResult } from './shared.js';
 import { TWITTER_BEARER_TOKEN, applyTopByEngagement } from './utils.js';
 const BOOKMARKS_QUERY_ID = 'Fy0QMy4q_aZCpkO0PnyLYw';

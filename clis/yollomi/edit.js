@@ -4,8 +4,6 @@
  */
 import * as path from 'node:path';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
-import { log } from '@jackwener/opencli/logger';
 import { YOLLOMI_DOMAIN, yollomiPost, downloadOutput, fmtBytes } from './utils.js';
 cli({
     site: 'yollomi',

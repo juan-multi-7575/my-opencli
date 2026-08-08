@@ -5,7 +5,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import {
     KIMI_DOMAIN,
     KIMI_URL,

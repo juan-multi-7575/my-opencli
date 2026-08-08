@@ -16,7 +16,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 
 function pickStore(args) {
     const s = String(args?.storage || 'local').trim().toLowerCase();

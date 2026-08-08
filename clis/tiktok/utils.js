@@ -13,7 +13,6 @@ import {
     CommandExecutionError,
     EmptyResultError,
     getErrorMessage,
-} from '@jackwener/opencli/errors';
 
 export const TIKTOK_AID = '1988';
 export const TIKTOK_HOST = 'https://www.tiktok.com';

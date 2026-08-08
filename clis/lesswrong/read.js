@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { DOMAIN, SITE, gqlEscape, gqlRequest, parsePostId, stripHtml, } from './_helpers.js';
 cli({
     site: SITE,

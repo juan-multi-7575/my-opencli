@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import './profile-experience.js';
 
 const {

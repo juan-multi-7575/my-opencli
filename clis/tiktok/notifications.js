@@ -7,7 +7,6 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 import {
     BROWSER_HELPERS,
     MAX_PAGES,

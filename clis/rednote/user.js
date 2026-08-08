@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { USER_SNAPSHOT_JS } from '../xiaohongshu/user.js';
 import { extractXhsUserNotes, normalizeXhsUserId } from '../xiaohongshu/user-helpers.js';
 

@@ -7,7 +7,6 @@
  * from an authenticated tab instead of replaying private signatures.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, TimeoutError } from '@jackwener/opencli/errors';
 
 const XHS_WEB_HOST = 'www.xiaohongshu.com';
 const ASK_COLUMNS = [

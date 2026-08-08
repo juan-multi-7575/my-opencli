@@ -2,7 +2,6 @@ import { mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { describe, expect, it, vi } from 'vitest';
-import { CliError } from '@jackwener/opencli/errors';
 import { __test__ } from './write-shared.js';
 class FakeNode {
     attrs;

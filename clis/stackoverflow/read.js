@@ -20,7 +20,6 @@
  *   - the accepted answer (if any) is surfaced first and tagged `accepted=true`
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const SE_API_BASE = 'https://api.stackexchange.com/2.3';
 const SE_SITE = 'stackoverflow';

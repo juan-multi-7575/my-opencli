@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { RELATED_COLUMNS, eutilsFetch, fetchSummaryRows, requireBoundedInt, requirePmid } from './utils.js';
 
 cli({

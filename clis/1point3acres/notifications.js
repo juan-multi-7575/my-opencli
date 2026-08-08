@@ -4,7 +4,6 @@
  * /bbs/home.php?mod=space&do=notice&view=interactive  needs login cookie.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, EmptyResultError } from '@jackwener/opencli/errors';
 import { fetchHtml, decodeEntities, getCookie, stripHtml, truncate, normalizePositiveInteger, BASE } from './utils.js';
 
 cli({

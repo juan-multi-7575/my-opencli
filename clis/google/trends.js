@@ -3,7 +3,6 @@
  * Shows daily trending searches for a given region.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 import { parseRssItems } from './utils.js';
 cli({
     site: 'google',

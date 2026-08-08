@@ -1,5 +1,4 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 
 const { mockApiGet } = vi.hoisted(() => ({
   mockApiGet: vi.fn(),

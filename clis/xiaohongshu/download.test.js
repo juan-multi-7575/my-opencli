@@ -3,14 +3,11 @@ const { mockDownloadMedia, mockFormatCookieHeader } = vi.hoisted(() => ({
     mockDownloadMedia: vi.fn(),
     mockFormatCookieHeader: vi.fn(() => 'a=b'),
 }));
-vi.mock('@jackwener/opencli/download/media-download', () => ({
     downloadMedia: mockDownloadMedia,
 }));
-vi.mock('@jackwener/opencli/download', () => ({
     formatCookieHeader: mockFormatCookieHeader,
 }));
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { JSDOM } from 'jsdom';
 import './download.js';
 import { buildDownloadExtractJs } from './download.js';

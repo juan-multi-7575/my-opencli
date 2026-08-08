@@ -4,7 +4,6 @@
  * and reports the resolved page URL.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { parseGameUrl } from './utils.js';
 
 cli({

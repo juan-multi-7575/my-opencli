@@ -1,6 +1,5 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { publishStoryViaPrivateApi, resolveInstagramPrivatePublishConfig, } from './_shared/private-publish.js';
 import { resolveInstagramRuntimeInfo } from './_shared/runtime-info.js';

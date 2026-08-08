@@ -3,7 +3,6 @@
  * so we try common endpoints in sequence.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 import { gotoOnesHome, onesFetchInPageWithMeta, resolveOnesUserUuid, summarizeOnesError, } from './common.js';
 import { hoursToOnesManhourRaw } from './task-helpers.js';
 function summarizeOnesMutationBody(parsed, status) {

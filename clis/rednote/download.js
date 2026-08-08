@@ -4,9 +4,6 @@
  * IIFE's CDN allowlist already accepts rednote-hosted media URLs.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { formatCookieHeader } from '@jackwener/opencli/download';
-import { downloadMedia } from '@jackwener/opencli/download/media-download';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { buildDownloadExtractJs } from '../xiaohongshu/download.js';
 import { buildNoteUrl, parseNoteId } from '../xiaohongshu/note-helpers.js';
 

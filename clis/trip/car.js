@@ -8,7 +8,6 @@
  * carries the site's near-term representative daily price; a dated pickup /
  * drop-off quote sits behind the booking step and is out of scope here.
  */
-import { AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     WAIT_FOR_CARS_JS,

@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, selectorError } from '@jackwener/opencli/errors';
 
 async function readCurrentModel(page) {
     const current = await page.evaluate(`(function() {

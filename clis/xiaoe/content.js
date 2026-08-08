@@ -29,7 +29,6 @@
 //     the cookie has expired). No silent `return [{ content: '' }]`.
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 export const CONTENT_SELECTORS = [
     '.rich-text-wrap',

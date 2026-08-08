@@ -15,7 +15,6 @@ import {
     CommandExecutionError,
     EmptyResultError,
     AuthRequiredError,
-} from '@jackwener/opencli/errors';
 import {
     DETAIL_COLUMNS,
     buildJobUrl,

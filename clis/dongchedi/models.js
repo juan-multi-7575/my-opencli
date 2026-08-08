@@ -7,7 +7,6 @@
  */
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     MODELS_COLUMNS,
     clean,

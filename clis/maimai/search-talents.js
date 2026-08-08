@@ -3,7 +3,6 @@
  * Reuses Chrome login session to search for candidates on maimai.cn
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 cli({
   site: 'maimai',

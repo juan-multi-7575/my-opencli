@@ -20,7 +20,6 @@
 //     source of truth.
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { requireXiaoePageUrl } from './content.js';
 
 // resource_type → human label. 1=图文 2=直播 3=音频 4=视频 6=专栏 8=大专栏.

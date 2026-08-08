@@ -1,6 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError } from '@jackwener/opencli/errors';
 import './task-delete.js';
 
 function makePage(envelope) {

@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError, getErrorMessage } from '@jackwener/opencli/errors';
 
 const AIBASE_DAILY_URL = 'https://www.aibase.com/zh/daily';
 const DEFAULT_LIMIT = 20;

@@ -3,7 +3,6 @@
 // proxy.golang.org is the canonical Go module proxy. It is unauthenticated
 // and serves the GOPROXY protocol (`@latest`, `@v/list`, `@v/<ver>.info|mod|zip`).
 // Spec: https://go.dev/ref/mod#goproxy-protocol
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 export const GOPROXY_BASE = 'https://proxy.golang.org';
 const UA = 'opencli-goproxy-adapter (+https://github.com/jackwener/opencli)';

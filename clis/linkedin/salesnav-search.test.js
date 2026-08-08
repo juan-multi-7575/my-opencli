@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import './salesnav-search.js';
 
 const {

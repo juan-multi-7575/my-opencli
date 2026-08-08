@@ -3,7 +3,6 @@
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { extractJsonAssignmentFromHtml, parseVideoId, prepareYoutubeApiPage } from './utils.js';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 
 function unwrapBrowserResult(value) {
     if (value && typeof value === 'object' && 'session' in value && 'data' in value) {

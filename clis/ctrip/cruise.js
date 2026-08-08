@@ -7,7 +7,6 @@
  * resolve the requested port name to its `sN` code, then loads that port's
  * results and reads the `.route_info` cards (see helpers in utils).
  */
-import { AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     WAIT_FOR_CRUISE_JS,

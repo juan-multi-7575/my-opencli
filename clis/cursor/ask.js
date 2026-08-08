@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, selectorError } from '@jackwener/opencli/errors';
 export const askCommand = cli({
     site: 'cursor',
     name: 'ask',

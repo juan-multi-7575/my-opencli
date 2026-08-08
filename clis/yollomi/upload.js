@@ -7,8 +7,6 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
-import { log } from '@jackwener/opencli/logger';
 import { YOLLOMI_DOMAIN, ensureOnYollomi, fmtBytes } from './utils.js';
 const MIME_MAP = {
     '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',

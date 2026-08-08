@@ -1,12 +1,10 @@
 import { readFile, stat } from 'node:fs/promises';
-import { htmlToMarkdown as coreHtmlToMarkdown } from '@jackwener/opencli/utils';
 import {
     ArgumentError,
     AuthRequiredError,
     CommandExecutionError,
     ConfigError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 
 const USER_AGENT = 'opencli-atlassian-adapter (+https://github.com/jackwener/opencli)';
 const DEPLOYMENTS = new Set(['cloud', 'datacenter', 'auto']);

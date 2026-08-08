@@ -1,5 +1,4 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const { mockApiPost, mockFetchJson, mockGetSelfUid, mockResolveUid } = vi.hoisted(() => ({
     mockApiPost: vi.fn(),

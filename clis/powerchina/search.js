@@ -2,7 +2,6 @@
  * PowerChina search — browser DOM extraction with multi-entry URL probing.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
   cleanText,
   normalizeDate,

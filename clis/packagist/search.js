@@ -5,7 +5,6 @@
 // package`), description, lifetime download count, GitHub-stars-style favers,
 // repository URL.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { PACKAGIST_BASE, packagistFetch, requireBoundedInt, requireString } from './utils.js';
 
 cli({

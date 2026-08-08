@@ -12,7 +12,6 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as os from 'node:os';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 
 export const TRAE_USER_DIR = path.join(os.homedir(), '.trae');
 export const TRAE_SKILLS_DIR = path.join(TRAE_USER_DIR, 'skills');

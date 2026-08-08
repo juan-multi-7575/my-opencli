@@ -1,4 +1,3 @@
-import { ArgumentError } from '@jackwener/opencli/errors';
 export function normalizeNumericId(value, label, example) {
     const normalized = String(value || '').trim();
     if (!/^\d+$/.test(normalized)) {

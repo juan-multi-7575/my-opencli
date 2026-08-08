@@ -6,7 +6,6 @@
  * search URL and reads by selector (see `buildTourExtractJs` in utils). A
  * destination with no matching packages raises `EmptyResultError`.
  */
-import { AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import {
     WAIT_FOR_VACATIONS_JS,

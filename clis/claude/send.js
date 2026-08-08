@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { CLAUDE_DOMAIN, CLAUDE_URL, COMPOSER_SELECTOR, ensureOnClaude, sendMessage, parseBoolFlag, withRetry, ensureClaudeComposer, requireNonEmptyPrompt } from './utils.js';
 
 export const sendCommand = cli({

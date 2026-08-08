@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, CliError } from '@jackwener/opencli/errors';
 
 function normalizeUrl(item) {
     const target = item.target || {};

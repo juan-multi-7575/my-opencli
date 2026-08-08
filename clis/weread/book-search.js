@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { WEREAD_UA, WEREAD_WEB_ORIGIN } from './utils.js';
 
 const MAX_LIMIT = 100;

@@ -3,7 +3,6 @@
  * Supports top stories (no keyword) and search (with keyword).
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 import { parseRssItems } from './utils.js';
 cli({
     site: 'google',

@@ -8,7 +8,6 @@
  * prices load via a post-SSR XHR and are out of scope here; `hotel-search`
  * already reports a representative nightly price per hotel.
  */
-import { AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { WAIT_FOR_HOTEL_DETAIL_JS, buildHotelDetailExtractJs, buildHotelDetailUrl, parseHotelId } from './utils.js';
 

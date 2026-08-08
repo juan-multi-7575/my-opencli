@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { createHash } from 'node:crypto';
 
 const LINKEDIN_DOMAIN = 'www.linkedin.com';

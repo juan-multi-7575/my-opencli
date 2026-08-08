@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, selectorError } from '@jackwener/opencli/errors';
 import { clickNewTaskScript, currentTaskStateScript, ensurePrompt, normalizeTimeout, sendTraePrompt } from './utils.js';
 
 export const newCommand = cli({

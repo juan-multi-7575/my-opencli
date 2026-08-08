@@ -1,5 +1,4 @@
 import * as fs from 'node:fs';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { parseTweetUrl, buildTwitterArticleScopeSource } from './shared.js';
 import {

@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import {
     MERCURY_EXPENSES_URL,
     RECEIPT_INPUT_SELECTOR,

@@ -1,4 +1,3 @@
-import { AuthRequiredError, CliError } from '@jackwener/opencli/errors';
 import { NOTEBOOKLM_DOMAIN } from './shared.js';
 
 export function unwrapNotebooklmEvaluateResult(payload) {

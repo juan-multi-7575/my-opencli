@@ -5,7 +5,6 @@
 //   opencli eastmoney kline sh600519 --period week --adjust forward
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 import { resolveSecid } from './_secid.js';
 
 const PERIOD_MAP = {

@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, selectorError } from '@jackwener/opencli/errors';
 import { unwrapEvaluateResult } from './_actions.js';
 
 // Antigravity exposes the active model via the composer button whose

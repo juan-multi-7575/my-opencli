@@ -3,7 +3,6 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { describe, expect, it, afterEach, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import './page.js';
 import './search.js';
 import './create.js';

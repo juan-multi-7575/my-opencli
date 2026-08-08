@@ -1,6 +1,5 @@
 // Pinterest search-boards — search for boards (BaseSearchResource scope=boards).
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, EmptyResultError } from '@jackwener/opencli/errors';
 import { DEFAULT_PAGE_SIZE, PINTEREST_BASE, collectResults, requireLimit } from './utils.js';
 
 const DEFAULT_LIMIT = 25;

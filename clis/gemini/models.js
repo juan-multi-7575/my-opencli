@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { GEMINI_DOMAIN, ensureGeminiPage } from './utils.js';
 
 function isObjectRecord(value) {

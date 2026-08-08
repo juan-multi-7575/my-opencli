@@ -6,7 +6,6 @@
  * 2. Batch-fetch details for the most recent ones (max 48 IDs per request)
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { pixivFetch, BATCH_SIZE } from './utils.js';
 cli({
     site: 'pixiv',

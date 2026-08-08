@@ -1,5 +1,4 @@
 import { describe, it, expect } from 'vitest';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, ConfigError } from '@jackwener/opencli/errors';
 import { dispatchEvaluateResult } from './errors.js';
 
 describe('dispatchEvaluateResult', () => {

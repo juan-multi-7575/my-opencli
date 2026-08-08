@@ -1,4 +1,3 @@
-import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 
 const REDDIT_COMMENT_ID_RE = /^[a-z0-9]+$/i;

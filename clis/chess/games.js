@@ -3,7 +3,6 @@
  * list newest-first and fetches as few months as needed to fill --limit.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { chessApi, validateUsername, mapGameRow } from './utils.js';
 
 const MAX_LIMIT = 100;

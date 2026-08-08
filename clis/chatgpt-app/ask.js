@@ -1,6 +1,5 @@
 import { statSync } from 'node:fs';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, ConfigError, TimeoutError } from '@jackwener/opencli/errors';
 import { activateChatGPT, getVisibleChatMessages, selectModel, MODEL_CHOICES, isGenerating, sendPrompt } from './ax.js';
 export const askCommand = cli({
     site: 'chatgpt-app',

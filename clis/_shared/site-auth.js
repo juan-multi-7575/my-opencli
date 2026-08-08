@@ -1,4 +1,3 @@
-import { AuthRequiredError, TimeoutError, getErrorMessage } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 
 const DEFAULT_TIMEOUT_SECONDS = 300;

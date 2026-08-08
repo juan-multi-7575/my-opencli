@@ -6,7 +6,6 @@
  */
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 import {
     WE_ORIGIN, SEARCH_COLUMNS, SORT_CODES,
     requirePage, navigateTo, pageFetchJson,

@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, EmptyResultError } from '@jackwener/opencli/errors';
 // ── CLI definition ────────────────────────────────────────────────────
 //
 // X (Twitter) removed the post-count caption from each trend cell on the

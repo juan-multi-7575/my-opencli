@@ -13,7 +13,6 @@
  *   - `[+N more replies]` summary rows whenever depth/limit cuts in
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 const LOBSTERS_STORY_BASE = 'https://lobste.rs/s';
 

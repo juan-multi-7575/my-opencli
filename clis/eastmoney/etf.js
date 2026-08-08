@@ -4,7 +4,6 @@
 //   opencli eastmoney etf --sort change --limit 30
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 
 const SORTS = {
   turnover: { fid: 'f6', order: 'desc' },

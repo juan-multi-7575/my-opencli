@@ -4,7 +4,6 @@
 // `{ data: [{ citingPaper: { ... } }] }`; we unwrap to the citing-paper rows
 // and surface fields that round-trip into `semanticscholar paper <paperId>`.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     S2_GRAPH_BASE,
     normalizePaperRow,

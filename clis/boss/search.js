@@ -2,7 +2,6 @@
  * BOSS直聘 job search — browser cookie API.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError } from '@jackwener/opencli/errors';
 import { requirePage, navigateTo, bossFetch, verbose } from './utils.js';
 /** City name → BOSS Zhipin city code mapping */
 const CITY_CODES = {

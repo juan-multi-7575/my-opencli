@@ -6,7 +6,6 @@
  * image URLs exposed in /imgres links and falling back to rendered thumbnails.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import {
     requireBoundedInteger,
     requireRows,

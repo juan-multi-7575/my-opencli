@@ -1,4 +1,3 @@
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 export function buildMediumTagUrl(topic) {
     return topic ? `https://medium.com/tag/${encodeURIComponent(topic)}` : 'https://medium.com/tag/technology';
 }

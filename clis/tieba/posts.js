@@ -1,4 +1,3 @@
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildTiebaPostCardsFromPagePc, buildTiebaPostItems, normalizeTiebaLimit, signTiebaPcParams, } from './utils.js';
 function getForumPageNumber(kwargs) {

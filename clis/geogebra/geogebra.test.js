@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from 'vitest';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import { ensureApplet, ggbEval, ggbGetProperty, ggbListObjects, ggbWaitForObjectCount } from './utils.js';
 import './add-circle.js';

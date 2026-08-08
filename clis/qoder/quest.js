@@ -5,7 +5,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     TimeoutError,
-} from '@jackwener/opencli/errors';
 import {
     buildQoderInjectTextScript,
     clickByTextScript,

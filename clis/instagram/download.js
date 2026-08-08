@@ -2,8 +2,6 @@ import * as fs from 'node:fs';
 import * as os from 'node:os';
 import * as path from 'node:path';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CliError, CommandExecutionError, EXIT_CODES } from '@jackwener/opencli/errors';
-import { httpDownload } from '@jackwener/opencli/download';
 const INSTAGRAM_GRAPHQL_DOC_ID = '8845758582119845';
 const INSTAGRAM_GRAPHQL_APP_ID = '936619743392459';
 const INSTAGRAM_HOST_SUFFIX = 'instagram.com';

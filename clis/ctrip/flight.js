@@ -11,7 +11,6 @@
  * Round-trip search lives in the sibling `flight-round` command; advanced filters
  * (airline whitelist, cabin selection beyond 全舱位) remain out of scope here.
  */
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildFlightExtractJs, buildScrollUntilJs, parseIataCode, parseIsoDate, parseStrictIntegerRange } from './utils.js';
 

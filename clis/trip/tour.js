@@ -8,7 +8,6 @@
  * `buildTourSearchJs` in utils). Per-departure pricing and availability sit behind
  * the booking step; the row `price` is the starting per-person estimate shown.
  */
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { buildTourSearchJs, buildTourSearchUrl, parseKeyword, parseListLimit } from './utils.js';
 

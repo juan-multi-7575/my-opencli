@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { extractXhsUserNotes, normalizeXhsUserId } from './user-helpers.js';
 /**
  * Host-agnostic IIFE that snapshots the user profile's Pinia store. Exported

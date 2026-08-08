@@ -2,7 +2,6 @@
  * 一亩三分地 版块帖子列表 — /bbs/forum-<fid>-<page>.html
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError } from '@jackwener/opencli/errors';
 import { fetchHtml, parseThreadList, parseThreadRows, normalizeLimit, BASE } from './utils.js';
 
 cli({

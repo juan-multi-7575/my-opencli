@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from 'vitest';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { summarizeCreatorNote } from './creator-notes-summary.js';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
 import * as creatorNotesModule from './creator-notes.js';

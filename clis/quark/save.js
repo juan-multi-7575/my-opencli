@@ -1,4 +1,3 @@
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { SHARE_API, extractPwdId, apiPost, getToken, pollTask, findFolder, } from './utils.js';
 async function saveShare(page, pwdId, stoken, fidList, targetFid, saveAll) {

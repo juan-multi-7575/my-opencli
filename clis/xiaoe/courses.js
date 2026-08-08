@@ -24,7 +24,6 @@
 //          path, everything else gets `/p/course/ecourse/`)
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 // Pure: derive the canonical course URL for a single purchase entry.
 // Returns '' when `entry` is missing the fields we'd need to construct

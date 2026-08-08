@@ -1,4 +1,3 @@
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError, selectorError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 const ROWS_PER_PAGE = 30;
 const MAX_LIMIT = 60;

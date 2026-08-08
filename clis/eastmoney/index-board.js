@@ -5,7 +5,6 @@
 //   opencli eastmoney index-board --group all
 
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
 
 const INDEX_GROUPS = {
   main: [

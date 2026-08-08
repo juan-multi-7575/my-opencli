@@ -2,7 +2,6 @@
  * YouTube channel — get channel info and recent videos via InnerTube API.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 
 export function extractSelectedRichGridContents(browseData) {
     const tabs = browseData?.contents?.twoColumnBrowseResultsRenderer?.tabs || [];

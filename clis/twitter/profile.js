@@ -1,4 +1,3 @@
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { describeTwitterApiError, normalizeTwitterScreenName, resolveTwitterQueryId, unwrapBrowserResult } from './shared.js';
 import { TWITTER_BEARER_TOKEN } from './utils.js';

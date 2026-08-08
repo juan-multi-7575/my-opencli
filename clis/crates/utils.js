@@ -1,5 +1,4 @@
 // Shared helpers for the crates.io adapters.
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 export const CRATES_BASE = 'https://crates.io';
 const UA = 'opencli-crates-adapter (+https://github.com/jackwener/opencli)';

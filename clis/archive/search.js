@@ -4,7 +4,6 @@ import {
     ArgumentError,
     CommandExecutionError,
     EmptyResultError,
-} from '@jackwener/opencli/errors';
 
 const SORT_OPTIONS = ['downloads', 'date', 'addeddate', 'week', 'title'];
 const SORT_ALIAS = { added: 'addeddate', published: 'date' };

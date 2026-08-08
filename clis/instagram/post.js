@@ -1,7 +1,6 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { installInstagramProtocolCapture, readInstagramProtocolCapture, } from './_shared/protocol-capture.js';
 import { publishMediaViaPrivateApi, publishImagesViaPrivateApi, resolveInstagramPrivatePublishConfig, } from './_shared/private-publish.js';
 import { resolveInstagramRuntimeInfo } from './_shared/runtime-info.js';

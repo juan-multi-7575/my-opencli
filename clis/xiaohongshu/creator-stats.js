@@ -8,7 +8,6 @@
  * Requires: logged into creator.xiaohongshu.com in Chrome.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 cli({
     site: 'xiaohongshu',
     name: 'creator-stats',

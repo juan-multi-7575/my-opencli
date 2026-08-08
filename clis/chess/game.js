@@ -4,7 +4,6 @@
  * PGN headers + move data plus per-player metadata.
  */
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 import { UA, formatDate, isPlainObject, parseGameUrl } from './utils.js';
 
 const CALLBACK_BASE = 'https://www.chess.com/callback';

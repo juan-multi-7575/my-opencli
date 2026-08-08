@@ -1,6 +1,5 @@
 import { beforeAll, describe, expect, it, vi } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { listConversations } from './_actions.js';
 import './audit-extras.js';
 import './delete.js';

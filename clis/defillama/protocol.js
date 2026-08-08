@@ -5,7 +5,6 @@
 // as the current TVL plus identifying metadata (category from /protocols since
 // the per-protocol endpoint omits it).
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { LLAMA_BASE, llamaFetch, requireSlug, unixToDate } from './utils.js';
 
 cli({

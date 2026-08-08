@@ -1,4 +1,3 @@
-import { AuthRequiredError, EmptyResultError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 /**
  * band posts — List posts from a specific Band.

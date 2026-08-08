@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest';
 import { getRegistry } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import './posts.js';
 
 const { activityUrl, parseMetric, parseReactionText, normalizePost } = await import('./posts-core.js');

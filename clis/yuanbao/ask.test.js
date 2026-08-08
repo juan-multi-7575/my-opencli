@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from 'vitest';
-import { ArgumentError, AuthRequiredError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { __test__ } from './ask.js';
 import { askCommand } from './ask.js';
 describe('yuanbao ask helpers', () => {

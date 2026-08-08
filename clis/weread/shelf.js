@@ -1,6 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CliError } from '@jackwener/opencli/errors';
-import { log } from '@jackwener/opencli/logger';
 import { buildWebShelfEntries, fetchPrivateApi, loadWebShelfSnapshot, } from './utils.js';
 function normalizeShelfLimit(limit) {
     if (!Number.isFinite(limit))

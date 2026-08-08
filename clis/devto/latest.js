@@ -4,7 +4,6 @@
 // `devto top` (most-reactioned) and `devto tag` (filtered) commands by
 // surfacing the firehose of brand-new posts.
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/opencli/errors';
 
 function requireBoundedInt(value, defaultValue, maxValue) {
     const raw = value ?? defaultValue;

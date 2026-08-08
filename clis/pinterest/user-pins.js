@@ -1,6 +1,5 @@
 // Pinterest user-pins — pins created by a user (UserPinsResource).
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { DEFAULT_PAGE_SIZE, PINTEREST_BASE, collectPins, parseUsername, requireLimit } from './utils.js';
 
 const DEFAULT_LIMIT = 25;

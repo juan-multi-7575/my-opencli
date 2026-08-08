@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { CommandExecutionError } from '@jackwener/opencli/errors';
 import { apiGet, resolveBvid, parsePageArg, selectVideoPart } from './utils.js';
 
 function requireObject(value, label) {

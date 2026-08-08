@@ -1,4 +1,3 @@
-import { CliError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
 import { assertAllowedKinds, parseTarget } from './target.js';
 import { buildResultRow, requireExecute } from './write-shared.js';

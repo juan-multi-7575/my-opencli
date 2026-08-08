@@ -1,5 +1,4 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { CliError } from '@jackwener/opencli/errors';
 const { mockFetchPrivateApi } = vi.hoisted(() => ({
     mockFetchPrivateApi: vi.fn(),
 }));

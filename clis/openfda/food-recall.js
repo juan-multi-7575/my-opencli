@@ -3,7 +3,6 @@
 // Endpoint: GET /food/enforcement.json?search=<lucene>&limit=<n>
 // Sorted by report_date descending (most recent first).
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { EmptyResultError } from '@jackwener/opencli/errors';
 import { OPENFDA_BASE, openfdaFetch, requireBoundedInt } from './utils.js';
 
 cli({

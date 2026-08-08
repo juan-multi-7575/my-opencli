@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError, CommandExecutionError } from '@jackwener/opencli/errors';
 import { NOTEBOOKLM_DOMAIN, NOTEBOOKLM_SITE } from './shared.js';
 import { callNotebooklmRpc } from './rpc.js';
 import { buildNotebooklmNotebookUrl, ensureNotebooklmHome, parseNotebooklmNotebookTarget, requireNotebooklmExecute, requireNotebooklmSession } from './utils.js';

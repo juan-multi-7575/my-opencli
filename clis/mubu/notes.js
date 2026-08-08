@@ -1,5 +1,4 @@
 import { cli, Strategy } from '../../../extensions/opencli-bridge/registry-internal';
-import { ArgumentError } from '@jackwener/opencli/errors';
 import { mubuPost, nodesToMarkdown, nodesToText, htmlToText } from './utils.js';
 
 // ── 日期工具 ──────────────────────────────────────────────
